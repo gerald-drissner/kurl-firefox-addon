@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - YOURLS مُختصِر الروابط"
+  },
+  "extensionDescription": {
+    "message": "اختصر الروابط باستخدام نسخة YOURLS الخاصة بك مباشرة من متصفحك."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: اختصر الرابط المحدد"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: اختصر رابط هذه الصفحة"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: اختصر عنوان الرابط"
+  },
+  "optionsTitle": {
+    "message": "إعدادات YOURLS"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "رابط YOURLS (بدون شرطة مائلة في النهاية)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "رمز توقيع API"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "انسخ الرابط القصير إلى الحافظة تلقائيًا"
+  },
+  "optionsBtnSave": {
+    "message": "حفظ"
+  },
+  "optionsBtnTest": {
+    "message": "اختبار الاتصال"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "إزالة إذن المضيف"
+  },
+  "optionsStatusLoaded": {
+    "message": "تم تحميل الإعدادات المحفوظة. انقر على 'اختبار الاتصال'."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "الرجاء إدخال رابط YOURLS ورمز API الخاص بك."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "لم يتم منح إذن المضيف."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "تعذر طلب إذن المضيف: "
+  },
+  "optionsStatusConnOk": {
+    "message": "الاتصال جيد (إجمالي الروابط: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "فشل الاتصال."
+  },
+  "optionsStatusSaved": {
+    "message": "تم حفظ الإعدادات. قد ترغب في اختبار الاتصال مرة أخرى."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "أدخل رابطًا لإزالة إذنه."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "تعذر إزالة الإذن: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "تمت إزالة إذن المضيف لهذا المصدر."
+  },
+  "popupTitle": {
+    "message": "kurl - YOURLS مُختصِر الروابط"
+  },
+  "popupLongUrlLabel": {
+    "message": "الرابط الطويل"
+  },
+  "popupKeywordLabel": {
+    "message": "كلمة رئيسية مخصصة (اختياري)"
+  },
+  "popupBtnShorten": {
+    "message": "اختصر"
+  },
+  "popupShortUrlLabel": {
+    "message": "الرابط القصير"
+  },
+  "popupBtnDelete": {
+    "message": "حذف"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "تأكيد؟"
+  },
+  "popupStatsLabel": {
+    "message": "إحصائيات لـ (رابط قصير أو كلمة رئيسية)"
+  },
+  "popupBtnStats": {
+    "message": "إحصائيات"
+  },
+  "popupBtnToggleJson": {
+    "message": "تبديل JSON"
+  },
+  "popupStatusReady": {
+    "message": "جاهز."
+  },
+  "popupStatusShortening": {
+    "message": "جارٍ الاختصار…"
+  },
+  "popupStatusCreated": {
+    "message": "تم إنشاء الرابط القصير."
+  },
+  "popupStatusCopied": {
+    "message": "تم النسخ إلى الحافظة."
+  },
+  "popupStatusFetchingStats": {
+    "message": "جارٍ جلب الإحصائيات…"
+  },
+  "popupStatusStatsResult": {
+    "message": "القصير: $shorturl$\nالهدف: $longurl$\nالنقرات: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "جارٍ الحذف…"
+  },
+  "popupStatusDeleted": {
+    "message": "تم حذف الرابط القصير."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "الرابط مختصر بالفعل. يمكنك عرض الإحصائيات أو حذفه أدناه."
+  },
+  "popupInfoAutoStats": {
+    "message": "هذا رابط قصير بالفعل. جارٍ جلب الإحصائيات تلقائيًا."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "الرجاء إدخال رابط http(s) صالح."
+  },
+  "popupErrorCopyFailed": {
+    "message": "فشل النسخ."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "أدخل رابطًا قصيرًا أو كلمة رئيسية للحصول على الإحصائيات."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "قدم رابطًا قصيرًا أو كلمة رئيسية للحذف."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "الرابط القصير غير موجود."
+  },
+  "errorShortenFailed": {
+    "message": "فشل الاختصار."
+  },
+  "errorStatsFailed": {
+    "message": "فشل جلب الإحصائيات."
+  },
+  "errorDeleteFailed": {
+    "message": "فشل الحذف."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "الرجاء إدخال رابط قصير أو كلمة رئيسية للحذف."
+  },
+  "errorNoSettings": {
+    "message": "الرجاء تكوين YOURLS أولاً في إعدادات الإضافة."
+  },
+  "errorKeywordExists": {
+    "message": "هذه الكلمة الرئيسية المخصصة مستخدمة بالفعل. الرجاء تجربة أخرى."
+  },
+  "toastUrlCreated": {
+    "message": "تم إنشاء الرابط القصير."
+  },
+  "toastUrlExists": {
+    "message": "الرابط مختصر بالفعل."
+  },
+  "toastUrlDeleted": {
+    "message": "تم حذف الرابط القصير."
+  },
+  "setupTitle": {
+    "message": "الإعداد مطلوب"
+  },
+  "setupMessage": {
+    "message": "الرجاء تكوين رابط نسخة YOURLS ورمز API الخاص بك في الإعدادات."
+  },
+  "setupBtnGoToOptions": {
+    "message": "فتح الإعدادات"
+  },
+  "advancedOptionsLabel": {
+    "message": "خيارات متقدمة"
+  },
+  "titleLabel": {
+    "message": "عنوان مخصص (اختياري)"
+  },
+  "popupBtnCopyClose": {
+    "message": "نسخ وإغلاق"
+  },
+  "popupBtnQrCode": {
+    "message": "رمز الاستجابة السريعة"
+  },
+  "popupBtnDownloadQr": {
+    "message": "تنزيل رمز الاستجابة السريعة"
+  },
+  "dashboardTitle": {
+    "message": "لوحة تحكم YOURLS"
+  },
+  "dashboardLinks": {
+    "message": "إجمالي الروابط"
+  },
+  "dashboardClicks": {
+    "message": "إجمالي النقرات"
+  }
+}

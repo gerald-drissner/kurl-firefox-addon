@@ -1,0 +1,271 @@
+{
+  "extensionName": {
+    "message": "kurl - YOURLS Shortener",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Shorten links with your YOURLS instance right from your browser.",
+    "description": "Description of the extension for Firefox."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: Shorten selected URL"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: Shorten this page's URL"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: Shorten link address"
+  },
+  "optionsTitle": {
+    "message": "YOURLS Settings",
+    "description": "Title for the options page."
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "YOURLS URL (no trailing slash)",
+    "description": "Label for the YOURLS URL input."
+  },
+  "optionsApiSignatureLabel": {
+    "message": "API signature token",
+    "description": "Label for the API signature token input."
+  },
+  "optionsAutoCopyLabel": {
+    "message": "Copy short link to clipboard automatically",
+    "description": "Label for the auto-copy checkbox."
+  },
+  "optionsBtnSave": {
+    "message": "Save",
+    "description": "Save button text."
+  },
+  "optionsBtnTest": {
+    "message": "Test Connection",
+    "description": "Test connection button text."
+  },
+  "optionsBtnRemovePerm": {
+    "message": "Remove Host Permission",
+    "description": "Remove host permission button text."
+  },
+  "optionsStatusLoaded": {
+    "message": "Saved settings loaded. Click “Test Connection”.",
+    "description": "Initial status message on options page."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "Please enter your YOURLS URL and API token.",
+    "description": "Error message when URL or token is missing."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "Host permission was not granted.",
+    "description": "Error message when host permission is denied."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "Could not request host permission: ",
+    "description": "Error message when requesting host permission fails."
+  },
+  "optionsStatusConnOk": {
+    "message": "Connection OK (Total links: $total$)",
+    "description": "Success message for connection test.",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "Connection failed.",
+    "description": "Error message for failed connection test."
+  },
+  "optionsStatusSaved": {
+    "message": "Settings saved. You may want to test the connection again.",
+    "description": "Status message after saving settings."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "Enter a URL to remove its permission.",
+    "description": "Message when trying to remove permission without a URL."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "Could not remove permission: ",
+    "description": "Error message when removing host permission fails."
+  },
+  "optionsStatusPermRemoved": {
+    "message": "Host permission removed for this origin.",
+    "description": "Success message when permission is removed."
+  },
+  "popupTitle": {
+    "message": "kurl - YOURLS Shortener",
+    "description": "Title for the popup window."
+  },
+  "popupLongUrlLabel": {
+    "message": "Long URL",
+    "description": "Label for the long URL input."
+  },
+  "popupKeywordLabel": {
+    "message": "Custom keyword (optional)",
+    "description": "Label for the custom keyword input."
+  },
+  "popupBtnShorten": {
+    "message": "Shorten",
+    "description": "Shorten button text."
+  },
+  "popupShortUrlLabel": {
+    "message": "Short URL",
+    "description": "Label for the short URL output."
+  },
+  "popupBtnDelete": {
+    "message": "Delete",
+    "description": "Delete button text."
+  },
+  "popupBtnConfirmDelete": {
+    "message": "Confirm?",
+    "description": "Delete button confirmation text."
+  },
+  "popupStatsLabel": {
+    "message": "Stats for (short URL or keyword)",
+    "description": "Label for the stats input."
+  },
+  "popupBtnStats": {
+    "message": "Stats",
+    "description": "Get stats button text."
+  },
+  "popupBtnToggleJson": {
+    "message": "Toggle JSON",
+    "description": "Toggle JSON view button text."
+  },
+  "popupStatusReady": {
+    "message": "Ready.",
+    "description": "Initial status message in popup."
+  },
+  "popupStatusShortening": {
+    "message": "Shortening…",
+    "description": "Status message while shortening."
+  },
+  "popupStatusCreated": {
+    "message": "Short URL created.",
+    "description": "Success message when URL is shortened."
+  },
+  "popupStatusCopied": {
+    "message": "Copied to clipboard.",
+    "description": "Message when text is copied."
+  },
+  "popupStatusFetchingStats": {
+    "message": "Fetching stats…",
+    "description": "Status message while fetching stats."
+  },
+  "popupStatusStatsResult": {
+    "message": "Short: $shorturl$\nTarget: $longurl$\nClicks: $clicks$",
+    "description": "Formatted stats result.",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "Deleting…",
+    "description": "Status message while deleting."
+  },
+  "popupStatusDeleted": {
+    "message": "Short URL deleted.",
+    "description": "Success message when URL is deleted."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URL already shortened. You can view stats or delete it below.",
+    "description": "Informational message for an existing URL."
+  },
+  "popupInfoAutoStats": {
+    "message": "This is already a short URL. Fetching stats automatically.",
+    "description": "Message when auto-fetching stats for a selected short URL."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "Please enter a valid http(s) URL.",
+    "description": "Error for invalid URL format."
+  },
+  "popupErrorCopyFailed": {
+    "message": "Copy failed.",
+    "description": "Error when clipboard copy fails."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "Enter a short URL or keyword to get stats.",
+    "description": "Error when stats button is clicked with no input."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "Provide a short URL or keyword to delete.",
+    "description": "Error when delete is clicked with no URL."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "Short URL not found.",
+    "description": "Error when stats are requested for a non-existent URL."
+  },
+  "errorShortenFailed": {
+    "message": "Shorten failed.",
+    "description": "Generic error for shortening."
+  },
+  "errorStatsFailed": {
+    "message": "Failed to fetch stats.",
+    "description": "Generic error for fetching stats."
+  },
+  "errorDeleteFailed": {
+    "message": "Delete failed.",
+    "description": "Generic error for deleting."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "Please enter a short URL or keyword to delete.",
+    "description": "Error in background script if keyword is missing for delete."
+  },
+  "errorNoSettings": {
+    "message": "Please configure YOURLS first in the add-on settings.",
+    "description": "Error when settings are not configured."
+  },
+  "errorKeywordExists": {
+    "message": "That custom keyword is already taken. Please try another."
+  },
+  "toastUrlCreated": {
+    "message": "Short URL created.",
+    "description": "Notification message for success."
+  },
+  "toastUrlExists": {
+    "message": "URL already shortened.",
+    "description": "Notification message for existing URL."
+  },
+  "toastUrlDeleted": {
+    "message": "Short URL deleted.",
+    "description": "Notification message for deleted URL."
+  },
+  "setupTitle": {
+    "message": "Setup Required"
+  },
+  "setupMessage": {
+    "message": "Please configure your YOURLS instance URL and API token in the settings."
+  },
+  "setupBtnGoToOptions": {
+    "message": "Open Settings"
+  },
+  "advancedOptionsLabel": {
+    "message": "Advanced Options"
+  },
+  "titleLabel": {
+    "message": "Custom Title (optional)"
+  },
+  "popupBtnCopyClose": {
+    "message": "Copy & Close"
+  },
+  "popupBtnQrCode": {
+    "message": "QR Code"
+  },
+  "popupBtnDownloadQr": {
+    "message": "Download QR code"
+  },
+  "dashboardTitle": {
+    "message": "YOURLS Dashboard"
+  },
+  "dashboardLinks": {
+    "message": "Total Links"
+  },
+  "dashboardClicks": {
+    "message": "Total Clicks"
+  }
+}

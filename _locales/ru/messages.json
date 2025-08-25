@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - Сокращатель YOURLS"
+  },
+  "extensionDescription": {
+    "message": "Сокращайте ссылки с помощью вашего экземпляра YOURLS прямо из браузера."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: Сократить выделенный URL"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: Сократить URL этой страницы"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: Сократить адрес ссылки"
+  },
+  "optionsTitle": {
+    "message": "Настройки YOURLS"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "URL YOURLS (без косой черты в конце)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "Токен подписи API"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "Автоматически копировать короткую ссылку в буфер обмена"
+  },
+  "optionsBtnSave": {
+    "message": "Сохранить"
+  },
+  "optionsBtnTest": {
+    "message": "Проверить соединение"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "Удалить разрешение для хоста"
+  },
+  "optionsStatusLoaded": {
+    "message": "Сохраненные настройки загружены. Нажмите «Проверить соединение»."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "Пожалуйста, введите ваш URL YOURLS и токен API."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "Разрешение для хоста не было предоставлено."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "Не удалось запросить разрешение для хоста: "
+  },
+  "optionsStatusConnOk": {
+    "message": "Соединение в порядке (Всего ссылок: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "Соединение не удалось."
+  },
+  "optionsStatusSaved": {
+    "message": "Настройки сохранены. Вы можете проверить соединение еще раз."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "Введите URL, чтобы удалить для него разрешение."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "Не удалось удалить разрешение: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "Разрешение для хоста удалено для этого источника."
+  },
+  "popupTitle": {
+    "message": "kurl - Сокращатель YOURLS"
+  },
+  "popupLongUrlLabel": {
+    "message": "Длинный URL"
+  },
+  "popupKeywordLabel": {
+    "message": "Пользовательское ключевое слово (необязательно)"
+  },
+  "popupBtnShorten": {
+    "message": "Сократить"
+  },
+  "popupShortUrlLabel": {
+    "message": "Короткий URL"
+  },
+  "popupBtnDelete": {
+    "message": "Удалить"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "Подтвердить?"
+  },
+  "popupStatsLabel": {
+    "message": "Статистика для (короткий URL или ключевое слово)"
+  },
+  "popupBtnStats": {
+    "message": "Статистика"
+  },
+  "popupBtnToggleJson": {
+    "message": "Переключить JSON"
+  },
+  "popupStatusReady": {
+    "message": "Готово."
+  },
+  "popupStatusShortening": {
+    "message": "Сокращение…"
+  },
+  "popupStatusCreated": {
+    "message": "Короткий URL создан."
+  },
+  "popupStatusCopied": {
+    "message": "Скопировано в буфер обмена."
+  },
+  "popupStatusFetchingStats": {
+    "message": "Получение статистики…"
+  },
+  "popupStatusStatsResult": {
+    "message": "Короткая: $shorturl$\nЦель: $longurl$\nКлики: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "Удаление…"
+  },
+  "popupStatusDeleted": {
+    "message": "Короткий URL удален."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URL уже сокращен. Вы можете просмотреть статистику или удалить его ниже."
+  },
+  "popupInfoAutoStats": {
+    "message": "Это уже короткий URL. Автоматическое получение статистики."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "Пожалуйста, введите действительный http(s) URL."
+  },
+  "popupErrorCopyFailed": {
+    "message": "Копирование не удалось."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "Введите короткий URL или ключевое слово для получения статистики."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "Укажите короткий URL или ключевое слово для удаления."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "Короткий URL не найден."
+  },
+  "errorShortenFailed": {
+    "message": "Сокращение не удалось."
+  },
+  "errorStatsFailed": {
+    "message": "Не удалось получить статистику."
+  },
+  "errorDeleteFailed": {
+    "message": "Удаление не удалось."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "Пожалуйста, введите короткий URL или ключевое слово для удаления."
+  },
+  "errorNoSettings": {
+    "message": "Пожалуйста, сначала настройте YOURLS в настройках дополнения."
+  },
+  "errorKeywordExists": {
+    "message": "Это пользовательское ключевое слово уже занято. Пожалуйста, попробуйте другое."
+  },
+  "toastUrlCreated": {
+    "message": "Короткий URL создан."
+  },
+  "toastUrlExists": {
+    "message": "URL уже сокращен."
+  },
+  "toastUrlDeleted": {
+    "message": "Короткий URL удален."
+  },
+  "setupTitle": {
+    "message": "Требуется настройка"
+  },
+  "setupMessage": {
+    "message": "Пожалуйста, настройте URL вашего экземпляра YOURLS и токен API в настройках."
+  },
+  "setupBtnGoToOptions": {
+    "message": "Открыть настройки"
+  },
+  "advancedOptionsLabel": {
+    "message": "Расширенные параметры"
+  },
+  "titleLabel": {
+    "message": "Пользовательский заголовок (необязательно)"
+  },
+  "popupBtnCopyClose": {
+    "message": "Копировать и закрыть"
+  },
+  "popupBtnQrCode": {
+    "message": "QR-код"
+  },
+  "popupBtnDownloadQr": {
+    "message": "Скачать QR-код"
+  },
+  "dashboardTitle": {
+    "message": "Панель управления YOURLS"
+  },
+  "dashboardLinks": {
+    "message": "Всего ссылок"
+  },
+  "dashboardClicks": {
+    "message": "Всего кликов"
+  }
+}

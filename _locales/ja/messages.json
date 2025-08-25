@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - YOURLS 短縮ツール"
+  },
+  "extensionDescription": {
+    "message": "お使いのYOURLSインスタンスでブラウザから直接リンクを短縮します。"
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: 選択したURLを短縮"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: このページのURLを短縮"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: リンクアドレスを短縮"
+  },
+  "optionsTitle": {
+    "message": "YOURLS 設定"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "YOURLS URL (末尾のスラッシュなし)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "API署名トークン"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "短縮リンクを自動的にクリップボードにコピー"
+  },
+  "optionsBtnSave": {
+    "message": "保存"
+  },
+  "optionsBtnTest": {
+    "message": "接続テスト"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "ホスト権限を削除"
+  },
+  "optionsStatusLoaded": {
+    "message": "保存された設定が読み込まれました。「接続テスト」をクリックしてください。"
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "YOURLS URLとAPIトークンを入力してください。"
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "ホスト権限が付与されませんでした。"
+  },
+  "optionsStatusPermRequestError": {
+    "message": "ホスト権限を要求できませんでした: "
+  },
+  "optionsStatusConnOk": {
+    "message": "接続OK (合計リンク数: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "接続に失敗しました。"
+  },
+  "optionsStatusSaved": {
+    "message": "設定が保存されました。再度接続をテストすることをお勧めします。"
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "権限を削除するURLを入力してください。"
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "権限を削除できませんでした: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "このオリジンのホスト権限が削除されました。"
+  },
+  "popupTitle": {
+    "message": "kurl - YOURLS 短縮ツール"
+  },
+  "popupLongUrlLabel": {
+    "message": "長いURL"
+  },
+  "popupKeywordLabel": {
+    "message": "カスタムキーワード (任意)"
+  },
+  "popupBtnShorten": {
+    "message": "短縮"
+  },
+  "popupShortUrlLabel": {
+    "message": "短いURL"
+  },
+  "popupBtnDelete": {
+    "message": "削除"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "確認しますか？"
+  },
+  "popupStatsLabel": {
+    "message": "統計情報 (短いURLまたはキーワード)"
+  },
+  "popupBtnStats": {
+    "message": "統計"
+  },
+  "popupBtnToggleJson": {
+    "message": "JSONの切り替え"
+  },
+  "popupStatusReady": {
+    "message": "準備完了。"
+  },
+  "popupStatusShortening": {
+    "message": "短縮中…"
+  },
+  "popupStatusCreated": {
+    "message": "短いURLが作成されました。"
+  },
+  "popupStatusCopied": {
+    "message": "クリップボードにコピーしました。"
+  },
+  "popupStatusFetchingStats": {
+    "message": "統計情報を取得中…"
+  },
+  "popupStatusStatsResult": {
+    "message": "短縮: $shorturl$\nターゲット: $longurl$\nクリック数: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "削除中…"
+  },
+  "popupStatusDeleted": {
+    "message": "短いURLが削除されました。"
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URLは既に短縮されています。以下で統計情報を表示または削除できます。"
+  },
+  "popupInfoAutoStats": {
+    "message": "これは既に短いURLです。統計情報を自動的に取得しています。"
+  },
+  "popupErrorInvalidUrl": {
+    "message": "有効なhttp(s) URLを入力してください。"
+  },
+  "popupErrorCopyFailed": {
+    "message": "コピーに失敗しました。"
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "統計情報を取得するには、短いURLまたはキーワードを入力してください。"
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "削除する短いURLまたはキーワードを入力してください。"
+  },
+  "popupErrorStatsNotFound": {
+    "message": "短いURLが見つかりません。"
+  },
+  "errorShortenFailed": {
+    "message": "短縮に失敗しました。"
+  },
+  "errorStatsFailed": {
+    "message": "統計情報の取得に失敗しました。"
+  },
+  "errorDeleteFailed": {
+    "message": "削除に失敗しました。"
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "削除する短いURLまたはキーワードを入力してください。"
+  },
+  "errorNoSettings": {
+    "message": "まずアドオン設定でYOURLSを設定してください。"
+  },
+  "errorKeywordExists": {
+    "message": "そのカスタムキーワードは既に使用されています。別のものを試してください。"
+  },
+  "toastUrlCreated": {
+    "message": "短いURLが作成されました。"
+  },
+  "toastUrlExists": {
+    "message": "URLは既に短縮されています。"
+  },
+  "toastUrlDeleted": {
+    "message": "短いURLが削除されました。"
+  },
+  "setupTitle": {
+    "message": "設定が必要です"
+  },
+  "setupMessage": {
+    "message": "設定でYOURLSインスタンスのURLとAPIトークンを設定してください。"
+  },
+  "setupBtnGoToOptions": {
+    "message": "設定を開く"
+  },
+  "advancedOptionsLabel": {
+    "message": "詳細オプション"
+  },
+  "titleLabel": {
+    "message": "カスタムタイトル (任意)"
+  },
+  "popupBtnCopyClose": {
+    "message": "コピーして閉じる"
+  },
+  "popupBtnQrCode": {
+    "message": "QRコード"
+  },
+  "popupBtnDownloadQr": {
+    "message": "QRコードをダウンロード"
+  },
+  "dashboardTitle": {
+    "message": "YOURLS ダッシュボード"
+  },
+  "dashboardLinks": {
+    "message": "合計リンク数"
+  },
+  "dashboardClicks": {
+    "message": "合計クリック数"
+  }
+}

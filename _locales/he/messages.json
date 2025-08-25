@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - מקצר כתובות YOURLS"
+  },
+  "extensionDescription": {
+    "message": "קצר קישורים עם מופע ה-YOURLS שלך ישירות מהדפדפן."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: קצר כתובת נבחרת"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: קצר את כתובת הדף הזה"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: קצר כתובת קישור"
+  },
+  "optionsTitle": {
+    "message": "הגדרות YOURLS"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "כתובת YOURLS (ללא לוכסן בסוף)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "אסימון חתימת API"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "העתק קישור קצר ללוח באופן אוטומטי"
+  },
+  "optionsBtnSave": {
+    "message": "שמור"
+  },
+  "optionsBtnTest": {
+    "message": "בדוק חיבור"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "הסר הרשאת מארח"
+  },
+  "optionsStatusLoaded": {
+    "message": "הגדרות שמורות נטענו. לחץ על 'בדוק חיבור'."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "אנא הזן את כתובת ה-YOURLS ואסימון ה-API שלך."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "הרשאת מארח לא ניתנה."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "לא ניתן לבקש הרשאת מארח: "
+  },
+  "optionsStatusConnOk": {
+    "message": "החיבור תקין (סה'כ קישורים: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "החיבור נכשל."
+  },
+  "optionsStatusSaved": {
+    "message": "ההגדרות נשמרו. מומלץ לבדוק את החיבור שוב."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "הזן כתובת להסרת ההרשאה שלה."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "לא ניתן להסיר הרשאה: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "הרשאת המארח הוסרה עבור מקור זה."
+  },
+  "popupTitle": {
+    "message": "kurl - מקצר כתובות YOURLS"
+  },
+  "popupLongUrlLabel": {
+    "message": "כתובת ארוכה"
+  },
+  "popupKeywordLabel": {
+    "message": "מילת מפתח מותאמת אישית (אופציונלי)"
+  },
+  "popupBtnShorten": {
+    "message": "קצר"
+  },
+  "popupShortUrlLabel": {
+    "message": "כתובת קצרה"
+  },
+  "popupBtnDelete": {
+    "message": "מחק"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "לאשר?"
+  },
+  "popupStatsLabel": {
+    "message": "סטטיסטיקות עבור (כתובת קצרה או מילת מפתח)"
+  },
+  "popupBtnStats": {
+    "message": "סטטיסטיקות"
+  },
+  "popupBtnToggleJson": {
+    "message": "החלף JSON"
+  },
+  "popupStatusReady": {
+    "message": "מוכן."
+  },
+  "popupStatusShortening": {
+    "message": "מקצר…"
+  },
+  "popupStatusCreated": {
+    "message": "כתובת קצרה נוצרה."
+  },
+  "popupStatusCopied": {
+    "message": "הועתק ללוח."
+  },
+  "popupStatusFetchingStats": {
+    "message": "מאחזר סטטיסטיקות…"
+  },
+  "popupStatusStatsResult": {
+    "message": "קצרה: $shorturl$\nיעד: $longurl$\nלחיצות: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "מוחק…"
+  },
+  "popupStatusDeleted": {
+    "message": "הכתובת הקצרה נמחקה."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "הכתובת כבר קוצרה. ניתן להציג סטטיסטיקות או למחוק אותה למטה."
+  },
+  "popupInfoAutoStats": {
+    "message": "זו כבר כתובת קצרה. מאחזר סטטיסטיקות באופן אוטומטי."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "אנא הזן כתובת http(s) חוקית."
+  },
+  "popupErrorCopyFailed": {
+    "message": "ההעתקה נכשלה."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "הזן כתובת קצרה או מילת מפתח לקבלת סטטיסטיקות."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "ספק כתובת קצרה או מילת מפתח למחיקה."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "הכתובת הקצרה לא נמצאה."
+  },
+  "errorShortenFailed": {
+    "message": "הקיצור נכשל."
+  },
+  "errorStatsFailed": {
+    "message": "אחזור הסטטיסטיקות נכשל."
+  },
+  "errorDeleteFailed": {
+    "message": "המחיקה נכשלה."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "אנא הזן כתובת קצרה או מילת מפתח למחיקה."
+  },
+  "errorNoSettings": {
+    "message": "אנא הגדר את YOURLS תחילה בהגדרות התוסף."
+  },
+  "errorKeywordExists": {
+    "message": "מילת המפתח המותאמת אישית הזו כבר תפוסה. אנא נסה אחרת."
+  },
+  "toastUrlCreated": {
+    "message": "כתובת קצרה נוצרה."
+  },
+  "toastUrlExists": {
+    "message": "הכתובת כבר קוצרה."
+  },
+  "toastUrlDeleted": {
+    "message": "הכתובת הקצרה נמחקה."
+  },
+  "setupTitle": {
+    "message": "נדרשת הגדרה"
+  },
+  "setupMessage": {
+    "message": "אנא הגדר את כתובת מופע ה-YOURLS ואסימון ה-API שלך בהגדרות."
+  },
+  "setupBtnGoToOptions": {
+    "message": "פתח הגדרות"
+  },
+  "advancedOptionsLabel": {
+    "message": "אפשרויות מתקדמות"
+  },
+  "titleLabel": {
+    "message": "כותרת מותאמת אישית (אופציונלי)"
+  },
+  "popupBtnCopyClose": {
+    "message": "העתק וסגור"
+  },
+  "popupBtnQrCode": {
+    "message": "קוד QR"
+  },
+  "popupBtnDownloadQr": {
+    "message": "הורד קוד QR"
+  },
+  "dashboardTitle": {
+    "message": "לוח מחוונים של YOURLS"
+  },
+  "dashboardLinks": {
+    "message": "סה'כ קישורים"
+  },
+  "dashboardClicks": {
+    "message": "סה'כ לחיצות"
+  }
+}

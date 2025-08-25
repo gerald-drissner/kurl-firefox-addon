@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - YOURLS-Shortener"
+  },
+  "extensionDescription": {
+    "message": "Verkürzen Sie Links mit Ihrer YOURLS-Instanz direkt aus Ihrem Browser."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: Ausgewählte URL kürzen"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: URL dieser Seite kürzen"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: Link-Adresse kürzen"
+  },
+  "optionsTitle": {
+    "message": "YOURLS-Einstellungen"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "YOURLS-URL (ohne abschließenden Schrägstrich)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "API-Signatur-Token"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "Kurzlink automatisch in die Zwischenablage kopieren"
+  },
+  "optionsBtnSave": {
+    "message": "Speichern"
+  },
+  "optionsBtnTest": {
+    "message": "Verbindung testen"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "Host-Berechtigung entfernen"
+  },
+  "optionsStatusLoaded": {
+    "message": "Gespeicherte Einstellungen geladen. Klicken Sie auf „Verbindung testen“."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "Bitte geben Sie Ihre YOURLS-URL und Ihr API-Token ein."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "Host-Berechtigung wurde nicht erteilt."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "Host-Berechtigung konnte nicht angefordert werden: "
+  },
+  "optionsStatusConnOk": {
+    "message": "Verbindung OK (Links insgesamt: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "Verbindung fehlgeschlagen."
+  },
+  "optionsStatusSaved": {
+    "message": "Einstellungen gespeichert. Sie sollten die Verbindung erneut testen."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "Geben Sie eine URL ein, um deren Berechtigung zu entfernen."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "Berechtigung konnte nicht entfernt werden: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "Host-Berechtigung für diesen Ursprung entfernt."
+  },
+  "popupTitle": {
+    "message": "kurl - YOURLS-Shortener"
+  },
+  "popupLongUrlLabel": {
+    "message": "Lange URL"
+  },
+  "popupKeywordLabel": {
+    "message": "Benutzerdefiniertes Schlüsselwort (optional)"
+  },
+  "popupBtnShorten": {
+    "message": "Kürzen"
+  },
+  "popupShortUrlLabel": {
+    "message": "Kurze URL"
+  },
+  "popupBtnDelete": {
+    "message": "Löschen"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "Bestätigen?"
+  },
+  "popupStatsLabel": {
+    "message": "Statistiken für (kurze URL oder Schlüsselwort)"
+  },
+  "popupBtnStats": {
+    "message": "Statistiken"
+  },
+  "popupBtnToggleJson": {
+    "message": "JSON umschalten"
+  },
+  "popupStatusReady": {
+    "message": "Bereit."
+  },
+  "popupStatusShortening": {
+    "message": "Wird gekürzt…"
+  },
+  "popupStatusCreated": {
+    "message": "Kurz-URL erstellt."
+  },
+  "popupStatusCopied": {
+    "message": "In die Zwischenablage kopiert."
+  },
+  "popupStatusFetchingStats": {
+    "message": "Statistiken werden abgerufen…"
+  },
+  "popupStatusStatsResult": {
+    "message": "Kurz: $shorturl$\nZiel: $longurl$\nKlicks: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "Wird gelöscht…"
+  },
+  "popupStatusDeleted": {
+    "message": "Kurz-URL gelöscht."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URL bereits gekürzt. Sie können Statistiken anzeigen oder sie unten löschen."
+  },
+  "popupInfoAutoStats": {
+    "message": "Dies ist bereits eine Kurz-URL. Statistiken werden automatisch abgerufen."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "Bitte geben Sie eine gültige http(s)-URL ein."
+  },
+  "popupErrorCopyFailed": {
+    "message": "Kopieren fehlgeschlagen."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "Geben Sie eine Kurz-URL oder ein Schlüsselwort ein, um Statistiken zu erhalten."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "Geben Sie eine Kurz-URL oder ein Schlüsselwort zum Löschen an."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "Kurz-URL nicht gefunden."
+  },
+  "errorShortenFailed": {
+    "message": "Kürzen fehlgeschlagen."
+  },
+  "errorStatsFailed": {
+    "message": "Abrufen der Statistiken fehlgeschlagen."
+  },
+  "errorDeleteFailed": {
+    "message": "Löschen fehlgeschlagen."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "Bitte geben Sie eine Kurz-URL oder ein Schlüsselwort zum Löschen ein."
+  },
+  "errorNoSettings": {
+    "message": "Bitte konfigurieren Sie zuerst YOURLS in den Add-on-Einstellungen."
+  },
+  "errorKeywordExists": {
+    "message": "Dieses benutzerdefinierte Schlüsselwort ist bereits vergeben. Bitte versuchen Sie ein anderes."
+  },
+  "toastUrlCreated": {
+    "message": "Kurz-URL erstellt."
+  },
+  "toastUrlExists": {
+    "message": "URL bereits gekürzt."
+  },
+  "toastUrlDeleted": {
+    "message": "Kurz-URL gelöscht."
+  },
+  "setupTitle": {
+    "message": "Einrichtung erforderlich"
+  },
+  "setupMessage": {
+    "message": "Bitte konfigurieren Sie Ihre YOURLS-Instanz-URL und Ihr API-Token in den Einstellungen."
+  },
+  "setupBtnGoToOptions": {
+    "message": "Einstellungen öffnen"
+  },
+  "advancedOptionsLabel": {
+    "message": "Erweiterte Optionen"
+  },
+  "titleLabel": {
+    "message": "Benutzerdefinierter Titel (optional)"
+  },
+  "popupBtnCopyClose": {
+    "message": "Kopieren & Schließen"
+  },
+  "popupBtnQrCode": {
+    "message": "QR-Code"
+  },
+  "popupBtnDownloadQr": {
+    "message": "QR-Code herunterladen"
+  },
+  "dashboardTitle": {
+    "message": "YOURLS Dashboard"
+  },
+  "dashboardLinks": {
+    "message": "Links insgesamt"
+  },
+  "dashboardClicks": {
+    "message": "Klicks insgesamt"
+  }
+}

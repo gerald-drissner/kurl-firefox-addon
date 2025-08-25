@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - Raccourcisseur YOURLS"
+  },
+  "extensionDescription": {
+    "message": "Raccourcissez les liens avec votre instance YOURLS directement depuis votre navigateur."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl : Raccourcir l'URL sélectionnée"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl : Raccourcir l'URL de cette page"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl : Raccourcir l'adresse du lien"
+  },
+  "optionsTitle": {
+    "message": "Paramètres YOURLS"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "URL YOURLS (sans barre oblique finale)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "Jeton de signature API"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "Copier automatiquement le lien court dans le presse-papiers"
+  },
+  "optionsBtnSave": {
+    "message": "Enregistrer"
+  },
+  "optionsBtnTest": {
+    "message": "Tester la connexion"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "Supprimer l'autorisation de l'hôte"
+  },
+  "optionsStatusLoaded": {
+    "message": "Paramètres enregistrés chargés. Cliquez sur « Tester la connexion »."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "Veuillez saisir votre URL YOURLS et votre jeton API."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "L'autorisation de l'hôte n'a pas été accordée."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "Impossible de demander l'autorisation de l'hôte : "
+  },
+  "optionsStatusConnOk": {
+    "message": "Connexion OK (Total des liens : $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "La connexion a échoué."
+  },
+  "optionsStatusSaved": {
+    "message": "Paramètres enregistrés. Vous voudrez peut-être tester à nouveau la connexion."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "Saisissez une URL pour supprimer son autorisation."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "Impossible de supprimer l'autorisation : "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "Autorisation de l'hôte supprimée pour cette origine."
+  },
+  "popupTitle": {
+    "message": "kurl - Raccourcisseur YOURLS"
+  },
+  "popupLongUrlLabel": {
+    "message": "URL longue"
+  },
+  "popupKeywordLabel": {
+    "message": "Mot-clé personnalisé (facultatif)"
+  },
+  "popupBtnShorten": {
+    "message": "Raccourcir"
+  },
+  "popupShortUrlLabel": {
+    "message": "URL courte"
+  },
+  "popupBtnDelete": {
+    "message": "Supprimer"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "Confirmer ?"
+  },
+  "popupStatsLabel": {
+    "message": "Statistiques pour (URL courte ou mot-clé)"
+  },
+  "popupBtnStats": {
+    "message": "Statistiques"
+  },
+  "popupBtnToggleJson": {
+    "message": "Basculer JSON"
+  },
+  "popupStatusReady": {
+    "message": "Prêt."
+  },
+  "popupStatusShortening": {
+    "message": "Raccourcissement en cours…"
+  },
+  "popupStatusCreated": {
+    "message": "URL courte créée."
+  },
+  "popupStatusCopied": {
+    "message": "Copié dans le presse-papiers."
+  },
+  "popupStatusFetchingStats": {
+    "message": "Récupération des statistiques…"
+  },
+  "popupStatusStatsResult": {
+    "message": "Court : $shorturl$\nCible : $longurl$\nClics : $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "Suppression en cours…"
+  },
+  "popupStatusDeleted": {
+    "message": "URL courte supprimée."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URL déjà raccourcie. Vous pouvez consulter les statistiques ou la supprimer ci-dessous."
+  },
+  "popupInfoAutoStats": {
+    "message": "Ceci est déjà une URL courte. Récupération automatique des statistiques."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "Veuillez saisir une URL http(s) valide."
+  },
+  "popupErrorCopyFailed": {
+    "message": "La copie a échoué."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "Saisissez une URL courte ou un mot-clé pour obtenir des statistiques."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "Fournissez une URL courte ou un mot-clé à supprimer."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "URL courte non trouvée."
+  },
+  "errorShortenFailed": {
+    "message": "Le raccourcissement a échoué."
+  },
+  "errorStatsFailed": {
+    "message": "Échec de la récupération des statistiques."
+  },
+  "errorDeleteFailed": {
+    "message": "La suppression a échoué."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "Veuillez saisir une URL courte ou un mot-clé à supprimer."
+  },
+  "errorNoSettings": {
+    "message": "Veuillez d'abord configurer YOURLS dans les paramètres du module complémentaire."
+  },
+  "errorKeywordExists": {
+    "message": "Ce mot-clé personnalisé est déjà pris. Veuillez en essayer un autre."
+  },
+  "toastUrlCreated": {
+    "message": "URL courte créée."
+  },
+  "toastUrlExists": {
+    "message": "URL déjà raccourcie."
+  },
+  "toastUrlDeleted": {
+    "message": "URL courte supprimée."
+  },
+  "setupTitle": {
+    "message": "Configuration requise"
+  },
+  "setupMessage": {
+    "message": "Veuillez configurer l'URL de votre instance YOURLS et votre jeton API dans les paramètres."
+  },
+  "setupBtnGoToOptions": {
+    "message": "Ouvrir les paramètres"
+  },
+  "advancedOptionsLabel": {
+    "message": "Options avancées"
+  },
+  "titleLabel": {
+    "message": "Titre personnalisé (facultatif)"
+  },
+  "popupBtnCopyClose": {
+    "message": "Copier & Fermer"
+  },
+  "popupBtnQrCode": {
+    "message": "Code QR"
+  },
+  "popupBtnDownloadQr": {
+    "message": "Télécharger le code QR"
+  },
+  "dashboardTitle": {
+    "message": "Tableau de bord YOURLS"
+  },
+  "dashboardLinks": {
+    "message": "Total des liens"
+  },
+  "dashboardClicks": {
+    "message": "Total des clics"
+  }
+}

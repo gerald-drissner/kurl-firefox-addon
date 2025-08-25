@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>kurl - YOURLS Shortener</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+  <div class="card">
+    <a href="#" id="open-settings-link" class="settings-link" title="Settings">⚙️</a>
+
+    <div id="setup-message" style="display: none;">
+      <h2 data-i18n-key="setupTitle">Setup Required</h2>
+      <p data-i18n-key="setupMessage">Please configure your YOURLS instance URL and API token in the settings.</p>
+      <div class="row">
+        <button id="btnGoToOptions" data-i18n-key="setupBtnGoToOptions">Open Settings</button>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <h1 data-i18n-key="popupTitle">kurl - YOURLS Shortener</h1>
+
+      <div id="dashboard" class="info" style="display:none; text-align: center;"></div>
+
+      <label data-i18n-key="popupLongUrlLabel">Long URL</label>
+      <input id="longUrl" type="url" placeholder="https://example.com/very/long/article/url/to/shorten">
+
+      <label data-i18n-key="popupKeywordLabel">Custom keyword (optional)</label>
+      <input id="keyword" type="text" placeholder="e.g. news-aug-22">
+
+      <details>
+        <summary data-i18n-key="advancedOptionsLabel">Advanced Options</summary>
+        <div class="advanced-options">
+          <label data-i18n-key="titleLabel">Custom Title (optional)</label>
+          <input id="title" type="text" placeholder="e.g. My Awesome Article">
+        </div>
+      </details>
+
+      <div class="row">
+        <button id="btnShorten" data-i18n-key="popupBtnShorten">Shorten</button>
+      </div>
+
+      <div id="result-area" style="display:none;">
+        <label data-i18n-key="popupShortUrlLabel">Short URL</label>
+        <input id="shortUrl" type="text" readonly>
+      <div class="row">
+        <button id="btnCopyClose" class="secondary" data-i18n-key="popupBtnCopyClose">Copy & Close</button>
+        <button id="btnQrCode" class="secondary" data-i18n-key="popupBtnQrCode">QR Code</button>
+        <button id="btnDownloadQr" class="secondary" data-i18n-key="popupBtnDownloadQr" style="display:none;">Download QR code</button>
+        <button id="btnDelete" class="secondary danger" data-i18n-key="popupBtnDelete" disabled>Delete</button>
+      </div>
+      <div id="qrcode-display" class="qrcode-container" style="display:none;"></div>
+
+      <div class="stats-area">
+        <label data-i18n-key="popupStatsLabel">Stats for (short URL or keyword)</label>
+        <input id="statsInput" type="text" placeholder="e.g. https://short.example/abc or abc">
+        <div class="row">
+          <button id="btnStats" class="secondary" data-i18n-key="popupBtnStats">Stats</button>
+          <button id="btnDetails" class="secondary" data-i18n-key="popupBtnToggleJson">Toggle JSON</button>
+        </div>
+      </div>
+
+      <div id="msg" class="info" data-i18n-key="popupStatusReady">Ready.</div>
+      <pre id="json" style="display:none;"></pre>
+    </div>
+
+  </div>
+  <script src="JS/qrcode.min.js"></script>
+  <script src="JS/helpers.js"></script>
+  <script src="JS/popup.js"></script>
+</body>
+</html>

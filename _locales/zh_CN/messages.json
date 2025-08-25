@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - YOURLS 缩短器"
+  },
+  "extensionDescription": {
+    "message": "直接从您的浏览器使用您的 YOURLS 实例缩短链接。"
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: 缩短所选网址"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: 缩短此页面的网址"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: 缩短链接地址"
+  },
+  "optionsTitle": {
+    "message": "YOURLS 设置"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "YOURLS 网址 (末尾无斜杠)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "API 签名令牌"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "自动将短链接复制到剪贴板"
+  },
+  "optionsBtnSave": {
+    "message": "保存"
+  },
+  "optionsBtnTest": {
+    "message": "测试连接"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "移除主机权限"
+  },
+  "optionsStatusLoaded": {
+    "message": "已加载保存的设置。请点击“测试连接”。"
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "请输入您的 YOURLS 网址和 API 令牌。"
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "未授予主机权限。"
+  },
+  "optionsStatusPermRequestError": {
+    "message": "无法请求主机权限: "
+  },
+  "optionsStatusConnOk": {
+    "message": "连接正常 (总链接数: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "连接失败。"
+  },
+  "optionsStatusSaved": {
+    "message": "设置已保存。您可能需要再次测试连接。"
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "输入要移除其权限的网址。"
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "无法移除权限: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "此来源的主机权限已移除。"
+  },
+  "popupTitle": {
+    "message": "kurl - YOURLS 缩短器"
+  },
+  "popupLongUrlLabel": {
+    "message": "长网址"
+  },
+  "popupKeywordLabel": {
+    "message": "自定义关键字 (可选)"
+  },
+  "popupBtnShorten": {
+    "message": "缩短"
+  },
+  "popupShortUrlLabel": {
+    "message": "短网址"
+  },
+  "popupBtnDelete": {
+    "message": "删除"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "确认吗？"
+  },
+  "popupStatsLabel": {
+    "message": "统计信息 (短网址或关键字)"
+  },
+  "popupBtnStats": {
+    "message": "统计"
+  },
+  "popupBtnToggleJson": {
+    "message": "切换 JSON"
+  },
+  "popupStatusReady": {
+    "message": "准备就绪。"
+  },
+  "popupStatusShortening": {
+    "message": "正在缩短…"
+  },
+  "popupStatusCreated": {
+    "message": "短网址已创建。"
+  },
+  "popupStatusCopied": {
+    "message": "已复制到剪贴板。"
+  },
+  "popupStatusFetchingStats": {
+    "message": "正在获取统计信息…"
+  },
+  "popupStatusStatsResult": {
+    "message": "短链: $shorturl$\n目标: $longurl$\n点击: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "正在删除…"
+  },
+  "popupStatusDeleted": {
+    "message": "短网址已删除。"
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "网址已被缩短。您可以在下方查看统计信息或将其删除。"
+  },
+  "popupInfoAutoStats": {
+    "message": "这已是短网址。正在自动获取统计信息。"
+  },
+  "popupErrorInvalidUrl": {
+    "message": "请输入有效的 http(s) 网址。"
+  },
+  "popupErrorCopyFailed": {
+    "message": "复制失败。"
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "输入短网址或关键字以获取统计信息。"
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "提供要删除的短网址或关键字。"
+  },
+  "popupErrorStatsNotFound": {
+    "message": "未找到短网址。"
+  },
+  "errorShortenFailed": {
+    "message": "缩短失败。"
+  },
+  "errorStatsFailed": {
+    "message": "获取统计信息失败。"
+  },
+  "errorDeleteFailed": {
+    "message": "删除失败。"
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "请输入要删除的短网址或关键字。"
+  },
+  "errorNoSettings": {
+    "message": "请先在附加组件设置中配置 YOURLS。"
+  },
+  "errorKeywordExists": {
+    "message": "该自定义关键字已被占用。请尝试其他关键字。"
+  },
+  "toastUrlCreated": {
+    "message": "短网址已创建。"
+  },
+  "toastUrlExists": {
+    "message": "网址已被缩短。"
+  },
+  "toastUrlDeleted": {
+    "message": "短网址已删除。"
+  },
+  "setupTitle": {
+    "message": "需要设置"
+  },
+  "setupMessage": {
+    "message": "请在设置中配置您的 YOURLS 实例网址和 API 令牌。"
+  },
+  "setupBtnGoToOptions": {
+    "message": "打开设置"
+  },
+  "advancedOptionsLabel": {
+    "message": "高级选项"
+  },
+  "titleLabel": {
+    "message": "自定义标题 (可选)"
+  },
+  "popupBtnCopyClose": {
+    "message": "复制并关闭"
+  },
+  "popupBtnQrCode": {
+    "message": "二维码"
+  },
+  "popupBtnDownloadQr": {
+    "message": "下载二维码"
+  },
+  "dashboardTitle": {
+    "message": "YOURLS 仪表板"
+  },
+  "dashboardLinks": {
+    "message": "总链接数"
+  },
+  "dashboardClicks": {
+    "message": "总点击数"
+  }
+}

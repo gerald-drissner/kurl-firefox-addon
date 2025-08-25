@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n-key="optionsTitle">kurl - Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options-body">
+<div class="card">
+    <h1 data-i18n-key="optionsTitle">YOURLS Settings</h1>
+
+    <label data-i18n-key="optionsYourlsUrlLabel">YOURLS URL (no trailing slash)</label>
+    <input id="yourlsUrl" type="url" placeholder="https://kurlxy.at">
+
+    <label data-i18n-key="optionsApiSignatureLabel">API signature token</label>
+    <input id="apiSignature" type="password" placeholder="••••••••••">
+
+    <div class="toggle-container">
+      <span data-i18n-key="optionsAutoCopyLabel">Copy short link to clipboard automatically</span>
+      <label class="switch">
+        <input id="autoCopy" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="row">
+      <button id="save" data-i18n-key="optionsBtnSave">Save</button>
+      <button id="test" class="secondary" data-i18n-key="optionsBtnTest">Test Connection</button>
+      <button id="removePerm" class="secondary danger" data-i18n-key="optionsBtnRemovePerm">Remove Host Permission</button>
+    </div>
+
+    <div id="status" class="info" data-i18n-key="optionsStatusLoaded">Saved settings loaded. Click “Test Connection”.</div>
+</div>
+
+  <script src="JS/helpers.js"></script>
+  <script src="JS/options.js"></script>
+</body>
+</html>

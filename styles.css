@@ -1,0 +1,297 @@
+/* ==========================================================================
+ * kurl - YOURLS SHORTENER Firefox Add-on — styles.css
+ * ========================================================================== */
+
+/* --- COLOR PALETTE (Dark by default) --- */
+:root {
+  --bg: #111827;
+  --panel: #1f2937;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --accent: #166534;
+  --ok: #065f46;
+  --bad: #b91c1c;
+  --bad-confirm: #991b1b;
+  --border: #374151;
+  --field: #111827;
+  --shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f9fafb;
+    --panel: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #15803d;
+    --ok: #047857;
+    --bad: #b91c1c;
+    --bad-confirm: #991b1b;
+    --border: #d1d5db;
+    --field: #f9fafb;
+    --shadow: 0 6px 18px rgba(15,23,42,.08);
+  }
+}
+
+/* --- GLOBAL RESETS & TYPOGRAPHY --- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 16px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light dark;
+}
+body.popup-body { width: 430px; }
+body.options-body { min-width: 450px; }
+
+/* --- LAYOUT --- */
+.card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* --- TYPOGRAPHY --- */
+h1 { margin: 0 0 10px 0; font-size: 20px; }
+h2 { margin: 0 0 8px 0; font-size: 16px; color: var(--text); }
+p { margin: 0 0 8px 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
+p:last-child { margin-bottom: 0; }
+
+/* --- FORMS --- */
+label {
+  display: block;
+  font-size: 13px;
+  margin: 12px 0 4px;
+  color: var(--muted);
+  font-weight: 500;
+}
+label:first-of-type {
+  margin-top: 0;
+}
+
+label.row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+label.row span {
+  margin-left: 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+input[type="text"], input[type="url"], input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--field);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+input::placeholder { color: var(--muted); opacity: 1; }
+input:disabled { opacity: 0.5; cursor: not-allowed; }
+input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); }
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+/* --- BUTTONS --- */
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+button:hover { opacity: 0.9; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+button.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+button.danger { background: var(--bad); }
+button.danger.confirm-delete { background: var(--bad-confirm); }
+
+/* --- SPECIFIC COMPONENTS --- */
+
+.settings-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+.settings-link:hover {
+  opacity: 1;
+}
+
+.stats-area {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+details {
+  margin: 12px 0;
+}
+details summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+details .advanced-options {
+  padding: 8px;
+  margin-top: 4px;
+  border-left: 2px solid var(--border);
+}
+
+.qrcode-container {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fff; /* QR Codes need a white background */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qrcode-container canvas {
+  border-radius: 4px;
+}
+
+/* --- STATUS & INFO BOXES --- */
+.info {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  border: 1px dashed var(--border);
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.info.ok { background: color-mix(in srgb, var(--ok) 15%, transparent); }
+.info#dashboard {
+  padding: 12px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.shortcut-info {
+  margin-top: 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  background: var(--field);
+}
+
+/* --- MONOSPACE & PRE --- */
+.copyTag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  word-break: break-all;
+  background-color: var(--field);
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--field);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  max-height: 200px;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+/* --- TOGGLE SWITCH --- */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

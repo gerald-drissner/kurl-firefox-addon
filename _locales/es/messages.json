@@ -1,0 +1,219 @@
+{
+  "extensionName": {
+    "message": "kurl - Acortador de YOURLS"
+  },
+  "extensionDescription": {
+    "message": "Acorta enlaces con tu instancia de YOURLS directamente desde tu navegador."
+  },
+  "menuItemShortenSelection": {
+    "message": "kurl: Acortar URL seleccionada"
+  },
+  "menuItemShortenPage": {
+    "message": "kurl: Acortar URL de esta página"
+  },
+  "menuItemShortenLink": {
+    "message": "kurl: Acortar dirección del enlace"
+  },
+  "optionsTitle": {
+    "message": "Configuración de YOURLS"
+  },
+  "optionsYourlsUrlLabel": {
+    "message": "URL de YOURLS (sin barra diagonal final)"
+  },
+  "optionsApiSignatureLabel": {
+    "message": "Token de firma de la API"
+  },
+  "optionsAutoCopyLabel": {
+    "message": "Copiar enlace corto al portapapeles automáticamente"
+  },
+  "optionsBtnSave": {
+    "message": "Guardar"
+  },
+  "optionsBtnTest": {
+    "message": "Probar conexión"
+  },
+  "optionsBtnRemovePerm": {
+    "message": "Eliminar permiso del host"
+  },
+  "optionsStatusLoaded": {
+    "message": "Configuración guardada cargada. Haz clic en «Probar conexión»."
+  },
+  "optionsStatusEnterUrlAndToken": {
+    "message": "Por favor, introduce tu URL de YOURLS y tu token de API."
+  },
+  "optionsStatusPermNotGranted": {
+    "message": "No se concedió el permiso del host."
+  },
+  "optionsStatusPermRequestError": {
+    "message": "No se pudo solicitar el permiso del host: "
+  },
+  "optionsStatusConnOk": {
+    "message": "Conexión OK (Total de enlaces: $total$)",
+    "placeholders": {
+      "total": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsStatusConnFailed": {
+    "message": "Falló la conexión."
+  },
+  "optionsStatusSaved": {
+    "message": "Configuración guardada. Es posible que desees probar la conexión de nuevo."
+  },
+  "optionsStatusEnterUrlToRemove": {
+    "message": "Introduce una URL para eliminar su permiso."
+  },
+  "optionsStatusPermRemoveError": {
+    "message": "No se pudo eliminar el permiso: "
+  },
+  "optionsStatusPermRemoved": {
+    "message": "Permiso del host eliminado para este origen."
+  },
+  "popupTitle": {
+    "message": "kurl - Acortador de YOURLS"
+  },
+  "popupLongUrlLabel": {
+    "message": "URL larga"
+  },
+  "popupKeywordLabel": {
+    "message": "Palabra clave personalizada (opcional)"
+  },
+  "popupBtnShorten": {
+    "message": "Acortar"
+  },
+  "popupShortUrlLabel": {
+    "message": "URL corta"
+  },
+  "popupBtnDelete": {
+    "message": "Eliminar"
+  },
+  "popupBtnConfirmDelete": {
+    "message": "¿Confirmar?"
+  },
+  "popupStatsLabel": {
+    "message": "Estadísticas para (URL corta o palabra clave)"
+  },
+  "popupBtnStats": {
+    "message": "Estadísticas"
+  },
+  "popupBtnToggleJson": {
+    "message": "Alternar JSON"
+  },
+  "popupStatusReady": {
+    "message": "Listo."
+  },
+  "popupStatusShortening": {
+    "message": "Acortando…"
+  },
+  "popupStatusCreated": {
+    "message": "URL corta creada."
+  },
+  "popupStatusCopied": {
+    "message": "Copiado al portapapeles."
+  },
+  "popupStatusFetchingStats": {
+    "message": "Obteniendo estadísticas…"
+  },
+  "popupStatusStatsResult": {
+    "message": "Corta: $shorturl$\nDestino: $longurl$\nClics: $clicks$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      },
+      "longurl": {
+        "content": "$2"
+      },
+      "clicks": {
+        "content": "$3"
+      }
+    }
+  },
+  "popupStatusDeleting": {
+    "message": "Eliminando…"
+  },
+  "popupStatusDeleted": {
+    "message": "URL corta eliminada."
+  },
+  "popupInfoAlreadyShortened": {
+    "message": "URL ya acortada. Puedes ver las estadísticas o eliminarla a continuación."
+  },
+  "popupInfoAutoStats": {
+    "message": "Esta ya es una URL corta. Obteniendo estadísticas automáticamente."
+  },
+  "popupErrorInvalidUrl": {
+    "message": "Por favor, introduce una URL http(s) válida."
+  },
+  "popupErrorCopyFailed": {
+    "message": "Falló la copia."
+  },
+  "popupErrorEnterUrlForStats": {
+    "message": "Introduce una URL corta o palabra clave para obtener estadísticas."
+  },
+  "popupErrorProvideUrlToDelete": {
+    "message": "Proporciona una URL corta o palabra clave para eliminar."
+  },
+  "popupErrorStatsNotFound": {
+    "message": "URL corta no encontrada."
+  },
+  "errorShortenFailed": {
+    "message": "Falló el acortamiento."
+  },
+  "errorStatsFailed": {
+    "message": "Falló la obtención de estadísticas."
+  },
+  "errorDeleteFailed": {
+    "message": "Falló la eliminación."
+  },
+  "errorEnterKeywordToDelete": {
+    "message": "Por favor, introduce una URL corta o palabra clave para eliminar."
+  },
+  "errorNoSettings": {
+    "message": "Por favor, configura primero YOURLS en la configuración del complemento."
+  },
+  "errorKeywordExists": {
+    "message": "Esa palabra clave personalizada ya está en uso. Por favor, prueba con otra."
+  },
+  "toastUrlCreated": {
+    "message": "URL corta creada."
+  },
+  "toastUrlExists": {
+    "message": "URL ya acortada."
+  },
+  "toastUrlDeleted": {
+    "message": "URL corta eliminada."
+  },
+  "setupTitle": {
+    "message": "Configuración requerida"
+  },
+  "setupMessage": {
+    "message": "Por favor, configura la URL de tu instancia de YOURLS y tu token de API en la configuración."
+  },
+  "setupBtnGoToOptions": {
+    "message": "Abrir configuración"
+  },
+  "advancedOptionsLabel": {
+    "message": "Opciones avanzadas"
+  },
+  "titleLabel": {
+    "message": "Título personalizado (opcional)"
+  },
+  "popupBtnCopyClose": {
+    "message": "Copiar y cerrar"
+  },
+  "popupBtnQrCode": {
+    "message": "Código QR"
+  },
+  "popupBtnDownloadQr": {
+    "message": "Descargar código QR"
+  },
+  "dashboardTitle": {
+    "message": "Panel de YOURLS"
+  },
+  "dashboardLinks": {
+    "message": "Total de enlaces"
+  },
+  "dashboardClicks": {
+    "message": "Total de clics"
+  }
+}
