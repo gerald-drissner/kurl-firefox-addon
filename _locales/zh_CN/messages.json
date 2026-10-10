@@ -489,5 +489,8 @@
   },
   "helperSource": {
     "message": "在 GitHub 上查看 Helper 源码"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "连接测试期间设置已更改。未保存任何内容。请重新测试连接。"
   }
 }
