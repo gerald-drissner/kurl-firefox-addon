@@ -489,5 +489,8 @@
   },
   "helperSource": {
     "message": "Посмотреть исходный код Helper на GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "Настройки изменились во время проверки. Ничего не сохранено. Проверьте подключение ещё раз."
   }
 }
