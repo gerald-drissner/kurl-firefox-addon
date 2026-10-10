@@ -34,7 +34,7 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
     tabs:{query:async()=>[{id:2,url:'https://www.example.com/post'}],get:async()=>({id:2,url:'https://www.example.com/post'})},
     notifications:{create:async()=>{}},action:{setBadgeText:async()=>{},setBadgeBackgroundColor:async()=>{}}
   };
-  const context={browser:api,URL,URLSearchParams,AbortController,TextEncoder,TextDecoder,Uint8Array,ArrayBuffer,
+  const context={browser:api,URL,URLSearchParams,AbortController,TextEncoder,TextDecoder,Uint8Array,ArrayBuffer,atob,
     navigator:{clipboard:{writeText:async()=>{}}},crypto:crypto.webcrypto,console,setTimeout,clearTimeout,Promise,
     fetch:async(url,opts)=>{
       const params=new URLSearchParams(opts.body); calls.push({url,params,opts});
@@ -63,6 +63,14 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
   assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.de/url?url=https%3A%2F%2Fexample.org%2Fpost")',context),'https://example.org/post');
   assert.equal(vm.runInContext('unwrapRedirectUrl("https://duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fddg")',context),'https://example.org/ddg');
   assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.de/url?url=javascript%3Aalert(1)")',context),'https://www.google.de/url?url=javascript%3Aalert(1)');
+  const bingTarget = "https://example.org/über?x=1";
+  const bingEncoded = Buffer.from(bingTarget, "utf8").toString("base64url");
+  assert.equal(vm.runInContext('unwrapRedirectUrl(' + JSON.stringify('https://www.bing.com/ck/a?u=a1'+bingEncoded) + ')',context),bingTarget);
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.youtube.com/redirect?q=https%3A%2F%2Fexample.org%2Fyt")',context),'https://example.org/yt');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.evil.example/url?url=https%3A%2F%2Fexample.org%2Fphish")',context),
+    'https://www.google.evil.example/url?url=https%3A%2F%2Fexample.org%2Fphish');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.bing.com/ck/a?u=a1amF2YXNjcmlwdDphbGVydCgxKQ")',context),
+    'https://www.bing.com/ck/a?u=a1amF2YXNjcmlwdDphbGVydCgxKQ');
   (async()=>{
     const verified=await send('CHECK_CONNECTION');assert.equal(verified.total,3);
     const made=await send('SHORTEN_URL',{longUrl:'https://example.org/long'});
