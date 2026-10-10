@@ -24,6 +24,8 @@ jobs:
         run: node tests/verify.cjs
       - name: API regression tests
         run: node tests/api-smoke.cjs
+      - name: Stale connection settings protection
+        run: node tests/options-race.cjs
       - name: Helper PHP syntax
         if: runner.os == 'Linux'
         run: php -l helper/kurl-helper/plugin.php
