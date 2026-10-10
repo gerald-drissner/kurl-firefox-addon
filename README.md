@@ -21,3 +21,5 @@ Thunderbird's message-reading, compose-editor insertion, QR attachment, `compose
 
 ## Local development
 Run `node --check JS/*.js` file by file and check the manifest and i18n files. For Chrome, load the folder through `chrome://extensions` → Developer mode → Load unpacked. For Firefox, test as a temporary add-on through `about:debugging` → This Firefox → Load Temporary Add-on → select `manifest.json`.
+
+Audit follow-up: safe Bing base64url link unwrapping, Google-host spoofing rejection and protection against overwriting settings edited during a connection test.
