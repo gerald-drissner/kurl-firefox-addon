@@ -564,5 +564,8 @@
   },
   "helperSource": {
     "message": "عرض شيفرة المساعد على GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "تغيّرت الإعدادات أثناء الاختبار. لم يُحفظ شيء. أعد اختبار الاتصال."
   }
 }
