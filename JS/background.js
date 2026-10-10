@@ -478,6 +478,23 @@ async function copyShortUrl(short) {
   const copied=await browser.runtime.sendMessage({type:"KURL_OFFSCREEN_COPY",text:short});
   if(!copied?.ok)throw new Error(copied?.reason||"Clipboard access denied");
 }
+// Preserve the browser add-ons' link-cleaning feature for recognized redirect URLs.
+// Only unwrap explicit HTTP(S) destinations; never fetch or follow redirects.
+function unwrapRedirectUrl(raw) {
+  const original = H.validHttpUrl(raw);
+  if (!original) return "";
+  try {
+    const u = new URL(original), host = u.hostname.toLowerCase(), path = u.pathname;
+    let target = "";
+    if (host.startsWith("www.google.") && path === "/url") target = u.searchParams.get("url") || "";
+    else if (host === "www.bing.com" && path.startsWith("/ck/a")) {
+      target = u.searchParams.get("u") || "";
+      if (target.startsWith("a1")) target = target.slice(2);
+    } else if (host === "duckduckgo.com" && path.startsWith("/l/")) target = u.searchParams.get("uddg") || "";
+    else if (host === "www.youtube.com" && path === "/redirect") target = u.searchParams.get("q") || "";
+    return H.validHttpUrl(target) || original;
+  } catch { return original; }
+}
 browser.menus.onClicked.addListener(async (info,tab)=>{
   if(info.menuItemId!==MENU_COPY && info.menuItemId!==MENU_PAGE)return;
   const raw=info.menuItemId===MENU_PAGE ? (info.pageUrl||tab?.url) :
@@ -485,7 +502,7 @@ browser.menus.onClicked.addListener(async (info,tab)=>{
   const url=validPageUrl(raw);
   if(!url)return feedback(tab,i18n("contextSelectUrl","Select a complete HTTP(S) URL."),true);
   try {
-    const result=await shorten(url);
+    const result=await shorten(info.menuItemId===MENU_COPY ? unwrapRedirectUrl(url) : url);
     await copyShortUrl(result.shortUrl);
     await writeLog("RIGHT_CLICK_COPY");
     await feedback(tab,i18nArg("contextCopied",result.shortUrl,"Copied to clipboard: $1"));

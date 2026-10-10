@@ -60,6 +60,9 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
       setTimeout(()=>reject(new Error('response timeout for '+type)),2000);
     });
   }
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.de/url?url=https%3A%2F%2Fexample.org%2Fpost")',context),'https://example.org/post');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fddg")',context),'https://example.org/ddg');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.de/url?url=javascript%3Aalert(1)")',context),'https://www.google.de/url?url=javascript%3Aalert(1)');
   (async()=>{
     const verified=await send('CHECK_CONNECTION');assert.equal(verified.total,3);
     const made=await send('SHORTEN_URL',{longUrl:'https://example.org/long'});
