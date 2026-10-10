@@ -489,5 +489,8 @@
   },
   "helperSource": {
     "message": "הצגת קוד ה־Helper ב־GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "ההגדרות השתנו במהלך הבדיקה. דבר לא נשמר. יש לבדוק שוב את החיבור."
   }
 }
