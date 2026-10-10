@@ -485,5 +485,8 @@
   },
   "helperSource": {
     "message": "GitHub で Helper のソースを見る"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "接続テスト中に設定が変更されました。保存されていません。もう一度接続をテストしてください。"
   }
 }
