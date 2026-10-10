@@ -485,5 +485,8 @@
   },
   "helperSource": {
     "message": "Ver el código del Helper en GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "La configuración cambió durante la prueba. No se guardó nada. Vuelve a comprobar la conexión."
   }
 }
