@@ -88,6 +88,13 @@ async function test() {
       error.code = result?.errorCode || "";
       throw error;
     }
+    // A response to an outdated settings form must not be stored.
+    if (checkGeneration !== connectionGeneration ||
+        H.sanitizeBaseUrl($("yourlsUrl").value) !== config.yourlsUrl ||
+        $("apiSignature").value.trim() !== config.apiSignature) {
+      status(t("optionsStatusChangedDuringTest", "Settings changed during the test. Nothing was saved; run the connection test again."));
+      return;
+    }
     // Commit only AFTER the API actually accepted the credentials.
     const finalSettings = { ...config, autoCopy: $("autoCopy").checked,
       showCopyNotifications: $("showCopyNotifications").checked };
