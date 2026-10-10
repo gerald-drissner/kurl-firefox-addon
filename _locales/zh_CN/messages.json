@@ -1,54 +1,54 @@
 {
   "extensionName": {
-    "message": "kurl - YOURLS 缩短器"
+    "message": "kurl - YOURLS Shortener",
+    "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "直接从您的浏览器使用您的 YOURLS 实例缩短链接。"
-  },
-  "menuItemShortenSelection": {
-    "message": "kurl: 缩短所选网址"
-  },
-  "menuItemShortenPage": {
-    "message": "kurl: 缩短此页面的网址"
-  },
-  "menuItemShortenLink": {
-    "message": "kurl: 缩短链接地址"
+    "message": "直接在浏览器中通过自己的 YOURLS 服务器缩短、查找和管理链接。"
   },
   "optionsTitle": {
-    "message": "YOURLS 设置"
+    "message": "YOURLS 设置",
+    "description": "Title for the options page."
   },
   "optionsYourlsUrlLabel": {
-    "message": "YOURLS 网址 (末尾无斜杠)"
+    "message": "YOURLS URL (无尾部斜杠)",
+    "description": "Label for the YOURLS URL input."
   },
   "optionsApiSignatureLabel": {
-    "message": "API 签名令牌"
+    "message": "API 签名令牌",
+    "description": "Label for the API signature token input."
   },
   "optionsAutoCopyLabel": {
-    "message": "自动将短链接复制到剪贴板"
+    "message": "自动将短链接复制到剪贴板",
+    "description": "Label for the auto-copy checkbox."
   },
   "optionsBtnSave": {
-    "message": "保存"
+    "message": "保存",
+    "description": "Save button text."
   },
   "optionsBtnTest": {
-    "message": "测试连接"
+    "message": "测试连接",
+    "description": "Test connection button text."
   },
   "optionsBtnRemovePerm": {
-    "message": "移除主机权限"
+    "message": "移除主机权限",
+    "description": "Remove host permission button text."
   },
   "optionsStatusLoaded": {
-    "message": "已加载保存的设置。请点击“测试连接”。"
+    "message": "已加载保存的设置。",
+    "description": "Initial status message on options page."
   },
   "optionsStatusEnterUrlAndToken": {
-    "message": "请输入您的 YOURLS 网址和 API 令牌。"
+    "message": "请输入您的 YOURLS URL 和 API 令牌。",
+    "description": "Error message when URL or token is missing."
   },
   "optionsStatusPermNotGranted": {
-    "message": "未授予主机权限。"
-  },
-  "optionsStatusPermRequestError": {
-    "message": "无法请求主机权限: "
+    "message": "主机权限未被授予。",
+    "description": "Error message when host permission is denied."
   },
   "optionsStatusConnOk": {
     "message": "连接正常 (总链接数: $total$)",
+    "description": "Success message for connection test.",
     "placeholders": {
       "total": {
         "content": "$1"
@@ -56,67 +56,132 @@
     }
   },
   "optionsStatusConnFailed": {
-    "message": "连接失败。"
+    "message": "连接失败。",
+    "description": "Error message for failed connection test."
   },
   "optionsStatusSaved": {
-    "message": "设置已保存。您可能需要再次测试连接。"
+    "message": "设置已保存。您可能想再次测试连接。",
+    "description": "Status message after saving settings."
   },
   "optionsStatusEnterUrlToRemove": {
-    "message": "输入要移除其权限的网址。"
+    "message": "输入一个 URL 以移除其权限。",
+    "description": "Message when trying to remove permission without a URL."
   },
   "optionsStatusPermRemoveError": {
-    "message": "无法移除权限: "
+    "message": "无法移除权限：",
+    "description": "Error message when removing host permission fails."
   },
   "optionsStatusPermRemoved": {
-    "message": "此来源的主机权限已移除。"
+    "message": "已移除此来源的主机权限。",
+    "description": "Success message when permission is removed."
+  },
+  "optionsShortcutTitle": {
+    "message": "使用快捷方式",
+    "description": "Title for the shortcut information box in options."
+  },
+  "optionsShortcutChange": {
+    "message": "您可以在 Thunderbird 的附加组件管理器中，在 kurl 的 ⚙️ 菜单下更改此快捷方式。",
+    "description": "Instructions on how to change the default keyboard shortcut."
   },
   "popupTitle": {
-    "message": "kurl - YOURLS 缩短器"
+    "message": "YOURLS 缩短器",
+    "description": "Title for the popup window."
   },
   "popupLongUrlLabel": {
-    "message": "长网址"
+    "message": "长 URL",
+    "description": "Label for the long URL input."
+  },
+  "popupAdvancedOptions": {
+    "message": "高级选项",
+    "description": "Label for the collapsible advanced options section in the popup."
   },
   "popupKeywordLabel": {
-    "message": "自定义关键字 (可选)"
+    "message": "自定义关键词 (可选)",
+    "description": "Label for the custom keyword input."
+  },
+  "popupTitleLabel": {
+    "message": "标题 (可选)",
+    "description": "Label for the URL title input."
   },
   "popupBtnShorten": {
-    "message": "缩短"
+    "message": "缩短",
+    "description": "Shorten button text."
   },
   "popupShortUrlLabel": {
-    "message": "短网址"
+    "message": "短 URL",
+    "description": "Label for the short URL output."
+  },
+  "popupBtnCopy": {
+    "message": "复制",
+    "description": "Copy button text."
+  },
+  "popupBtnCopyClose": {
+    "message": "复制并关闭",
+    "description": "Copy and Close button text."
+  },
+  "popupBtnInsert": {
+    "message": "插入",
+    "description": "Insert button text."
   },
   "popupBtnDelete": {
-    "message": "删除"
+    "message": "删除",
+    "description": "Delete button text."
   },
-  "popupBtnConfirmDelete": {
-    "message": "确认吗？"
+  "popupBtnGoToSettings": {
+    "message": "前往设置",
+    "description": "Button text in the popup to open the options page."
+  },
+  "popupBtnShowQr": {
+    "message": "显示二维码",
+    "description": "Button to show the QR code."
+  },
+  "popupBtnDownloadQr": {
+    "message": "下载",
+    "description": "Button to download the QR code image."
+  },
+  "popupBtnAttachQr": {
+    "message": "附加二维码",
+    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
-    "message": "统计信息 (短网址或关键字)"
+    "message": "统计 (短 URL 或关键词)",
+    "description": "Label for the stats input."
   },
   "popupBtnStats": {
-    "message": "统计"
+    "message": "统计",
+    "description": "Get stats button text."
   },
   "popupBtnToggleJson": {
-    "message": "切换 JSON"
+    "message": "切换 JSON",
+    "description": "Toggle JSON view button text."
   },
   "popupStatusReady": {
-    "message": "准备就绪。"
+    "message": "准备就绪。",
+    "description": "Initial status message in popup."
   },
   "popupStatusShortening": {
-    "message": "正在缩短…"
+    "message": "正在缩短…",
+    "description": "Status message while shortening."
   },
   "popupStatusCreated": {
-    "message": "短网址已创建。"
+    "message": "短 URL 已创建。",
+    "description": "Success message when URL is shortened."
   },
   "popupStatusCopied": {
-    "message": "已复制到剪贴板。"
+    "message": "已复制到剪贴板。",
+    "description": "Message when text is copied."
+  },
+  "popupStatusInserted": {
+    "message": "已将短 URL 插入到撰写中。",
+    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
-    "message": "正在获取统计信息…"
+    "message": "正在获取统计…",
+    "description": "Status message while fetching stats."
   },
   "popupStatusStatsResult": {
-    "message": "短链: $shorturl$\n目标: $longurl$\n点击: $clicks$",
+    "message": "短: $shorturl$\n目标: $longurl$\n点击: $clicks$",
+    "description": "Formatted stats result.",
     "placeholders": {
       "shorturl": {
         "content": "$1"
@@ -130,90 +195,299 @@
     }
   },
   "popupStatusDeleting": {
-    "message": "正在删除…"
+    "message": "正在删除…",
+    "description": "Status message while deleting."
   },
   "popupStatusDeleted": {
-    "message": "短网址已删除。"
+    "message": "短 URL 已删除。",
+    "description": "Success message when URL is deleted."
+  },
+  "popupStatusAttachingQr": {
+    "message": "正在附加二维码...",
+    "description": "Status message when attaching a QR code."
+  },
+  "popupStatusQrAttached": {
+    "message": "二维码已成功附加。",
+    "description": "Success message when QR code is attached."
   },
   "popupInfoAlreadyShortened": {
-    "message": "网址已被缩短。您可以在下方查看统计信息或将其删除。"
-  },
-  "popupInfoAutoStats": {
-    "message": "这已是短网址。正在自动获取统计信息。"
+    "message": "URL 已被缩短。您可以在下方查看统计或删除它。",
+    "description": "Informational message for an existing URL."
   },
   "popupErrorInvalidUrl": {
-    "message": "请输入有效的 http(s) 网址。"
+    "message": "请输入有效的 http(s) URL。",
+    "description": "Error for invalid URL format."
   },
-  "popupErrorCopyFailed": {
-    "message": "复制失败。"
+  "popupErrorNothingToCopy": {
+    "message": "无可复制。",
+    "description": "Error when copy button is clicked with no URL."
+  },
+  "popupErrorNothingToAttach": {
+    "message": "无可附加。",
+    "description": "Error when attach button is clicked with no URL."
+  },
+  "popupErrorNoCompose": {
+    "message": "找不到活动的撰写窗口。",
+    "description": "Error when trying to insert without a compose window."
   },
   "popupErrorEnterUrlForStats": {
-    "message": "输入短网址或关键字以获取统计信息。"
+    "message": "请输入一个短 URL 或关键词以获取统计。",
+    "description": "Error when stats button is clicked with no input."
   },
   "popupErrorProvideUrlToDelete": {
-    "message": "提供要删除的短网址或关键字。"
-  },
-  "popupErrorStatsNotFound": {
-    "message": "未找到短网址。"
-  },
-  "errorShortenFailed": {
-    "message": "缩短失败。"
-  },
-  "errorStatsFailed": {
-    "message": "获取统计信息失败。"
-  },
-  "errorDeleteFailed": {
-    "message": "删除失败。"
-  },
-  "errorEnterKeywordToDelete": {
-    "message": "请输入要删除的短网址或关键字。"
+    "message": "提供一个短 URL 或关键词以删除。",
+    "description": "Error when delete is clicked with no URL."
   },
   "errorNoSettings": {
-    "message": "请先在附加组件设置中配置 YOURLS。"
+    "message": "请先在附加组件设置中配置 YOURLS。",
+    "description": "Error when settings are not configured."
   },
-  "errorKeywordExists": {
-    "message": "该自定义关键字已被占用。请尝试其他关键字。"
+  "commandShortenDescription": {
+    "message": "打开 kurl 缩短器弹窗。",
+    "description": "Description for the keyboard shortcut."
   },
-  "toastUrlCreated": {
-    "message": "短网址已创建。"
-  },
-  "toastUrlExists": {
-    "message": "网址已被缩短。"
-  },
-  "toastUrlDeleted": {
-    "message": "短网址已删除。"
-  },
-  "setupTitle": {
-    "message": "需要设置"
-  },
-  "setupMessage": {
-    "message": "请在设置中配置您的 YOURLS 实例网址和 API 令牌。"
-  },
-  "setupBtnGoToOptions": {
-    "message": "打开设置"
-  },
-  "advancedOptionsLabel": {
-    "message": "高级选项"
-  },
-  "titleLabel": {
-    "message": "自定义标题 (可选)"
-  },
-  "popupBtnCopyClose": {
-    "message": "复制并关闭"
-  },
-  "popupBtnQrCode": {
-    "message": "二维码"
-  },
-  "popupBtnDownloadQr": {
-    "message": "下载二维码"
+  "commandOpenReaderDescription": {
+    "message": "在消息阅读器中打开 kurl",
+    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
-    "message": "YOURLS 仪表板"
+    "message": "仪表板",
+    "description": "The main title for the dashboard page and tab."
   },
-  "dashboardLinks": {
-    "message": "总链接数"
+  "dashboardBtnRefresh": {
+    "message": "刷新",
+    "description": "Text for the refresh button on the dashboard."
   },
-  "dashboardClicks": {
-    "message": "总点击数"
+  "dashboardLabelTotalLinks": {
+    "message": "总链接数",
+    "description": "Label for the total links stat card."
+  },
+  "dashboardLabelTotalClicks": {
+    "message": "总点击数",
+    "description": "Label for the total clicks stat card."
+  },
+  "dashboardLabelAvgClicks": {
+    "message": "平均点击数",
+    "description": "Label for the average clicks stat card."
+  },
+  "dashboardLabelServerStatus": {
+    "message": "服务器状态",
+    "description": "Label for the server status stat card."
+  },
+  "dashboardTitleRecentLinks": {
+    "message": "最近的链接",
+    "description": "The title for the recent links section."
+  },
+  "dashboardStatusOnline": {
+    "message": "在线",
+    "description": "Server status text for when the connection is OK."
+  },
+  "dashboardStatusError": {
+    "message": "错误",
+    "description": "Server status text for when an error occurs."
+  },
+  "dashboardStatusLoading": {
+    "message": "加载中...",
+    "description": "Generic loading text."
+  },
+  "dashboardNoLinksFound": {
+    "message": "未找到最近的链接。",
+    "description": "Message shown when the recent links list is empty."
+  },
+  "dashboardBtnViewMore": {
+    "message": "查看更多",
+    "description": "Text for the 'View More' button to load more links."
+  },
+  "apiAuthRejected": {
+    "message": "YOURLS 拒绝了 API 签名。服务器更新后签名令牌可能已改变。请在浏览器中登录 YOURLS 管理界面，打开“管理 → 工具”，将当前签名复制到 kURL 设置中，然后点击“测试连接并保存”。kURL 不需要用户名或密码。如果仍然失败，请检查计算机与服务器的时间以及 API 访问限制。"
+  },
+  "apiAccessDenied": {
+    "message": "服务器拒绝 API 访问（HTTP 401/403）。请在 YOURLS 的“管理 → 工具”检查签名并重新测试。如果签名正确，请检查服务器访问限制和系统时间。无需在 kURL 中登录。"
+  },
+  "apiInvalidResponse": {
+    "message": "YOURLS 未返回有效的 API 响应（HTTP $status$）。请检查服务器地址、HTTPS 以及可能跳转到登录页面的重定向。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "apiOpenTools": {
+    "message": "打开 YOURLS 的“管理 → 工具”以复制当前 API 签名"
+  },
+  "optionsBtnTestAndSave": {
+    "message": "测试连接并保存"
+  },
+  "contextSelectUrl": {
+    "message": "请选择完整的 HTTP(S) URL。"
+  },
+  "contextInserted": {
+    "message": "✓ 已插入短链接：$shorturl$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      }
+    }
+  },
+  "contextCopied": {
+    "message": "✓ 已复制到剪贴板：$shorturl$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      }
+    }
+  },
+  "contextShorteningFailed": {
+    "message": "短链接创建失败"
+  },
+  "dashboardLabelClicks": {
+    "message": "点击次数：$count$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "insertAmbiguousLink": {
+    "message": "多个链接使用此网址。请单击目标链接内部，然后重试。"
+  },
+  "insertClickedLinkMissing": {
+    "message": "在邮件正文中找不到所点击的链接。"
+  },
+  "insertPlainTextSelectUrl": {
+    "message": "在纯文本模式下，请先选中网址，再使用“kURL：缩短并插入”。"
+  },
+  "optionsOldTokenHint": {
+    "message": "此十字符令牌可能来自旧版 YOURLS。请从“管理 → 工具”复制当前 API 签名。"
+  },
+  "menuQuickCopy": {
+    "message": "kURL：缩短并复制"
+  },
+  "menuQuickInsert": {
+    "message": "kURL：缩短并插入"
+  },
+  "insertCannotSafely": {
+    "message": "无法安全地插入短链接。"
+  },
+  "lookupHeading": {
+    "message": "查找已有链接"
+  },
+  "lookupHelp": {
+    "message": "输入短链接、关键词或目标网址。可以查看短链接的目标地址和点击次数，也可以检查目标网址是否已有短链接。"
+  },
+  "lookupQueryLabel": {
+    "message": "短链接、关键词或目标网址"
+  },
+  "lookupQueryPlaceholder": {
+    "message": "$short$ 或 https://example.com/article",
+    "placeholders": {
+      "short": {
+        "content": "$1"
+      }
+    }
+  },
+  "lookupSearch": {
+    "message": "搜索 YOURLS"
+  },
+  "lookupResultHeading": {
+    "message": "找到链接"
+  },
+  "lookupClicks": {
+    "message": "点击次数"
+  },
+  "lookupCreateInstead": {
+    "message": "创建短链接"
+  },
+  "lookupInvalid": {
+    "message": "请输入有效的目标网址、此服务器上的短链接或关键词。"
+  },
+  "lookupNeedsHelper": {
+    "message": "按目标网址搜索需要可选的 YOURLS Helper 插件。按短链接搜索则不需要。"
+  },
+  "lookupSearching": {
+    "message": "正在搜索 YOURLS…"
+  },
+  "lookupFound": {
+    "message": "已在 YOURLS 服务器上找到链接。"
+  },
+  "lookupNotFound": {
+    "message": "未找到短链接"
+  },
+  "lookupNotFoundHelp": {
+    "message": "此目标网址没有找到已有短链接。你可以创建一个。"
+  },
+  "helperCompactOk": {
+    "message": "Helper 已安装"
+  },
+  "helperShowDetails": {
+    "message": "安装说明和源代码"
+  },
+  "dashFilter": {
+    "message": "筛选当前显示的最近链接"
+  },
+  "dashSearch": {
+    "message": "在已显示的链接中搜索"
+  },
+  "dashFilterHelp": {
+    "message": "仅筛选当前已显示的最近链接。点击“$button$”可包含更早的链接。",
+    "placeholders": {
+      "button": {
+        "content": "$1"
+      }
+    }
+  },
+  "dashFilterNoMatch": {
+    "message": "当前显示的最近链接中没有匹配项。"
+  },
+  "lookupOwnInvalid": {
+    "message": "此地址属于您的 YOURLS 服务器，但不是有效的短链接。请输入此服务器上的关键词或短链接。"
+  },
+  "dashboardSetupHeading": {
+    "message": "连接 YOURLS 服务器"
+  },
+  "dashboardSetupHelp": {
+    "message": "在设置中填写 YOURLS 地址和 API 签名，测试连接成功后保存配置。"
+  },
+  "dashboardSetupButton": {
+    "message": "打开 YOURLS 设置"
+  },
+  "dashboardSetupStatus": {
+    "message": "请先连接 YOURLS 服务器。"
+  },
+  "connectionNotConfigured": {
+    "message": "尚未配置连接"
+  },
+  "connectionNotChecked": {
+    "message": "尚未使用这些设置测试连接"
+  },
+  "connectionChecking": {
+    "message": "正在检查 YOURLS 连接…"
+  },
+  "connectionOnline": {
+    "message": "已连接 — YOURLS API 正常响应"
+  },
+  "connectionFailed": {
+    "message": "连接检查失败 — 请检查服务器和令牌"
+  },
+  "connectionPermissionMissing": {
+    "message": "缺少 YOURLS 服务器访问权限"
+  },
+  "confirmDelete": {
+    "message": "确定永久删除此短链接吗？网站和已发送电子邮件中的相关链接可能会失效。"
+  },
+  "menuQuickPage": {
+    "message": "kURL: Shorten current page and copy"
+  },
+  "popupCurrentPage": {
+    "message": "使用当前网页"
+  },
+  "optionsPrivacyNotice": {
+    "message": "kURL 只会通过 HTTPS 将你选择的链接及可选关键词、标题发送到你配置的 YOURLS 服务器。API 令牌和最近七天的活动记录保存在浏览器本地，不会发送给开发者。"
+  },
+  "helperSetupSummary": {
+    "message": "可选 Helper 运行在你的 YOURLS 服务器上，而不是浏览器扩展内。"
+  },
+  "helperSource": {
+    "message": "在 GitHub 上查看 Helper 源码"
   }
 }

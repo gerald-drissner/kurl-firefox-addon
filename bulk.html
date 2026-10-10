@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>kURL — Bulk Shortener</title><link rel="stylesheet" href="styles.css"></head>
+<body class="options-body"><main class="card">
+<nav class="nav-tabs" aria-label="kURL">
+<a href="dashboard.html" class="nav-tab" data-i18n-key="dashboardTitle">Dashboard</a>
+<a href="options.html" class="nav-tab" data-i18n-key="optionsTitle">Settings</a>
+<a href="bulk.html" class="nav-tab active" aria-current="page" data-i18n-key="dashBulk">Bulk</a>
+<a href="logs.html" class="nav-tab" data-i18n-key="dashLogs">Logs</a>
+</nav>
+<h1 data-i18n-key="bulkHeading">Bulk URL shortener</h1>
+<p data-i18n-key="bulkExplanation">Paste one full HTTP(S) URL per line. Existing YOURLS links will be reused; Up to 250 unique URLs per run.</p>
+<label for="bulk-input" data-i18n-key="bulkInput">URLs to shorten</label>
+<textarea id="bulk-input" rows="10" spellcheck="false" placeholder="https://example.com/first
+https://example.com/second"></textarea>
+<div class="row">
+<label for="bulk-size" data-i18n-key="bulkSize">Refresh progress every</label>
+<select id="bulk-size"><option value="5">5</option><option value="10" selected>10</option><option value="25">25</option></select>
+</div>
+<div class="row">
+<button id="bulk-preview" class="secondary" type="button" data-i18n-key="bulkPreview">Preview</button>
+<button id="bulk-start" type="button" data-i18n-key="bulkStart">Start</button>
+<button id="bulk-stop" class="secondary" type="button" disabled data-i18n-key="bulkStop">Stop after current request</button>
+<button id="bulk-copy" type="button" class="secondary" disabled data-i18n-key="bulkCopy">Copy results</button>
+</div>
+<progress id="bulk-progress" max="100" value="0" aria-label="Bulk progress"></progress>
+<p id="bulk-status" class="info" role="status" aria-live="polite">Ready.</p>
+<div id="bulk-results" class="kurl-link-list"></div>
+</main>
+<script src="JS/polyfill.js"></script>
+  <script src="JS/helpers.js"></script><script src="JS/bulk.js"></script>
+</body></html>

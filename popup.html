@@ -1,72 +1,15 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>kurl - YOURLS Shortener</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="popup-body">
-  <div class="card">
-    <a href="#" id="open-settings-link" class="settings-link" title="Settings">⚙️</a>
-
-    <div id="setup-message" style="display: none;">
-      <h2 data-i18n-key="setupTitle">Setup Required</h2>
-      <p data-i18n-key="setupMessage">Please configure your YOURLS instance URL and API token in the settings.</p>
-      <div class="row">
-        <button id="btnGoToOptions" data-i18n-key="setupBtnGoToOptions">Open Settings</button>
-      </div>
-    </div>
-
-    <div id="main-content">
-      <h1 data-i18n-key="popupTitle">kurl - YOURLS Shortener</h1>
-
-      <div id="dashboard" class="info" style="display:none; text-align: center;"></div>
-
-      <label data-i18n-key="popupLongUrlLabel">Long URL</label>
-      <input id="longUrl" type="url" placeholder="https://example.com/very/long/article/url/to/shorten">
-
-      <label data-i18n-key="popupKeywordLabel">Custom keyword (optional)</label>
-      <input id="keyword" type="text" placeholder="e.g. news-aug-22">
-
-      <details>
-        <summary data-i18n-key="advancedOptionsLabel">Advanced Options</summary>
-        <div class="advanced-options">
-          <label data-i18n-key="titleLabel">Custom Title (optional)</label>
-          <input id="title" type="text" placeholder="e.g. My Awesome Article">
-        </div>
-      </details>
-
-      <div class="row">
-        <button id="btnShorten" data-i18n-key="popupBtnShorten">Shorten</button>
-      </div>
-
-      <div id="result-area" style="display:none;">
-        <label data-i18n-key="popupShortUrlLabel">Short URL</label>
-        <input id="shortUrl" type="text" readonly>
-      <div class="row">
-        <button id="btnCopyClose" class="secondary" data-i18n-key="popupBtnCopyClose">Copy & Close</button>
-        <button id="btnQrCode" class="secondary" data-i18n-key="popupBtnQrCode">QR Code</button>
-        <button id="btnDownloadQr" class="secondary" data-i18n-key="popupBtnDownloadQr" style="display:none;">Download QR code</button>
-        <button id="btnDelete" class="secondary danger" data-i18n-key="popupBtnDelete" disabled>Delete</button>
-      </div>
-      <div id="qrcode-display" class="qrcode-container" style="display:none;"></div>
-
-      <div class="stats-area">
-        <label data-i18n-key="popupStatsLabel">Stats for (short URL or keyword)</label>
-        <input id="statsInput" type="text" placeholder="e.g. https://short.example/abc or abc">
-        <div class="row">
-          <button id="btnStats" class="secondary" data-i18n-key="popupBtnStats">Stats</button>
-          <button id="btnDetails" class="secondary" data-i18n-key="popupBtnToggleJson">Toggle JSON</button>
-        </div>
-      </div>
-
-      <div id="msg" class="info" data-i18n-key="popupStatusReady">Ready.</div>
-      <pre id="json" style="display:none;"></pre>
-    </div>
-
-  </div>
-  <script src="JS/qrcode.min.js"></script>
-  <script src="JS/helpers.js"></script>
-  <script src="JS/popup.js"></script>
-</body>
-</html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>kURL</title><link rel="stylesheet" href="styles.css"></head>
+<body class="popup-body"><div id="popup-shell" class="card">
+<header class="popup-browser-header"><h1>kURL · YOURLS</h1><button id="open-dashboard" class="secondary" type="button" data-i18n-key="dashboardTitle">Dashboard</button></header>
+<section id="setup-message" hidden><p data-i18n-key="errorNoSettings">Configure your YOURLS server in Settings first.</p><button id="open-settings" data-i18n-key="popupBtnGoToSettings">Open Settings</button></section>
+<section id="main-content" hidden>
+<label for="longUrl" data-i18n-key="popupLongUrlLabel">Destination URL</label><input id="longUrl" type="url" placeholder="https://example.com/article">
+<details><summary data-i18n-key="popupAdvancedOptions">Advanced options</summary><label for="keyword" data-i18n-key="popupKeywordLabel">Custom keyword (optional)</label><input id="keyword"><label for="title" data-i18n-key="popupTitleLabel">Title (optional)</label><input id="title"></details>
+<div class="row"><button id="btnShorten" type="button" data-i18n-key="popupBtnShorten">Shorten</button><button id="btnCurrentPage" class="secondary" type="button" data-i18n-key="popupCurrentPage">Use current page</button></div>
+<label for="shortUrl" data-i18n-key="popupShortUrlLabel">Short URL</label><input id="shortUrl" type="text" readonly>
+<div class="row"><button id="btnCopy" class="secondary" type="button" data-i18n-key="popupBtnCopy">Copy</button><button id="btnQrCode" class="secondary" type="button" data-i18n-key="popupBtnShowQr">Show QR</button><button id="btnDownloadQr" class="secondary" type="button" data-i18n-key="popupBtnDownloadQr" hidden>Download QR</button></div>
+<div id="qrcode-display" class="qr-container" hidden></div>
+<label for="statsInput" data-i18n-key="popupStatsLabel">Statistics: short URL or keyword</label><input id="statsInput" type="text" placeholder="abc123"><button id="btnStats" class="secondary" type="button" data-i18n-key="popupBtnStats">Statistics</button>
+<p id="msg" class="info" role="status" aria-live="polite"></p><details><summary data-i18n-key="popupBtnToggleJson">Detailed JSON</summary><pre id="json"></pre></details>
+</section></div><script src="JS/polyfill.js"></script><script src="JS/helpers.js"></script><script src="JS/qrcode.js"></script><script src="JS/popup.js"></script></body></html>

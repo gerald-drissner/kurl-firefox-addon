@@ -1,14 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "kurl - YOURLS Shortener",
-  "short_name": "kurl",
-  "version": "1.1",
+  "name": "__MSG_extensionName__",
+  "short_name": "kURL",
+  "version": "2.0.0",
   "author": "Gerald Drißner",
   "default_locale": "en",
-  "description": "Shorten links with your YOURLS instance right from your browser.",
+  "description": "__MSG_extensionDescription__",
   "browser_specific_settings": {
     "gecko": {
-      "id": "kurl@drissner.me"
+      "id": "kurl@drissner.me",
+      "strict_min_version": "140.0"
     }
   },
   "icons": {
@@ -17,31 +18,28 @@
   },
   "background": {
     "scripts": [
+      "JS/polyfill.js",
       "JS/helpers.js",
       "JS/background.js"
     ]
   },
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
-  },
   "action": {
-    "default_title": "kurl",
     "default_popup": "popup.html",
-    "default_icon": "images/kurl-icon-48.png"
+    "default_title": "kURL"
+  },
+  "options_ui": {
+    "page": "dashboard.html",
+    "open_in_tab": true
   },
   "permissions": [
     "storage",
     "clipboardWrite",
     "menus",
     "notifications",
+    "activeTab",
     "tabs"
   ],
   "optional_host_permissions": [
-    "http://*/*",
     "https://*/*"
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'none';"
-  }
+  ]
 }
