@@ -787,5 +787,8 @@
   },
   "popupCurrentPage": {
     "message": "Use current page"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "Settings changed during the test. Nothing was saved; run the connection test again."
   }
 }
