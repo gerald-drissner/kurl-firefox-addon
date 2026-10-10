@@ -489,5 +489,8 @@
   },
   "helperSource": {
     "message": "Consulter le code du Helper sur GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "Les paramètres ont changé pendant le test. Rien n’a été enregistré. Testez de nouveau la connexion."
   }
 }
