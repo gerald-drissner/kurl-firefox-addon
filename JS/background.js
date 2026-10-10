@@ -486,10 +486,22 @@ function unwrapRedirectUrl(raw) {
   try {
     const u = new URL(original), host = u.hostname.toLowerCase(), path = u.pathname;
     let target = "";
-    if (host.startsWith("www.google.") && path === "/url") target = u.searchParams.get("url") || "";
+    // Do not mistake attacker-controlled www.google.evil.example for Google.
+    const google = host === "www.google.com" || /^www\.google\.[a-z]{2}$/.test(host) ||
+      /^www\.google\.(?:co|com)\.[a-z]{2}$/.test(host);
+    if (google && path === "/url") target = u.searchParams.get("url") || "";
     else if (host === "www.bing.com" && path.startsWith("/ck/a")) {
       target = u.searchParams.get("u") || "";
-      if (target.startsWith("a1")) target = target.slice(2);
+      // Bing's `u=a1...` contains a base64url-encoded HTTP(S) destination.
+      if (target.startsWith("a1") && typeof atob === "function") {
+        try {
+          const encoded = target.slice(2).replace(/-/g, "+").replace(/_/g, "/");
+          if (/^[A-Za-z0-9+/]*={0,2}$/.test(encoded)) {
+            const binary = atob(encoded + "=".repeat((4 - encoded.length % 4) % 4));
+            target = new TextDecoder().decode(Uint8Array.from(binary, ch => ch.charCodeAt(0)));
+          }
+        } catch { target = ""; }
+      }
     } else if (host === "duckduckgo.com" && path.startsWith("/l/")) target = u.searchParams.get("uddg") || "";
     else if (host === "www.youtube.com" && path === "/redirect") target = u.searchParams.get("q") || "";
     return H.validHttpUrl(target) || original;
