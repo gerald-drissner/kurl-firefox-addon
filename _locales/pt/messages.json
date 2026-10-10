@@ -481,5 +481,8 @@
   },
   "helperSource": {
     "message": "Ver o código do Helper no GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "As definições foram alteradas durante o teste. Nada foi guardado. Teste novamente a ligação."
   }
 }
