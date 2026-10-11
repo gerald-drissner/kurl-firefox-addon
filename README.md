@@ -27,3 +27,7 @@ Thunderbird's message-reading, compose-editor insertion, QR attachment, `compose
 Run `node --check JS/*.js` file by file and execute all `node tests/*.cjs` scripts listed in `.github/workflows/ci.yml`. For Chrome, load the folder through `chrome://extensions` → Developer mode → Load unpacked. For Firefox, test as a temporary add-on through `about:debugging` → This Firefox → Load Temporary Add-on → select `manifest.json`.
 
 Audit follow-up: safe Bing base64url link unwrapping, Google-host spoofing rejection and protection against overwriting settings edited during a connection test.
+
+## Contact
+
+For support and privacy questions, email [mail@drissner.media](mailto:mail@drissner.media), or open an issue in this repository.

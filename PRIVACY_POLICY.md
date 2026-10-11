@@ -52,4 +52,6 @@ Your YOURLS server is operated by you or by whoever runs it. It processes, and m
 
 ## Contact
 
-Questions about this policy: https://github.com/gerald-drissner/kurl-firefox-addon/issues
+Contact: [mail@drissner.media](mailto:mail@drissner.media)
+
+Issues: https://github.com/gerald-drissner/kurl-firefox-addon/issues
