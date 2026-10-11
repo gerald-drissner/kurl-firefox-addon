@@ -74,14 +74,6 @@
     "message": "Host permission removed for this origin.",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "Using the Shortcut",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "You can change the kURL shortcut in the ⚙️ menu of Thunderbird's Add-ons Manager.",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupTitle": {
     "message": "YOURLS Shortener",
     "description": "Title for the popup window."
@@ -118,10 +110,6 @@
     "message": "Copy & Close",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "Insert",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "Delete",
     "description": "Delete button text."
@@ -137,10 +125,6 @@
   "popupBtnDownloadQr": {
     "message": "Download",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "Attach QR Code",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "Stats for (short URL or keyword)",
@@ -169,10 +153,6 @@
   "popupStatusCopied": {
     "message": "Copied to clipboard.",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "Inserted short URL into compose.",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "Fetching stats…",
@@ -213,6 +193,10 @@
     "message": "URL already shortened. You can view stats or delete it below.",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "URL already shortened.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "Please enter a valid http(s) URL.",
     "description": "Error for invalid URL format."
@@ -225,10 +209,6 @@
     "message": "Nothing to attach.",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "Could not find an active compose window.",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "Enter a short URL or keyword to get stats.",
     "description": "Error when stats button is clicked with no input."
@@ -240,14 +220,6 @@
   "errorNoSettings": {
     "message": "Please configure YOURLS first in the add-on settings.",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "Open the kURL shortener popup.",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "Open kURL in the message reader",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "Dashboard",
@@ -336,14 +308,8 @@
   "dashHelper": {
     "message": "kURL Helper"
   },
-  "popupBtnShortenInsert": {
-    "message": "Shorten & Insert"
-  },
   "menuQuickCopy": {
     "message": "kURL: Shorten and copy"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: Shorten and insert"
   },
   "dashBulk": {
     "message": "Bulk"
@@ -409,7 +375,7 @@
     "message": "Recent kURL activity"
   },
   "logExplanation": {
-    "message": "Local log of the last seven days (maximum 100 entries). No API tokens, email contents or URLs are recorded."
+    "message": "Local log of the last seven days (maximum 100 entries). No API tokens, page contents or URLs are recorded."
   },
   "logClear": {
     "message": "Clear log"
@@ -425,17 +391,6 @@
   },
   "dashNewReady": {
     "message": "Ready for a new short URL."
-  },
-  "optionsShortcutSentence": {
-    "message": "Select a URL in a message you are writing, then press $shortcut$.",
-    "placeholders": {
-      "shortcut": {
-        "content": "$1"
-      }
-    }
-  },
-  "optionsBtnEditShortcuts": {
-    "message": "Configure shortcuts"
   },
   "optionsPrivacyNotice": {
     "message": "kURL sends the URL you choose to shorten or manage, and optional keywords/titles, to your configured HTTPS YOURLS server. API signatures are time-limited; your raw token and seven-day activity log stay in local browser storage. No data is sent to the add-on developer."
@@ -466,15 +421,6 @@
   },
   "dashCreating": {
     "message": "Creating short URL…"
-  },
-  "optionsShortcutUnassigned": {
-    "message": "No shortcut assigned. Choose one with Configure shortcuts or use the toolbar button."
-  },
-  "popupErrorTargetChanged": {
-    "message": "The target URL has changed. Shorten it again before inserting."
-  },
-  "popupErrorNoOriginal": {
-    "message": "Shorten the target URL first before inserting it."
   },
   "popupErrorQrGeneration": {
     "message": "Could not generate QR code."
@@ -618,7 +564,7 @@
     "message": "Show success notifications"
   },
   "optionsCopyFeedbackHint": {
-    "message": "Display brief copy confirmations in the dashboard and feedback after right-click copying or inserting. Turning this off hides success toasts, desktop notifications and badges; errors remain visible. Saved immediately."
+    "message": "Display brief copy confirmations in the dashboard and feedback after right-click shortening and copying. Turning this off hides success toasts, desktop notifications and badges; errors remain visible. Saved immediately."
   },
   "dashCopyToast": {
     "message": "Copied to clipboard"
@@ -642,14 +588,6 @@
   },
   "contextSelectUrl": {
     "message": "Select a complete HTTP(S) URL."
-  },
-  "contextInserted": {
-    "message": "✓ Short URL inserted: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
   },
   "contextCopied": {
     "message": "✓ Copied to clipboard: $shorturl$",
@@ -676,14 +614,8 @@
   "insertClickedLinkMissing": {
     "message": "The clicked link was not found in the message body."
   },
-  "insertPlainTextSelectUrl": {
-    "message": "In plain-text mode, select the URL before using “kURL: Shorten and insert”."
-  },
   "optionsOldTokenHint": {
     "message": "This ten-character token may be from an older YOURLS version. Copy the current API signature from Admin → Tools."
-  },
-  "insertCannotSafely": {
-    "message": "Could not insert the short URL safely."
   },
   "lookupHeading": {
     "message": "Find an existing link"

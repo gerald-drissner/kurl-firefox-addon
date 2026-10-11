@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "kurl - YOURLS Shortener",
+    "message": "kURL – YOURLS Shortener",
     "description": "Name of the extension."
   },
   "extensionDescription": {
@@ -75,14 +75,6 @@
     "message": "Permissão de host removida para esta origem.",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "Usando o Atalho",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "Você pode alterar este atalho no Gerenciador de Complementos do Thunderbird, sob o menu ⚙️ para kurl.",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupLongUrlLabel": {
     "message": "URL longa",
     "description": "Label for the long URL input."
@@ -115,10 +107,6 @@
     "message": "Copiar e Fechar",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "Inserir",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "Excluir",
     "description": "Delete button text."
@@ -134,10 +122,6 @@
   "popupBtnDownloadQr": {
     "message": "Baixar",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "Anexar Código QR",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "Estatísticas para (URL curta ou palavra-chave)",
@@ -166,10 +150,6 @@
   "popupStatusCopied": {
     "message": "Copiado para a área de transferência.",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "URL curta inserida na composição.",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "Buscando estatísticas…",
@@ -210,6 +190,10 @@
     "message": "URL já encurtada. Você pode ver as estatísticas ou excluí-la abaixo.",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "URL já encurtada.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "Por favor, insira uma URL http(s) válida.",
     "description": "Error for invalid URL format."
@@ -222,10 +206,6 @@
     "message": "Nada para anexar.",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "Não foi possível encontrar uma janela de composição ativa.",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "Insira uma URL curta ou palavra-chave para obter estatísticas.",
     "description": "Error when stats button is clicked with no input."
@@ -237,14 +217,6 @@
   "errorNoSettings": {
     "message": "Por favor, configure o YOURLS primeiro nas configurações do complemento.",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "Abre o popup do encurtador kurl.",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "Abre kurl no leitor de mensagens",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "Painel",
@@ -313,14 +285,6 @@
   "contextSelectUrl": {
     "message": "Selecione um URL HTTP(S) completo."
   },
-  "contextInserted": {
-    "message": "✓ URL curto inserido: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
-  },
   "contextCopied": {
     "message": "✓ Copiado para a área de transferência: $shorturl$",
     "placeholders": {
@@ -346,20 +310,11 @@
   "insertClickedLinkMissing": {
     "message": "A ligação selecionada não foi encontrada no corpo da mensagem."
   },
-  "insertPlainTextSelectUrl": {
-    "message": "No modo de texto simples, selecione o URL antes de usar «kURL: Encurtar e inserir»."
-  },
   "optionsOldTokenHint": {
     "message": "Este token de dez caracteres pode pertencer a uma versão antiga do YOURLS. Copie a assinatura API atual em Administração → Ferramentas."
   },
   "menuQuickCopy": {
     "message": "kURL: Encurtar e copiar"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: Encurtar e inserir"
-  },
-  "insertCannotSafely": {
-    "message": "Não foi possível inserir o URL curto com segurança."
   },
   "lookupHeading": {
     "message": "Procurar ligação existente"
@@ -468,7 +423,7 @@
     "message": "Eliminar permanentemente este URL curto? As ligações em sites e mensagens de correio eletrónico já enviadas poderão deixar de funcionar."
   },
   "menuQuickPage": {
-    "message": "kURL: Shorten current page and copy"
+    "message": "kURL: Encurtar a página atual e copiar"
   },
   "popupCurrentPage": {
     "message": "Usar a página atual"

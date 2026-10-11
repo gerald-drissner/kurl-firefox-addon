@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "kurl - מקצר YOURLS",
+    "message": "kURL – מקצר YOURLS",
     "description": "Name of the extension."
   },
   "extensionDescription": {
@@ -75,14 +75,6 @@
     "message": "הרשאת מארח הוסרה למקור זה.",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "שימוש בקיצור הדרך",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "באפשרותך לשנות קיצור דרך זה במנהל התוספים של Thunderbird תחת תפריט ⚙️ עבור kurl.",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupTitle": {
     "message": "מקצר YOURLS",
     "description": "Title for the popup window."
@@ -119,10 +111,6 @@
     "message": "העתק וסגור",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "הכנס",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "מחק",
     "description": "Delete button text."
@@ -138,10 +126,6 @@
   "popupBtnDownloadQr": {
     "message": "הורד",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "צרף קוד QR",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "סטטיסטיקות עבור (URL קצר או מילת מפתח)",
@@ -170,10 +154,6 @@
   "popupStatusCopied": {
     "message": "הועתק ללוח.",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "הוזן URL מקוצר לכתיבה.",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "מאחזר סטטיסטיקות…",
@@ -214,6 +194,10 @@
     "message": "ה-URL כבר מקוצר. באפשרותך להציג סטטיסטיקות או למחוק אותו למטה.",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "ה-URL כבר מקוצר.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "אנא הזן כתובת http(s) תקינה.",
     "description": "Error for invalid URL format."
@@ -226,10 +210,6 @@
     "message": "אין מה לצרף.",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "לא ניתן היה למצוא חלון כתיבה פעיל.",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "הזן URL קצר או מילת מפתח כדי לקבל סטטיסטיקות.",
     "description": "Error when stats button is clicked with no input."
@@ -241,14 +221,6 @@
   "errorNoSettings": {
     "message": "אנא הגדר את YOURLS קודם בהגדרות התוסף.",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "פתח את החלון הקופץ של מקצר kurl.",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "פתח את kurl בקורא ההודעות",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "לוח מחוונים",
@@ -321,14 +293,6 @@
   "contextSelectUrl": {
     "message": "יש לבחור כתובת HTTP(S) מלאה."
   },
-  "contextInserted": {
-    "message": "✓ הקישור המקוצר נוסף: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
-  },
   "contextCopied": {
     "message": "✓ הועתק ללוח: $shorturl$",
     "placeholders": {
@@ -354,20 +318,11 @@
   "insertClickedLinkMissing": {
     "message": "הקישור שנלחץ לא נמצא בגוף ההודעה."
   },
-  "insertPlainTextSelectUrl": {
-    "message": "במצב טקסט פשוט, יש לבחור את כתובת ה־URL לפני השימוש ב״kURL: קיצור והוספה״."
-  },
   "optionsOldTokenHint": {
     "message": "אסימון זה, בן עשרה תווים, עשוי להיות מגרסת YOURLS ישנה. יש להעתיק את חתימת ה־API הנוכחית מניהול ← כלים."
   },
   "menuQuickCopy": {
     "message": "kURL: קיצור והעתקה"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: קיצור והוספה"
-  },
-  "insertCannotSafely": {
-    "message": "לא ניתן להוסיף את הקישור המקוצר בבטחה."
   },
   "lookupHeading": {
     "message": "חיפוש קישור קיים"
@@ -476,7 +431,7 @@
     "message": "למחוק את הקישור המקוצר לצמיתות? קישורים באתרי אינטרנט ובהודעות דוא״ל שכבר נשלחו עלולים להפסיק לפעול."
   },
   "menuQuickPage": {
-    "message": "kURL: Shorten current page and copy"
+    "message": "kURL: קיצור הדף הנוכחי והעתקה"
   },
   "popupCurrentPage": {
     "message": "השתמש בדף הנוכחי"

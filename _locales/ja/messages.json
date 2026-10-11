@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "kurl - YOURLS Shortener",
+    "message": "kURL – YOURLS Shortener",
     "description": "Name of the extension."
   },
   "extensionDescription": {
@@ -75,14 +75,6 @@
     "message": "このオリジンのホスト権限が削除されました。",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "ショートカットの使用",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "このショートカットは、Thunderbirdのアドオンマネージャーにあるkurlの⚙️メニューで変更できます。",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupLongUrlLabel": {
     "message": "長いURL",
     "description": "Label for the long URL input."
@@ -115,10 +107,6 @@
     "message": "コピーして閉じる",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "挿入",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "削除",
     "description": "Delete button text."
@@ -134,10 +122,6 @@
   "popupBtnDownloadQr": {
     "message": "ダウンロード",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "QRコードを添付",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "統計情報（短いURLまたはキーワード）",
@@ -166,10 +150,6 @@
   "popupStatusCopied": {
     "message": "クリップボードにコピーされました。",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "短いURLを作成に挿入しました。",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "統計情報を取得中…",
@@ -210,6 +190,10 @@
     "message": "URLはすでに短縮されています。下記で統計情報を表示または削除できます。",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "URLはすでに短縮されています。",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "有効なhttp(s) URLを入力してください。",
     "description": "Error for invalid URL format."
@@ -222,10 +206,6 @@
     "message": "添付するものはありません。",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "アクティブな作成ウィンドウが見つかりませんでした。",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "統計情報を取得するには、短いURLまたはキーワードを入力してください。",
     "description": "Error when stats button is clicked with no input."
@@ -237,14 +217,6 @@
   "errorNoSettings": {
     "message": "まず、アドオン設定でYOURLSを構成してください。",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "kurl短縮ポップアップを開きます。",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "メッセージリーダーでkurlを開く",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "ダッシュボード",
@@ -317,14 +289,6 @@
   "contextSelectUrl": {
     "message": "HTTP(S) の完全な URL を選択してください。"
   },
-  "contextInserted": {
-    "message": "✓ 短縮 URL を挿入しました: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
-  },
   "contextCopied": {
     "message": "✓ クリップボードにコピーしました: $shorturl$",
     "placeholders": {
@@ -350,20 +314,11 @@
   "insertClickedLinkMissing": {
     "message": "クリックしたリンクがメール本文に見つかりませんでした。"
   },
-  "insertPlainTextSelectUrl": {
-    "message": "プレーンテキストモードでは、「kURL: 短縮して挿入」を使用する前に URL を選択してください。"
-  },
   "optionsOldTokenHint": {
     "message": "この10文字のトークンは古い YOURLS のものかもしれません。管理 → ツールから現在の API 署名をコピーしてください。"
   },
   "menuQuickCopy": {
     "message": "kURL: 短縮してコピー"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: 短縮して挿入"
-  },
-  "insertCannotSafely": {
-    "message": "短縮 URL を安全に挿入できませんでした。"
   },
   "lookupHeading": {
     "message": "既存のリンクを検索"
@@ -472,7 +427,7 @@
     "message": "この短縮URLを完全に削除しますか？ウェブサイトや送信済みメールに含まれるリンクが機能しなくなる可能性があります。"
   },
   "menuQuickPage": {
-    "message": "kURL: Shorten current page and copy"
+    "message": "kURL: 現在のページを短縮してコピー"
   },
   "popupCurrentPage": {
     "message": "現在のページを使用"

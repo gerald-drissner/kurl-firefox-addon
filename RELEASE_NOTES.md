@@ -1,4 +1,16 @@
-# kURL Firefox 2.0.0 — development preview
+# kURL Firefox 2.0.1 — development preview
+
+Fixes after review of the 2.0.0 preview:
+
+- The activity log again records created, deleted, looked-up, edited and regenerated links (type and status only, never URLs), as in Thunderbird.
+- Bing redirect links are decoded (base64url after `a1`), and Google `/url?q=` links are unwrapped.
+- Chrome-only offscreen code was removed from the Firefox background (two addons-linter warnings).
+- The background starts without a `menus` API (prerequisite for Firefox for Android).
+- `tabs` permission removed (`activeTab` is sufficient); `data_collection_permissions` declared; 16, 32 and 128 px icons added.
+- URLs and dates keep left-to-right order in Arabic and Hebrew. Untranslated context-menu entries and Thunderbird-specific wording were corrected; the popup no longer replaces "URL already shortened." with the copy confirmation.
+- The Helper source link points to an immutable commit; legacy 1.x prefill values are deleted on update; browser-accurate privacy policy.
+
+## 2.0.0
 
 This major rewrite brings the Thunderbird kURL 2.0.20 dashboard and security model to Firefox, while retaining browser-native toolbar and context-menu behavior.
 

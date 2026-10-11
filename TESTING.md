@@ -7,6 +7,7 @@
 5. Test context-menu on a page, on a link and on selected text; check clipboard contents and notifications on/off.
 6. Test QR generation and local PNG download; bulk URL shortening and the seven-day activity log export.
 7. Test Arabic/Hebrew RTL switches and verify all UI controls remain usable.
-8. Chrome: explicitly test clipboard copying from a service worker through the offscreen document and verify the service worker recovers after suspension. Firefox: test background clipboard behavior.
+8. Firefox: test right-click copy (background clipboard), with Firefox suspending the background page between uses (wait a few minutes, then right-click again).
+   After updating from 1.1, confirm settings are kept and that Firefox shows the declared data types.
 9. Verify optional host permissions only grant access to the chosen HTTPS YOURLS server.
 10. Run Firefox AMO / Chrome Web Store validators before production submission and do not claim native-browser testing when only mocked API checks passed.

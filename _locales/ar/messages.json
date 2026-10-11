@@ -72,14 +72,6 @@
     "message": "تمت إزالة إذن المضيف لهذا المصدر.",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "استخدام الاختصار",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "يمكنك تغيير اختصار لوحة المفاتيح من قائمة ⚙️ في مدير إضافات Thunderbird.",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupTitle": {
     "message": "أداة اختصار YOURLS",
     "description": "Title for the popup window."
@@ -115,10 +107,6 @@
   "popupBtnCopyClose": {
     "message": "انسخ وأغلق"
   },
-  "popupBtnInsert": {
-    "message": "أدرج",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "احذف",
     "description": "Delete button text."
@@ -131,9 +119,6 @@
   },
   "popupBtnDownloadQr": {
     "message": "نزّل رمز QR"
-  },
-  "popupBtnAttachQr": {
-    "message": "أرفق رمز QR"
   },
   "popupStatsLabel": {
     "message": "إحصاءات (رابط مختصر أو كلمة مفتاحية)",
@@ -160,10 +145,6 @@
   "popupStatusCopied": {
     "message": "تم النسخ إلى الحافظة.",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "تم إدراج الرابط المختصر في نافذة كتابة الرسالة.",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "جارٍ جلب الإحصاءات…"
@@ -203,6 +184,10 @@
     "message": "تم اختصار الرابط بالفعل. يمكنك عرض الإحصاءات أو حذفه أدناه.",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "تم اختصار الرابط بالفعل.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "الرجاء إدخال رابط http(s) صالح.",
     "description": "Error for invalid URL format."
@@ -215,10 +200,6 @@
     "message": "لا يوجد شيء للإرفاق.",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "تعذر العثور على نافذة كتابة رسالة نشطة.",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "أدخل رابطا مختصرا أو كلمة مفتاحية للحصول على الإحصاءات.",
     "description": "Error when stats button is clicked with no input."
@@ -230,14 +211,6 @@
   "errorNoSettings": {
     "message": "الرجاء تهيئة YOURLS أولا في إعدادات الإضافة.",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "افتح نافذة kURL لاختصار الروابط.",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "افتح kURL في نافذة قراءة الرسائل.",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "لوحة التحكم",
@@ -286,17 +259,6 @@
   "dashboardBtnViewMore": {
     "message": "عرض المزيد",
     "description": "Text for the 'View More' button to load more links."
-  },
-  "optionsShortcutSentence": {
-    "message": "حدد رابطا في نافذة كتابة الرسالة، ثم اضغط $shortcut$.",
-    "placeholders": {
-      "shortcut": {
-        "content": "$1"
-      }
-    }
-  },
-  "optionsShortcutUnassigned": {
-    "message": "لم يعين اختصار لوحة مفاتيح بعد. استخدم زر kURL في شريط الأدوات، أو انقر على «اختصارات لوحة المفاتيح» لتعيين اختصار."
   },
   "dashBulk": {
     "message": "اختصار مجموعة من الروابط"
@@ -349,15 +311,6 @@
   "logClear": {
     "message": "امسح السجل"
   },
-  "popupErrorTargetChanged": {
-    "message": "تغير الرابط الأصلي. اختصره من جديد قبل إدراجه."
-  },
-  "popupErrorNoOriginal": {
-    "message": "اختصر الرابط الأصلي أولا قبل إدراجه."
-  },
-  "optionsBtnEditShortcuts": {
-    "message": "اختصارات لوحة المفاتيح"
-  },
   "popupErrorQrGeneration": {
     "message": "تعذر إنشاء رمز QR."
   },
@@ -368,7 +321,7 @@
     "message": "إظهار إشعارات النجاح"
   },
   "optionsCopyFeedbackHint": {
-    "message": "إظهار تأكيد موجز بعد النسخ في لوحة التحكم، أو النسخ والإدراج من القائمة السياقية. يمكن إيقاف إشعارات النجاح دون إخفاء رسائل الخطأ. يحفظ هذا الإعداد فورا."
+    "message": "إظهار تأكيد موجز بعد النسخ في لوحة التحكم، وبعد الاختصار والنسخ من القائمة السياقية. يمكن إيقاف إشعارات النجاح دون إخفاء رسائل الخطأ. يحفظ هذا الإعداد فورا."
   },
   "dashCopyToast": {
     "message": "تم النسخ إلى الحافظة"
@@ -396,14 +349,6 @@
   "contextSelectUrl": {
     "message": "حدد رابط HTTP(S) كاملا."
   },
-  "contextInserted": {
-    "message": "✓ تم إدراج الرابط المختصر: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
-  },
   "contextCopied": {
     "message": "✓ تم النسخ إلى الحافظة: $shorturl$",
     "placeholders": {
@@ -429,20 +374,11 @@
   "insertClickedLinkMissing": {
     "message": "لم يتم العثور على الرابط الذي نقرت عليه في نص الرسالة."
   },
-  "insertPlainTextSelectUrl": {
-    "message": "في وضع النص العادي، حدد الرابط قبل استخدام «kURL: اختصار وإدراج»."
-  },
   "optionsOldTokenHint": {
     "message": "قد يكون هذا الرمز المؤلف من عشرة أحرف من إصدار قديم من YOURLS. انسخ توقيع API الحالي من الإدارة ← الأدوات."
   },
   "menuQuickCopy": {
     "message": "kURL: اختصار ونسخ"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: اختصار وإدراج"
-  },
-  "insertCannotSafely": {
-    "message": "تعذر إدراج الرابط المختصر بأمان."
   },
   "lookupHeading": {
     "message": "البحث عن رابط موجود"
@@ -551,7 +487,7 @@
     "message": "هل تريد حذف هذا الرابط المختصر نهائيا؟ قد تتوقف الروابط الموجودة في المواقع الإلكترونية ورسائل البريد الإلكتروني المرسلة عن العمل."
   },
   "menuQuickPage": {
-    "message": "kURL: اختصار الصفحة الحالية ونسخ الرابط"
+    "message": "kURL: اختصار رابط الصفحة الحالية ونسخه"
   },
   "popupCurrentPage": {
     "message": "استخدم الصفحة الحالية"

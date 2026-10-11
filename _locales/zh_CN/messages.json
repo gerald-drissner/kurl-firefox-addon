@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "kurl - YOURLS Shortener",
+    "message": "kURL – YOURLS Shortener",
     "description": "Name of the extension."
   },
   "extensionDescription": {
@@ -75,14 +75,6 @@
     "message": "已移除此来源的主机权限。",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "使用快捷方式",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "您可以在 Thunderbird 的附加组件管理器中，在 kurl 的 ⚙️ 菜单下更改此快捷方式。",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupTitle": {
     "message": "YOURLS 缩短器",
     "description": "Title for the popup window."
@@ -119,10 +111,6 @@
     "message": "复制并关闭",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "插入",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "删除",
     "description": "Delete button text."
@@ -138,10 +126,6 @@
   "popupBtnDownloadQr": {
     "message": "下载",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "附加二维码",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "统计 (短 URL 或关键词)",
@@ -170,10 +154,6 @@
   "popupStatusCopied": {
     "message": "已复制到剪贴板。",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "已将短 URL 插入到撰写中。",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "正在获取统计…",
@@ -214,6 +194,10 @@
     "message": "URL 已被缩短。您可以在下方查看统计或删除它。",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "URL 已被缩短。",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "请输入有效的 http(s) URL。",
     "description": "Error for invalid URL format."
@@ -226,10 +210,6 @@
     "message": "无可附加。",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "找不到活动的撰写窗口。",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "请输入一个短 URL 或关键词以获取统计。",
     "description": "Error when stats button is clicked with no input."
@@ -241,14 +221,6 @@
   "errorNoSettings": {
     "message": "请先在附加组件设置中配置 YOURLS。",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "打开 kurl 缩短器弹窗。",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "在消息阅读器中打开 kurl",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "仪表板",
@@ -321,14 +293,6 @@
   "contextSelectUrl": {
     "message": "请选择完整的 HTTP(S) URL。"
   },
-  "contextInserted": {
-    "message": "✓ 已插入短链接：$shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
-  },
   "contextCopied": {
     "message": "✓ 已复制到剪贴板：$shorturl$",
     "placeholders": {
@@ -354,20 +318,11 @@
   "insertClickedLinkMissing": {
     "message": "在邮件正文中找不到所点击的链接。"
   },
-  "insertPlainTextSelectUrl": {
-    "message": "在纯文本模式下，请先选中网址，再使用“kURL：缩短并插入”。"
-  },
   "optionsOldTokenHint": {
     "message": "此十字符令牌可能来自旧版 YOURLS。请从“管理 → 工具”复制当前 API 签名。"
   },
   "menuQuickCopy": {
     "message": "kURL：缩短并复制"
-  },
-  "menuQuickInsert": {
-    "message": "kURL：缩短并插入"
-  },
-  "insertCannotSafely": {
-    "message": "无法安全地插入短链接。"
   },
   "lookupHeading": {
     "message": "查找已有链接"
@@ -476,7 +431,7 @@
     "message": "确定永久删除此短链接吗？网站和已发送电子邮件中的相关链接可能会失效。"
   },
   "menuQuickPage": {
-    "message": "kURL: Shorten current page and copy"
+    "message": "kURL：缩短当前网页并复制"
   },
   "popupCurrentPage": {
     "message": "使用当前网页"

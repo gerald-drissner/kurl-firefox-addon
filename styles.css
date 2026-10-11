@@ -1,5 +1,5 @@
 /* ==========================================================================
- * kURL - YOURLS SHORTENER Thunderbird Add-on — styles.css
+ * kURL - YOURLS SHORTENER Browser Extension — styles.css
  * ========================================================================== */
 
 /* --- COLOR PALETTE (Dark by default) --- */
@@ -617,3 +617,10 @@ body.options-body:has(.dashboard-shell) { min-width: 0; padding: 24px clamp(14px
 .popup-browser-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
 .popup-browser-header h1 {font-size:1.1rem; margin:0;}
 #qrcode-display[hidden], #btnDownloadQr[hidden], #main-content[hidden], #setup-message[hidden] {display:none !important;}
+
+/* URLs, keywords and timestamps are left-to-right data, also in Arabic and Hebrew UIs.
+   Without isolation "127.0.0.1:8443/trans" renders as "trans/127.0.0.1:8443" in RTL. */
+.link-short, small.link-long, .kurl-date { direction: ltr; unicode-bidi: isolate; }
+span.link-long { unicode-bidi: plaintext; }
+input[type="url"], #shortUrl, #statsInput, #keyword, #lookup-query, #manual-keyword, #manual-result { direction: ltr; }
+[dir="rtl"] :is(.link-short, .link-long, .kurl-date, input[type="url"], #shortUrl, #statsInput, #keyword, #lookup-query, #manual-keyword, #manual-result) { text-align: right; }

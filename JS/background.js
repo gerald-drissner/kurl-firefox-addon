@@ -80,48 +80,6 @@ async function getHelperInfo(force = false) {
 }
 
 
-// Never insert transient status nodes in a Thunderbird compose editor: they
-// can be serialized into an outgoing message or an autosaved draft.
-const badgeTimers = new Map();
-async function signalToolbar(kind, tabId) {
-  if (!Number.isInteger(tabId) || tabId < 0) return;
-  const previous = badgeTimers.get(tabId);
-  if (previous) clearTimeout(previous);
-  const value = kind === "error" ? "!" : "✓";
-  const color = kind === "error" ? "#b91c1c" : "#15803d";
-  const actions = [browser.action, browser.messageDisplayAction, browser.composeAction];
-  for (const api of actions) {
-    try {
-      if (api?.setBadgeText) await api.setBadgeText({text: value, tabId});
-      if (api?.setBadgeBackgroundColor) await api.setBadgeBackgroundColor({color, tabId});
-    } catch { /* This toolbar API may not exist in the current Thunderbird view. */ }
-  }
-  const timeout = setTimeout(() => {
-    if (badgeTimers.get(tabId) !== timeout) return;
-    badgeTimers.delete(tabId);
-    for (const api of actions) {
-      try { void api?.setBadgeText?.({text: "", tabId})?.catch?.(() => {}); } catch {}
-    }
-  }, 3500);
-  badgeTimers.set(tabId, timeout);
-}
-async function contextFeedback(tab, message, kind = "success") {
-  // Suppress only optional success messages. Failures must remain visible.
-  if (kind === "success") {
-    const settings = await H.getSettings();
-    if (!settings.showCopyNotifications) return;
-  }
-  // OS notifications and a tab-scoped badge do not modify the email body.
-  await Promise.allSettled([notify(message), signalToolbar(kind, tab?.id)]);
-}
-
-function notify(message) {
-  return browser.notifications.create({
-    type: "basic", title: "kURL", message: String(message),
-    iconUrl: browser.runtime.getURL("images/kurl-icon-48.png")
-  }).catch(error => console.warn("kURL notification unavailable:", error?.message || error));
-}
-
 function requireTarget(value) {
   const url = H.validHttpUrl(value);
   if (!url) throw new Error(i18n("popupErrorInvalidUrl", "Enter a valid HTTP(S) URL."));
@@ -417,11 +375,25 @@ async function dispatch(message) {
     default:return {ok:false,reason:"Unsupported request."};
   }
 }
+// Activity log parity with Thunderbird: record only the action type and its
+// result, never URLs, keywords, titles or tokens. Bulk runs log one summary.
+const LOGGED_EVENTS = new Set(["SHORTEN_URL", "DELETE_SHORTURL", "LOOKUP_URL", "UPDATE_URL", "REGENERATE_URL"]);
+async function dispatchAndLog(message) {
+  const logged = LOGGED_EVENTS.has(message.type) && !message.bulk;
+  try {
+    const result = await dispatch(message);
+    if (logged) await writeLog(message.type, result?.ok ? "info" : "error");
+    return result;
+  } catch (error) {
+    if (logged) await writeLog(message.type, "error");
+    throw error;
+  }
+}
 // Use the callback protocol supported by Chrome MV3 and Firefox. Do not accidentally
 // answer an offscreen-document clipboard message in the service worker.
 browser.runtime.onMessage.addListener((message,sender,sendResponse)=>{
-  if(!message || message.type==="KURL_OFFSCREEN_COPY")return false;
-  Promise.resolve().then(()=>dispatch(message)).then(
+  if(!message || typeof message.type!=="string" || message.type==="KURL_OFFSCREEN_COPY")return false;
+  Promise.resolve().then(()=>dispatchAndLog(message)).then(
     result=>sendResponse(result), error=>sendResponse({ok:false,reason:String(error?.message||error),
       ...(error?.code?{errorCode:error.code}:{})})
   );
@@ -438,20 +410,30 @@ async function activeUrl(tabId) {
   return validPageUrl(tabs?.[0]?.url) || "";
 }
 const MENU_COPY="kurl-browser-copy", MENU_PAGE="kurl-browser-page";
+// Firefox names the API "menus", Chrome "contextMenus". From Chrome 148 the native
+// browser namespace exists and is the same object as chrome, so browser.menus is
+// undefined there and polyfill.js does not run. Firefox for Android has neither.
+const menusApi = browser.menus || browser.contextMenus || null;
 let menuInit=Promise.resolve();
 function ensureMenus() {
+  if (!menusApi) return menuInit;
   menuInit=menuInit.catch(()=>{}).then(async()=>{
     const entries=[
       {id:MENU_COPY,title:i18n("menuQuickCopy","kURL: Shorten and copy"),contexts:["selection","link"]},
       {id:MENU_PAGE,title:i18n("menuQuickPage","kURL: Shorten current page and copy"),contexts:["page"]}
     ];
     for(const item of entries){
-      try {await browser.menus.remove(item.id);}catch{}
-      await browser.menus.create(item);
+      try {await menusApi.remove(item.id);}catch{}
+      await menusApi.create(item);
     }
   });return menuInit;
 }
-browser.runtime.onInstalled.addListener(()=>{void ensureMenus();});
+browser.runtime.onInstalled.addListener(details=>{
+  void ensureMenus();
+  // kURL 1.x kept the last page URL for popup prefill. 2.x never stores URLs.
+  if(details?.reason==="update")
+    void browser.storage.local.remove(["yourls_prefill_long","yourls_prefill_short"]).catch(()=>{});
+});
 browser.runtime.onStartup?.addListener(()=>{void ensureMenus();});
 const badges=new Map();
 async function feedback(tab,message,error=false) {
@@ -466,17 +448,20 @@ async function feedback(tab,message,error=false) {
   badges.set(id,next);
 }
 async function copyShortUrl(short) {
-  if(typeof navigator!=="undefined" && navigator.clipboard?.writeText){
-    await navigator.clipboard.writeText(short);return;
-  }
-  if(typeof chrome==="undefined" || !chrome.offscreen)
+  // Firefox background pages may write to the clipboard with the clipboardWrite
+  // permission (MDN: Interact with the clipboard). Chrome needs its own adapter.
+  if(typeof navigator==="undefined" || !navigator.clipboard?.writeText)
     throw new Error("Clipboard unavailable. Open the kURL popup to copy the link.");
-  if(!(await chrome.offscreen.hasDocument())){
-    await chrome.offscreen.createDocument({url:"offscreen.html",reasons:["CLIPBOARD"],
-      justification:"Copy user-requested YOURLS short links to the clipboard"});
-  }
-  const copied=await browser.runtime.sendMessage({type:"KURL_OFFSCREEN_COPY",text:short});
-  if(!copied?.ok)throw new Error(copied?.reason||"Clipboard access denied");
+  await navigator.clipboard.writeText(short);
+}
+// Bing click-tracking links carry "a1" followed by the base64url-encoded destination.
+function decodeBingTarget(value) {
+  if (!/^a1[A-Za-z0-9_-]+$/.test(value)) return "";
+  try {
+    const b64 = value.slice(2).replace(/-/g, "+").replace(/_/g, "/");
+    const binary = atob(b64 + "=".repeat((4 - b64.length % 4) % 4));
+    return new TextDecoder("utf-8", {fatal: true}).decode(Uint8Array.from(binary, c => c.charCodeAt(0)));
+  } catch { return ""; }
 }
 // Preserve the browser add-ons' link-cleaning feature for recognized redirect URLs.
 // Only unwrap explicit HTTP(S) destinations; never fetch or follow redirects.
@@ -489,25 +474,15 @@ function unwrapRedirectUrl(raw) {
     // Do not mistake attacker-controlled www.google.evil.example for Google.
     const google = host === "www.google.com" || /^www\.google\.[a-z]{2}$/.test(host) ||
       /^www\.google\.(?:co|com)\.[a-z]{2}$/.test(host);
-    if (google && path === "/url") target = u.searchParams.get("url") || "";
-    else if (host === "www.bing.com" && path.startsWith("/ck/a")) {
-      target = u.searchParams.get("u") || "";
-      // Bing's `u=a1...` contains a base64url-encoded HTTP(S) destination.
-      if (target.startsWith("a1") && typeof atob === "function") {
-        try {
-          const encoded = target.slice(2).replace(/-/g, "+").replace(/_/g, "/");
-          if (/^[A-Za-z0-9+/]*={0,2}$/.test(encoded)) {
-            const binary = atob(encoded + "=".repeat((4 - encoded.length % 4) % 4));
-            target = new TextDecoder().decode(Uint8Array.from(binary, ch => ch.charCodeAt(0)));
-          }
-        } catch { target = ""; }
-      }
-    } else if (host === "duckduckgo.com" && path.startsWith("/l/")) target = u.searchParams.get("uddg") || "";
+    if (google && path === "/url") target = u.searchParams.get("url") || u.searchParams.get("q") || "";
+    else if (host === "www.bing.com" && path.startsWith("/ck/a"))
+      target = decodeBingTarget(u.searchParams.get("u") || "");
+    else if (host === "duckduckgo.com" && path.startsWith("/l/")) target = u.searchParams.get("uddg") || "";
     else if (host === "www.youtube.com" && path === "/redirect") target = u.searchParams.get("q") || "";
     return H.validHttpUrl(target) || original;
   } catch { return original; }
 }
-browser.menus.onClicked.addListener(async (info,tab)=>{
+menusApi?.onClicked.addListener(async (info,tab)=>{
   if(info.menuItemId!==MENU_COPY && info.menuItemId!==MENU_PAGE)return;
   const raw=info.menuItemId===MENU_PAGE ? (info.pageUrl||tab?.url) :
     (info.linkUrl||extractFirstUrl(info.selectionText)||validPageUrl(info.selectionText));

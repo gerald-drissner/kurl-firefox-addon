@@ -4,7 +4,7 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
   const root=path.join(__dirname,'..');
   const read=p=>fs.readFileSync(path.join(root,p),'utf8');
   const manifest=JSON.parse(read('manifest.json'));
-  assert.equal(manifest.version,'2.0.0');
+  assert.equal(manifest.version,'2.0.1');
   assert.equal(manifest.manifest_version,3);
   assert.equal(manifest.options_ui.page,'dashboard.html');
   assert(manifest.optional_host_permissions.includes('https://*/*'));
@@ -71,10 +71,17 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
     'https://www.google.evil.example/url?url=https%3A%2F%2Fexample.org%2Fphish');
   assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.bing.com/ck/a?u=a1amF2YXNjcmlwdDphbGVydCgxKQ")',context),
     'https://www.bing.com/ck/a?u=a1amF2YXNjcmlwdDphbGVydCgxKQ');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.google.com/url?q=https://example.org/gq&sa=D")',context),'https://example.org/gq');
+  assert.equal(vm.runInContext('unwrapRedirectUrl("https://www.bing.com/ck/a?!&&p=x&u=a1aHR0cHM6Ly9leGFtcGxlLm9yZy9iaW5n&ntb=1")',context),'https://example.org/bing');
   (async()=>{
     const verified=await send('CHECK_CONNECTION');assert.equal(verified.total,3);
     const made=await send('SHORTEN_URL',{longUrl:'https://example.org/long'});
     assert.equal(made.shortUrl,'https://sho.rt/abc');
+    assert(stored.kurlActivityLog.some(x=>x.action==='SHORTEN_URL'&&x.level==='info'),'shortening must be logged');
+    const logged=stored.kurlActivityLog.length;
+    await send('SHORTEN_URL',{longUrl:'https://example.org/long',bulk:true});
+    assert.equal(stored.kurlActivityLog.length,logged,'bulk items are summarized by LOG_BULK, not logged one by one');
+    assert(!JSON.stringify(stored.kurlActivityLog).includes('example.org'),'the activity log never stores URLs');
     const stats=await send('GET_STATS',{shortUrl:'https://sho.rt/abc'});
     assert.equal(stats.data.link.clicks,6);
     assert.equal(calls.find(x=>x.params.get('action')==='url-stats').params.get('shorturl'),'abc');

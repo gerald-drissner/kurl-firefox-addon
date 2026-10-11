@@ -43,9 +43,11 @@
     $("statsInput").value=reply.shortUrl;
     $("qrcode-display").hidden=true;
     $("btnDownloadQr").hidden=true;
-    status(reply.already?t("popupInfoAlreadyShortened","Link already exists."):t("popupStatusCreated","Short URL created."),true);
+    const done=reply.already?t("popupInfoExisting","URL already shortened."):t("popupStatusCreated","Short URL created.");
+    status(done,true);
     if((await H.getSettings()).autoCopy) {
-      try {await navigator.clipboard.writeText(reply.shortUrl);status(t("popupStatusCopied","Copied to clipboard."),true);}
+      // Keep "already exists" visible; only append the copy confirmation.
+      try {await navigator.clipboard.writeText(reply.shortUrl);status(done+" "+t("popupStatusCopied","Copied to clipboard."),true);}
       catch { /* Explicit Copy button remains available. */ }
     }
   }

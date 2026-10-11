@@ -74,14 +74,6 @@
     "message": "Host-Berechtigung für diesen Ursprung entfernt.",
     "description": "Success message when permission is removed."
   },
-  "optionsShortcutTitle": {
-    "message": "Verwendung des Tastenkürzels",
-    "description": "Title for the shortcut information box in options."
-  },
-  "optionsShortcutChange": {
-    "message": "Sie können das Tastenkürzel im ⚙️-Menü des Thunderbird-Add-on-Managers ändern.",
-    "description": "Instructions on how to change the default keyboard shortcut."
-  },
   "popupTitle": {
     "message": "YOURLS-Linkkürzer",
     "description": "Title for the popup window."
@@ -118,10 +110,6 @@
     "message": "Kopieren & schließen",
     "description": "Copy and Close button text."
   },
-  "popupBtnInsert": {
-    "message": "Einfügen",
-    "description": "Insert button text."
-  },
   "popupBtnDelete": {
     "message": "Löschen",
     "description": "Delete button text."
@@ -137,10 +125,6 @@
   "popupBtnDownloadQr": {
     "message": "Herunterladen",
     "description": "Button to download the QR code image."
-  },
-  "popupBtnAttachQr": {
-    "message": "QR-Code anhängen",
-    "description": "Button to attach the QR code to an email."
   },
   "popupStatsLabel": {
     "message": "Statistiken für (Kurz-URL oder Kürzel)",
@@ -169,10 +153,6 @@
   "popupStatusCopied": {
     "message": "In die Zwischenablage kopiert.",
     "description": "Message when text is copied."
-  },
-  "popupStatusInserted": {
-    "message": "Kurz-URL in das Verfassenfenster eingefügt.",
-    "description": "Message when short URL is inserted."
   },
   "popupStatusFetchingStats": {
     "message": "Statistiken werden abgerufen …",
@@ -213,6 +193,10 @@
     "message": "URL bereits gekürzt. Sie können die Statistiken anzeigen oder die Kurz-URL unten löschen.",
     "description": "Informational message for an existing URL."
   },
+  "popupInfoExisting": {
+    "message": "URL bereits gekürzt.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
+  },
   "popupErrorInvalidUrl": {
     "message": "Bitte geben Sie eine gültige http(s)-URL ein.",
     "description": "Error for invalid URL format."
@@ -225,10 +209,6 @@
     "message": "Nichts zum Anhängen.",
     "description": "Error when attach button is clicked with no URL."
   },
-  "popupErrorNoCompose": {
-    "message": "Kein aktives Verfassenfenster gefunden.",
-    "description": "Error when trying to insert without a compose window."
-  },
   "popupErrorEnterUrlForStats": {
     "message": "Geben Sie eine Kurz-URL oder ein Kürzel ein, um Statistiken zu erhalten.",
     "description": "Error when stats button is clicked with no input."
@@ -240,14 +220,6 @@
   "errorNoSettings": {
     "message": "Bitte konfigurieren Sie zuerst YOURLS in den Add-on-Einstellungen.",
     "description": "Error when settings are not configured."
-  },
-  "commandShortenDescription": {
-    "message": "Öffnet das kURL-Fenster zum Kürzen von Links.",
-    "description": "Description for the keyboard shortcut."
-  },
-  "commandOpenReaderDescription": {
-    "message": "Öffnet kURL im Nachrichtenleser",
-    "description": "Description for the message reader keyboard shortcut."
   },
   "dashboardTitle": {
     "message": "Dashboard",
@@ -336,14 +308,8 @@
   "dashHelper": {
     "message": "kURL Helper"
   },
-  "popupBtnShortenInsert": {
-    "message": "Kürzen & einfügen"
-  },
   "menuQuickCopy": {
     "message": "kURL: Kürzen und kopieren"
-  },
-  "menuQuickInsert": {
-    "message": "kURL: Kürzen und einfügen"
   },
   "dashBulk": {
     "message": "Stapelverarbeitung"
@@ -409,7 +375,7 @@
     "message": "Letzte kURL-Aktivitäten"
   },
   "logExplanation": {
-    "message": "Lokales Protokoll der letzten sieben Tage (höchstens 100 Einträge). API-Token, E-Mail-Inhalte und URLs werden nicht gespeichert."
+    "message": "Lokales Protokoll der letzten sieben Tage (höchstens 100 Einträge). API-Token, Seiteninhalte und URLs werden nicht gespeichert."
   },
   "logClear": {
     "message": "Protokoll löschen"
@@ -425,17 +391,6 @@
   },
   "dashNewReady": {
     "message": "Bereit für eine neue Kurz-URL."
-  },
-  "optionsShortcutSentence": {
-    "message": "Markieren Sie eine URL im Verfassenfenster und drücken Sie $shortcut$.",
-    "placeholders": {
-      "shortcut": {
-        "content": "$1"
-      }
-    }
-  },
-  "optionsBtnEditShortcuts": {
-    "message": "Tastenkürzel ändern"
   },
   "optionsPrivacyNotice": {
     "message": "kURL übermittelt nur die gewählten Zieladressen sowie gegebenenfalls Kürzel und Titel an Ihren YOURLS-Server über HTTPS. Der API-Token und das siebentägige Aktivitätsprotokoll bleiben im lokalen Browser-Speicher. Der Entwickler erhält keine Daten."
@@ -466,15 +421,6 @@
   },
   "dashCreating": {
     "message": "Kurz-URL wird erstellt …"
-  },
-  "optionsShortcutUnassigned": {
-    "message": "Kein Tastenkürzel festgelegt. Verwenden Sie die kURL-Schaltfläche oder klicken Sie auf „Tastenkürzel ändern“."
-  },
-  "popupErrorTargetChanged": {
-    "message": "Die Ziel-URL wurde geändert. Kürzen Sie sie erneut, bevor Sie den Link einfügen."
-  },
-  "popupErrorNoOriginal": {
-    "message": "Kürzen Sie zuerst die Ziel-URL, bevor Sie sie einfügen."
   },
   "popupErrorQrGeneration": {
     "message": "Der QR-Code konnte nicht erstellt werden."
@@ -618,7 +564,7 @@
     "message": "Erfolgsbestätigungen anzeigen"
   },
   "optionsCopyFeedbackHint": {
-    "message": "Zeigt kurze Hinweise nach dem Kopieren im Dashboard sowie nach dem Kürzen, Kopieren oder Einfügen per Kontextmenü. Bei deaktivierter Option werden Erfolgshinweise, Desktop-Benachrichtigungen und Symbolmarkierungen ausgeblendet; Fehlermeldungen bleiben sichtbar. Wird sofort gespeichert."
+    "message": "Zeigt kurze Hinweise nach dem Kopieren im Dashboard sowie nach dem Kürzen und Kopieren per Kontextmenü. Bei deaktivierter Option werden Erfolgshinweise, Desktop-Benachrichtigungen und Symbolmarkierungen ausgeblendet; Fehlermeldungen bleiben sichtbar. Wird sofort gespeichert."
   },
   "dashCopyToast": {
     "message": "In die Zwischenablage kopiert"
@@ -642,14 +588,6 @@
   },
   "contextSelectUrl": {
     "message": "Wählen Sie eine vollständige HTTP(S)-URL aus."
-  },
-  "contextInserted": {
-    "message": "✓ Kurz-URL eingefügt: $shorturl$",
-    "placeholders": {
-      "shorturl": {
-        "content": "$1"
-      }
-    }
   },
   "contextCopied": {
     "message": "✓ In die Zwischenablage kopiert: $shorturl$",
@@ -676,14 +614,8 @@
   "insertClickedLinkMissing": {
     "message": "Der angeklickte Link wurde im Nachrichtentext nicht gefunden."
   },
-  "insertPlainTextSelectUrl": {
-    "message": "Markieren Sie im Reintextmodus die URL, bevor Sie „kURL: Kürzen und einfügen“ auswählen."
-  },
   "optionsOldTokenHint": {
     "message": "Dieses zehnstellige Token könnte aus einer älteren YOURLS-Version stammen. Kopieren Sie die aktuelle API-Signatur unter Admin → Tools."
-  },
-  "insertCannotSafely": {
-    "message": "Die Kurz-URL konnte nicht sicher eingefügt werden."
   },
   "lookupHeading": {
     "message": "Vorhandenen Link suchen"
