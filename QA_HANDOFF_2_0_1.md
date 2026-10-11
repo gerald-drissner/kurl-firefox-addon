@@ -30,6 +30,8 @@ This tree combines the user-reviewed 2.0.1 patch built on the prior Chrome `7c92
 
 ## GitHub state
 
-The Draft PRs and main branches were not modified by this merged local review. Apply the separately supplied **review2-on-current-branch.patch** on the draft head, then run CI before any merge. Do not apply the original user 2.0.1 review.patch directly onto the newer audit heads; the patches overlap.
+The merged Review2 tree is committed on the two existing **Draft PR branches**: Chrome `f71c298ac55199c092dba3797544d5c19b7e1026` and Firefox `acc8b5db0b9f9c887cd4441cb2e8cccaeef85684`. GitHub Actions CI passed on **Linux, Windows and macOS** for both commits. The two `main` branches, store listings, WordPress and Thunderbird are unchanged.
+
+**Do not apply either the original 2.0.1 review patch or the Review2-on-current-branch patch again:** all the reviewed changes are already included in these Draft branches. Keep both PRs in Draft until the live browser and store checks in the release gate are completed.
 
 WordPress and Thunderbird code are not modified. The shared Helper PHP plugin is included only as a **static, unchanged copy**.
