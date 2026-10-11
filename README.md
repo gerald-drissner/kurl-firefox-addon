@@ -1,6 +1,6 @@
-# kURL for Firefox — 2.0.2 development preview
+# kURL for Firefox — 2.0.2 (release candidate)
 
-This is a **separate browser extension**, modernized using the tested kURL for Thunderbird 2.0.20 dashboard, security model, YOURLS API client, link search, bulk shortening and local logs. **Do not submit this preview to the store without live browser tests.**
+This is a **separate browser extension**, modernized using the tested kURL for Thunderbird 2.0.20 dashboard, security model, YOURLS API client, link search, bulk shortening and local logs. **This is a release candidate on a Draft PR. Complete store review, upgrade-path and permission checks before publication.**
 
 ## Features
 - Full dashboard: two-way lookup (keyword/short URL → target and clicks; destination → existing short link via the optional server-side Helper), top and recent links, create and safely edit/delete links.
