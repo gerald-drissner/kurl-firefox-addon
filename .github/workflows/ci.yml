@@ -1,0 +1,35 @@
+name: Validate kURL browser extension
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        shell: bash
+        run: for file in JS/*.js; do node --check "$file" || exit 1; done
+      - name: Package integrity
+        run: node tests/verify.cjs
+      - name: API regression tests
+        run: node tests/api-smoke.cjs
+      - name: Firefox without context menus API
+        run: node tests/no-menus.cjs
+      - name: Stale connection settings protection
+        run: node tests/options-race.cjs
+      - name: Dashboard footer and localization
+        run: node tests/footer.cjs
+      - name: Helper PHP syntax
+        if: runner.os == 'Linux'
+        run: php -l helper/kurl-helper/plugin.php

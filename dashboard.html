@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kURL Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options-body">
+  <main class="card dashboard-shell">
+    <nav class="nav-tabs" aria-label="kURL">
+      <a href="dashboard.html" class="nav-tab active" aria-current="page" data-i18n-key="dashboardTitle">Dashboard</a>
+      <a href="options.html" class="nav-tab" data-i18n-key="optionsTitle">Settings</a>
+      <a href="bulk.html" class="nav-tab" data-i18n-key="dashBulk">Bulk</a>
+      <a href="logs.html" class="nav-tab" data-i18n-key="dashLogs">Logs</a>
+    </nav>
+    <div class="dashboard-header">
+      <h1 data-i18n-key="dashboardTitle">Dashboard</h1>
+      <div class="dashboard-utilities">
+        <label class="copy-notification-setting" for="dash-copy-notifications">
+          <input id="dash-copy-notifications" type="checkbox" checked>
+          <span data-i18n-key="optionsCopyFeedbackLabel">Show copy confirmations</span>
+        </label>
+        <button id="refresh-btn" class="secondary" type="button" data-i18n-key="dashboardBtnRefresh">Refresh</button>
+      </div>
+    </div>
+    <p id="dashboard-feedback" class="info" role="status" aria-live="polite">Loading…</p>
+    <p id="dashboard-auth-recovery" class="auth-recovery" hidden><a id="dashboard-auth-tools" target="_blank" rel="noopener noreferrer" data-i18n-key="apiOpenTools">Open YOURLS Admin → Tools to copy the current API signature</a></p>
+    <div id="copy-toast" class="copy-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+    <section id="dashboard-onboarding" class="dashboard-onboarding" hidden aria-labelledby="onboarding-heading">
+      <h2 id="onboarding-heading" data-i18n-key="dashboardSetupHeading">Connect your YOURLS server</h2>
+      <p data-i18n-key="dashboardSetupHelp">To use the dashboard, enter your YOURLS URL and API signature in Settings. Test the connection there to save the configuration.</p>
+      <a class="kurl-setup-action" href="options.html" data-i18n-key="dashboardSetupButton">Open YOURLS Settings</a>
+    </section>
+    <div class="dashboard-workspace">
+    <div class="dashboard-overview-column">
+    <section aria-labelledby="overview-title">
+      <h2 id="overview-title" data-i18n-key="dashOverview">YOURLS overview</h2>
+      <div class="dashboard-grid">
+        <div class="stat-card">
+          <span id="total-links" class="stat-value">—</span>
+          <span class="stat-label" data-i18n-key="dashboardLabelTotalLinks">Total links</span>
+        </div>
+        <div class="stat-card">
+          <span id="total-clicks" class="stat-value">—</span>
+          <span class="stat-label" data-i18n-key="dashboardLabelTotalClicks">Total clicks</span>
+        </div>
+        <div class="stat-card">
+          <span id="avg-clicks" class="stat-value">—</span>
+          <span class="stat-label" data-i18n-key="dashboardLabelAvgClicks">Average clicks</span>
+        </div>
+        <div class="stat-card">
+          <span id="server-status" class="stat-value">—</span>
+          <span class="stat-label" data-i18n-key="dashboardLabelServerStatus">Connection</span>
+        </div>
+      </div>
+      <div id="helper-indicator" class="helper-indicator" role="status" aria-live="polite">Checking Helper…</div>
+      <details class="server-details"><summary data-i18n-key="dashTechnical">Connection details</summary>
+      <dl class="kurl-details">
+        <dt data-i18n-key="dashServer">Server</dt><dd id="info-server">—</dd>
+        <dt data-i18n-key="dashYourlsVersion">YOURLS version</dt><dd id="info-version">—</dd>
+        <dt data-i18n-key="dashHelper">kURL Helper</dt><dd id="info-helper">—</dd>
+        <dt data-i18n-key="dashActivity">Recent operations (7 days)</dt><dd id="info-activity">—</dd>
+      </dl></details>
+    </section>
+    </div>
+    <div class="dashboard-create-column">
+
+    <section class="kurl-panel kurl-lookup-panel" aria-labelledby="lookup-heading">
+      <h2 id="lookup-heading" data-i18n-key="lookupHeading">Find a YOURLS link</h2>
+      <p class="kurl-help" data-i18n-key="lookupHelp">Enter a short URL, its keyword, or a destination URL. Short links show their target and clicks; destination URLs are checked for existing short links.</p>
+      <form id="lookup-form" novalidate>
+        <label for="lookup-query" data-i18n-key="lookupQueryLabel">Short URL, keyword, or destination URL</label>
+        <div class="lookup-controls">
+          <input id="lookup-query" type="text" autocomplete="off" spellcheck="false" data-i18n-placeholder="lookupQueryPlaceholder" placeholder="https://short.example/example or https://example.com/article">
+          <button type="submit" id="lookup-submit" data-i18n-key="lookupSearch">Find link</button>
+        </div>
+      </form>
+      <p id="lookup-message" class="kurl-help" role="status" aria-live="polite"></p>
+      <section id="lookup-result" class="lookup-result" aria-labelledby="lookup-result-title" hidden>
+        <h3 id="lookup-result-title" data-i18n-key="lookupResultHeading">Found link</h3>
+        <dl class="lookup-details">
+          <dt data-i18n-key="dashShortUrl">Short URL</dt><dd id="lookup-short" dir="auto"></dd>
+          <dt data-i18n-key="dashTarget">Target URL</dt><dd id="lookup-long" dir="auto"></dd>
+          <dt data-i18n-key="lookupClicks">Clicks</dt><dd id="lookup-clicks"></dd>
+          <dt data-i18n-key="dashTitleInput">Title (optional)</dt><dd id="lookup-title"></dd>
+        </dl>
+        <div class="row lookup-actions">
+          <button id="lookup-copy" type="button" class="secondary" data-i18n-key="popupBtnCopy">Copy</button>
+          <button id="lookup-edit" type="button" class="secondary" data-i18n-key="dashEdit">Edit</button>
+          <button id="lookup-delete" type="button" class="danger" data-i18n-key="popupBtnDelete" hidden>Delete</button>
+          <button id="lookup-create" type="button" class="secondary" data-i18n-key="lookupCreateInstead" hidden>Create a short URL</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="kurl-panel" aria-labelledby="manual-title">
+      <h2 id="manual-title" data-i18n-key="dashCreate">Create a short URL</h2>
+      <form id="manual-form">
+        <label for="manual-long" data-i18n-key="dashTarget">Target URL</label>
+        <input id="manual-long" type="url" required placeholder="https://example.com/article" autocomplete="off">
+        <label for="manual-keyword" data-i18n-key="dashKeyword">Custom keyword (optional)</label>
+        <input id="manual-keyword" type="text" autocomplete="off" maxlength="100" placeholder="my-article">
+        <label for="manual-title-input" data-i18n-key="dashTitleInput">Title (optional)</label>
+        <input id="manual-title-input" type="text" autocomplete="off" maxlength="300">
+        <div class="row">
+          <button type="button" id="manual-reset" class="secondary" data-i18n-key="dashNew">New link</button>
+          <button type="button" id="manual-lookup" class="secondary" data-i18n-key="dashLookup">Check YOURLS</button>
+          <button type="submit" id="manual-submit" data-i18n-key="dashCreateNew">Create short URL</button>
+          <button type="button" id="manual-update" class="secondary" disabled data-i18n-key="dashUpdateExisting">Update existing link</button>
+          <button type="button" id="manual-regenerate" class="secondary" disabled data-i18n-key="dashRegenerate">Regenerate safely</button>
+          <button type="button" id="manual-copy" class="secondary" disabled data-i18n-key="dashCopyResult">Copy result</button>
+        </div>
+        <label for="manual-result" data-i18n-key="dashShortUrl">Short URL</label>
+        <input id="manual-result" type="text" readonly>
+        <p class="kurl-help" data-i18n-key="dashManualHelp">Create generates a link for the target. To change a saved link, select Edit in a list or Check YOURLS, then use Update existing link. Edits can affect links already shared.</p>
+        <p id="manual-status" class="info" role="status" aria-live="polite">Ready.</p>
+      </form>
+    </section>
+
+    </div>
+    </div>
+    <aside id="helper-setup" class="helper-setup" aria-labelledby="helper-setup-title">
+      <details id="helper-panel" class="helper-panel">
+        <summary id="helper-panel-summary" data-i18n-key="helperShowDetails">Helper setup and source code</summary>
+      <div class="helper-lead">
+        <div>
+          <h2 id="helper-setup-title" data-i18n-key="helperSetupTitle">kURL Helper for YOURLS</h2>
+          <p data-i18n-key="helperSetupSummary">The optional server-side plugin adds lookup, editing, regeneration and remote deletion. It is installed on YOURLS, not your browser.</p>
+        </div>
+        <span class="helper-pill" data-i18n-key="helperOptional">Optional</span>
+      </div>
+      <details id="helper-instructions">
+        <summary data-i18n-key="helperInstructions">Installation guide and download</summary>
+        <ol>
+          <li data-i18n-key="helperStep1">Download plugin.php here or copy the full PHP source code below.</li>
+          <li data-i18n-key="helperStep2">On your YOURLS server create user/plugins/kurl-helper/ and save plugin.php in that folder (not plugin.php.txt).</li>
+          <li data-i18n-key="helperStep3">In YOURLS → Manage Plugins, activate kURL Helper.</li>
+          <li data-i18n-key="helperStep4">Return to this dashboard and click Refresh. Version 1.1.6 or newer enables advanced actions.</li>
+        </ol>
+        <div class="helper-actions row">
+          <button id="helper-download" type="button" class="secondary" data-i18n-key="helperDownload">Save plugin.php</button>
+          <button id="helper-copy" type="button" class="secondary" data-i18n-key="helperCopy">Copy PHP code</button>
+          <a id="helper-source-link" href="https://github.com/gerald-drissner/kurl-firefox-addon/blob/b45b12f7dc211921b55c2165912deadff4a0b4f8/helper/kurl-helper/plugin.php" target="_blank" rel="noopener noreferrer" data-i18n-key="helperSource">View the helper on GitHub</a>
+        </div>
+        <details id="helper-code-details" class="helper-code-details">
+          <summary data-i18n-key="helperShowCode">Show full PHP source</summary>
+          <pre class="helper-source"><code id="helper-code" dir="ltr" data-i18n-key="helperLoadOnOpen">Open to load the code.</code></pre>
+        </details>
+        <p id="helper-file-status" role="status" aria-live="polite" class="kurl-help"></p>
+        <p class="helper-warning" data-i18n-key="helperSafety">One YOURLS Helper installation can serve multiple clients. Changes and deletions can break URLs already shared on websites or in sent emails.</p>
+      </details>
+      </details>
+    </aside>
+    <div class="dashboard-list-columns">
+    <section aria-labelledby="top-title">
+      <h2 id="top-title" data-i18n-key="dashTop">Most clicked YOURLS links</h2>
+      <div id="top-links-container" class="kurl-link-list" ></div>
+    </section>
+    <section aria-labelledby="recent-title">
+      <div class="dashboard-header">
+        <h2 id="recent-title" data-i18n-key="dashboardTitleRecentLinks">Recent links</h2>
+        <div>
+          <label for="filter-links" class="kurl-inline-label" data-i18n-key="dashFilter">Filter loaded links</label>
+          <input id="filter-links" type="search" data-i18n-placeholder="dashSearch" placeholder="Filter recent links">
+          <p class="filter-scope-help" data-i18n-key="dashFilterHelp">Filters only the recent links already displayed. Use “View More” to include older links.</p>
+        </div>
+      </div>
+      <div id="recent-links-container" class="kurl-link-list" ></div>
+      <div id="view-more-container" class="row"></div>
+    </section>
+    </div>
+    <footer class="kurl-dashboard-footer" aria-label="kURL">
+      <span id="kurl-dashboard-version" dir="ltr">kURL</span>
+      <span class="kurl-footer-separator" aria-hidden="true">·</span>
+      <a href="https://drissner.media/kontakt" target="_blank" rel="noopener noreferrer" data-i18n-key="footerContact">Contact</a>
+      <span class="kurl-footer-separator" aria-hidden="true">·</span>
+      <a href="https://www.paypal.com/paypalme/drissner" target="_blank" rel="noopener noreferrer" data-i18n-key="footerSupport">Support development</a>
+    </footer>
+  </main>
+  <script src="JS/polyfill.js"></script>
+  <script src="JS/helpers.js"></script>
+  <script src="JS/dashboard.js"></script>
+</body>
+</html>

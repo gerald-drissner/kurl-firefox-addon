@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>kURL — Activity log</title><link rel="stylesheet" href="styles.css"></head>
+<body class="options-body"><main class="card">
+<nav class="nav-tabs" aria-label="kURL">
+<a href="dashboard.html" class="nav-tab" data-i18n-key="dashboardTitle">Dashboard</a>
+<a href="options.html" class="nav-tab" data-i18n-key="optionsTitle">Settings</a>
+<a href="bulk.html" class="nav-tab" data-i18n-key="dashBulk">Bulk</a>
+<a href="logs.html" class="nav-tab active" aria-current="page" data-i18n-key="dashLogs">Logs</a>
+</nav>
+<h1 data-i18n-key="logHeading">Recent kURL activity</h1>
+<p data-i18n-key="logExplanation">A local seven-day operation log (maximum 100 entries). No API tokens, page contents or URLs are stored here.</p>
+<div class="row">
+<button id="log-refresh" class="secondary" type="button" data-i18n-key="dashboardBtnRefresh">Refresh</button>
+<button id="log-copy" class="secondary" type="button" disabled data-i18n-key="logCopy">Copy log</button>
+<button id="log-download" class="secondary" type="button" disabled data-i18n-key="logDownload">Export .txt</button>
+<button id="log-clear" class="danger" type="button" data-i18n-key="logClear">Clear log</button>
+</div>
+<p id="log-status" class="info" role="status" aria-live="polite">Ready.</p>
+<div id="log-results" class="kurl-link-list"></div>
+<nav class="log-pages" aria-label="Log pages">
+<button id="log-prev" class="secondary" type="button" disabled data-i18n-key="logPrev">Previous</button>
+<span id="log-page" aria-live="polite">Page 1</span>
+<button id="log-next" class="secondary" type="button" disabled data-i18n-key="logNext">Next</button>
+</nav>
+</main><script src="JS/polyfill.js"></script><script src="JS/logs.js"></script></body></html>

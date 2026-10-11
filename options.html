@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title data-i18n-key="optionsTitle">kurl - Settings</title>
@@ -7,31 +7,58 @@
 </head>
 <body class="options-body">
 <div class="card">
-    <h1 data-i18n-key="optionsTitle">YOURLS Settings</h1>
+  <h1 data-i18n-key="optionsTitle">YOURLS Settings</h1>
 
-    <label data-i18n-key="optionsYourlsUrlLabel">YOURLS URL (no trailing slash)</label>
-    <input id="yourlsUrl" type="url" placeholder="https://kurlxy.at">
+  <div class="nav-tabs">
+    <a href="dashboard.html" class="nav-tab" data-i18n-key="dashboardTitle">Dashboard</a>
+    <a href="options.html" class="nav-tab active" data-i18n-key="optionsTitle">Settings</a>
+    <a href="bulk.html" class="nav-tab" data-i18n-key="dashBulk">Bulk</a>
+    <a href="logs.html" class="nav-tab" data-i18n-key="dashLogs">Logs</a>
+  </div>
 
-    <label data-i18n-key="optionsApiSignatureLabel">API signature token</label>
+  <div id="connection-indicator" class="connection-indicator connection-neutral" role="status" aria-live="polite">
+    <span class="connection-light" aria-hidden="true"></span>
+    <span id="connection-indicator-text" data-i18n-key="connectionNotConfigured">Connection not configured</span>
+  </div>
+
+  <label for="yourlsUrl" data-i18n-key="optionsYourlsUrlLabel">YOURLS URL (no trailing slash)</label>
+  <input id="yourlsUrl" type="url" placeholder="https://kurlxy.at" required>
+
+    <label for="apiSignature" data-i18n-key="optionsApiSignatureLabel">API signature token</label>
     <input id="apiSignature" type="password" placeholder="••••••••••">
 
     <div class="toggle-container">
-      <span data-i18n-key="optionsAutoCopyLabel">Copy short link to clipboard automatically</span>
+      <label for="autoCopy" data-i18n-key="optionsAutoCopyLabel">Copy short link to clipboard automatically</label>
       <label class="switch">
         <input id="autoCopy" type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
 
+    <div class="toggle-container">
+      <label for="showCopyNotifications" data-i18n-key="optionsCopyFeedbackLabel">Show copy confirmations</label>
+      <label class="switch">
+        <input id="showCopyNotifications" type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <p class="settings-hint" data-i18n-key="optionsCopyFeedbackHint">Brief confirmations after copying in the dashboard or using the right-click menu. Turn off to suppress success toasts, desktop notifications and badges; errors are still shown. This preference saves immediately.</p>
+
     <div class="row">
-      <button id="save" data-i18n-key="optionsBtnSave">Save</button>
-      <button id="test" class="secondary" data-i18n-key="optionsBtnTest">Test Connection</button>
+      <button id="test" data-i18n-key="optionsBtnTestAndSave">Test connection &amp; save</button>
+      <button id="save" class="secondary" data-i18n-key="optionsBtnSaveUnverified">Save without testing</button>
       <button id="removePerm" class="secondary danger" data-i18n-key="optionsBtnRemovePerm">Remove Host Permission</button>
     </div>
 
-    <div id="status" class="info" data-i18n-key="optionsStatusLoaded">Saved settings loaded. Click “Test Connection”.</div>
-</div>
+    <p class="settings-hint" data-i18n-key="optionsOpenDashboardHint">Open Dashboard in its own tab for link statistics, link management and Helper installation instructions.</p>
+    <div id="status" class="info" role="status" aria-live="polite" data-i18n-key="optionsStatusLoaded">Saved settings loaded. Click “Test Connection”.</div>
+    <p id="options-auth-recovery" class="auth-recovery" hidden><a id="options-auth-tools" target="_blank" rel="noopener noreferrer" data-i18n-key="apiOpenTools">Open YOURLS Admin → Tools to copy the current API signature</a></p>
 
+    <p id="privacy-info" data-i18n-key="optionsPrivacyNotice">kURL sends the target URL, optional keyword/title, and API authentication data to your configured YOURLS server over HTTPS. Dashboard actions retrieve statistics and link information from that server. API settings and a seven-day activity log remain local in this browser extension; no data is sent to the add-on developer.</p>
+  
+  </div>
+
+  <script src="JS/polyfill.js"></script>
   <script src="JS/helpers.js"></script>
   <script src="JS/options.js"></script>
 </body>

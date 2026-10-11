@@ -1,54 +1,51 @@
 {
   "extensionName": {
-    "message": "kurl - YOURLS مُختصِر الروابط"
+    "message": "kURL — اختصار روابط YOURLS"
   },
   "extensionDescription": {
-    "message": "اختصر الروابط باستخدام نسخة YOURLS الخاصة بك مباشرة من متصفحك."
-  },
-  "menuItemShortenSelection": {
-    "message": "kurl: اختصر الرابط المحدد"
-  },
-  "menuItemShortenPage": {
-    "message": "kurl: اختصر رابط هذه الصفحة"
-  },
-  "menuItemShortenLink": {
-    "message": "kurl: اختصر عنوان الرابط"
+    "message": "اختصر الروابط وابحث عنها وأدرها من خادم YOURLS الخاص بك مباشرة في المتصفح."
   },
   "optionsTitle": {
-    "message": "إعدادات YOURLS"
+    "message": "إعدادات YOURLS",
+    "description": "Title for the options page."
   },
   "optionsYourlsUrlLabel": {
-    "message": "رابط YOURLS (بدون شرطة مائلة في النهاية)"
+    "message": "رابط YOURLS (بدون شرطة مائلة في النهاية)",
+    "description": "Label for the YOURLS URL input."
   },
   "optionsApiSignatureLabel": {
-    "message": "رمز توقيع API"
+    "message": "رمز توقيع API",
+    "description": "Label for the API signature token input."
   },
   "optionsAutoCopyLabel": {
-    "message": "انسخ الرابط القصير إلى الحافظة تلقائيًا"
+    "message": "نسخ الرابط المختصر إلى الحافظة تلقائيا",
+    "description": "Label for the auto-copy checkbox."
   },
   "optionsBtnSave": {
-    "message": "حفظ"
+    "message": "احفظ"
   },
   "optionsBtnTest": {
-    "message": "اختبار الاتصال"
+    "message": "اختبر الاتصال",
+    "description": "Test connection button text."
   },
   "optionsBtnRemovePerm": {
-    "message": "إزالة إذن المضيف"
+    "message": "أزل إذن المضيف"
   },
   "optionsStatusLoaded": {
-    "message": "تم تحميل الإعدادات المحفوظة. انقر على 'اختبار الاتصال'."
+    "message": "تم تحميل الإعدادات المحفوظة.",
+    "description": "Initial status message on options page."
   },
   "optionsStatusEnterUrlAndToken": {
-    "message": "الرجاء إدخال رابط YOURLS ورمز API الخاص بك."
+    "message": "الرجاء إدخال رابط YOURLS ورمز API.",
+    "description": "Error message when URL or token is missing."
   },
   "optionsStatusPermNotGranted": {
-    "message": "لم يتم منح إذن المضيف."
-  },
-  "optionsStatusPermRequestError": {
-    "message": "تعذر طلب إذن المضيف: "
+    "message": "لم يتم منح إذن المضيف.",
+    "description": "Error message when host permission is denied."
   },
   "optionsStatusConnOk": {
     "message": "الاتصال جيد (إجمالي الروابط: $total$)",
+    "description": "Success message for connection test.",
     "placeholders": {
       "total": {
         "content": "$1"
@@ -56,67 +53,105 @@
     }
   },
   "optionsStatusConnFailed": {
-    "message": "فشل الاتصال."
+    "message": "فشل الاتصال.",
+    "description": "Error message for failed connection test."
   },
   "optionsStatusSaved": {
-    "message": "تم حفظ الإعدادات. قد ترغب في اختبار الاتصال مرة أخرى."
+    "message": "تم حفظ الإعدادات. قد ترغب في اختبار الاتصال مرة أخرى.",
+    "description": "Status message after saving settings."
   },
   "optionsStatusEnterUrlToRemove": {
-    "message": "أدخل رابطًا لإزالة إذنه."
+    "message": "أدخل رابطا لإزالة إذن المضيف الخاص به.",
+    "description": "Message when trying to remove permission without a URL."
   },
   "optionsStatusPermRemoveError": {
-    "message": "تعذر إزالة الإذن: "
+    "message": "تعذر إزالة الإذن: ",
+    "description": "Error message when removing host permission fails."
   },
   "optionsStatusPermRemoved": {
-    "message": "تمت إزالة إذن المضيف لهذا المصدر."
+    "message": "تمت إزالة إذن المضيف لهذا المصدر.",
+    "description": "Success message when permission is removed."
   },
   "popupTitle": {
-    "message": "kurl - YOURLS مُختصِر الروابط"
+    "message": "أداة اختصار YOURLS",
+    "description": "Title for the popup window."
   },
   "popupLongUrlLabel": {
-    "message": "الرابط الطويل"
+    "message": "الرابط الطويل",
+    "description": "Label for the long URL input."
+  },
+  "popupAdvancedOptions": {
+    "message": "خيارات متقدمة",
+    "description": "Label for the collapsible advanced options section in the popup."
   },
   "popupKeywordLabel": {
-    "message": "كلمة رئيسية مخصصة (اختياري)"
+    "message": "كلمة مفتاحية مخصصة (اختياري)",
+    "description": "Label for the custom keyword input."
+  },
+  "popupTitleLabel": {
+    "message": "عنوان (اختياري)",
+    "description": "Label for the URL title input."
   },
   "popupBtnShorten": {
-    "message": "اختصر"
+    "message": "اختصر",
+    "description": "Shorten button text."
   },
   "popupShortUrlLabel": {
-    "message": "الرابط القصير"
+    "message": "الرابط المختصر",
+    "description": "Label for the short URL output."
+  },
+  "popupBtnCopy": {
+    "message": "انسخ",
+    "description": "Copy button text."
+  },
+  "popupBtnCopyClose": {
+    "message": "انسخ وأغلق"
   },
   "popupBtnDelete": {
-    "message": "حذف"
+    "message": "احذف",
+    "description": "Delete button text."
   },
-  "popupBtnConfirmDelete": {
-    "message": "تأكيد؟"
+  "popupBtnGoToSettings": {
+    "message": "اذهب إلى الإعدادات"
+  },
+  "popupBtnShowQr": {
+    "message": "أظهر رمز QR"
+  },
+  "popupBtnDownloadQr": {
+    "message": "نزّل رمز QR"
   },
   "popupStatsLabel": {
-    "message": "إحصائيات لـ (رابط قصير أو كلمة رئيسية)"
+    "message": "إحصاءات (رابط مختصر أو كلمة مفتاحية)",
+    "description": "Label for the stats input."
   },
   "popupBtnStats": {
-    "message": "إحصائيات"
+    "message": "أظهر الإحصاءات"
   },
   "popupBtnToggleJson": {
-    "message": "تبديل JSON"
+    "message": "أظهر تفاصيل JSON"
   },
   "popupStatusReady": {
-    "message": "جاهز."
+    "message": "جاهز.",
+    "description": "Initial status message in popup."
   },
   "popupStatusShortening": {
-    "message": "جارٍ الاختصار…"
+    "message": "جارٍ الاختصار…",
+    "description": "Status message while shortening."
   },
   "popupStatusCreated": {
-    "message": "تم إنشاء الرابط القصير."
+    "message": "تم إنشاء الرابط المختصر.",
+    "description": "Success message when URL is shortened."
   },
   "popupStatusCopied": {
-    "message": "تم النسخ إلى الحافظة."
+    "message": "تم النسخ إلى الحافظة.",
+    "description": "Message when text is copied."
   },
   "popupStatusFetchingStats": {
-    "message": "جارٍ جلب الإحصائيات…"
+    "message": "جارٍ جلب الإحصاءات…"
   },
   "popupStatusStatsResult": {
-    "message": "القصير: $shorturl$\nالهدف: $longurl$\nالنقرات: $clicks$",
+    "message": "مختصر: $shorturl$\nالهدف: $longurl$\nالنقرات: $clicks$",
+    "description": "Formatted stats result.",
     "placeholders": {
       "shorturl": {
         "content": "$1"
@@ -130,90 +165,349 @@
     }
   },
   "popupStatusDeleting": {
-    "message": "جارٍ الحذف…"
+    "message": "جارٍ الحذف…",
+    "description": "Status message while deleting."
   },
   "popupStatusDeleted": {
-    "message": "تم حذف الرابط القصير."
+    "message": "تم حذف الرابط المختصر.",
+    "description": "Success message when URL is deleted."
+  },
+  "popupStatusAttachingQr": {
+    "message": "جارٍ إرفاق رمز QR...",
+    "description": "Status message when attaching a QR code."
+  },
+  "popupStatusQrAttached": {
+    "message": "تم إرفاق رمز QR بنجاح.",
+    "description": "Success message when QR code is attached."
   },
   "popupInfoAlreadyShortened": {
-    "message": "الرابط مختصر بالفعل. يمكنك عرض الإحصائيات أو حذفه أدناه."
+    "message": "تم اختصار الرابط بالفعل. يمكنك عرض الإحصاءات أو حذفه أدناه.",
+    "description": "Informational message for an existing URL."
   },
-  "popupInfoAutoStats": {
-    "message": "هذا رابط قصير بالفعل. جارٍ جلب الإحصائيات تلقائيًا."
+  "popupInfoExisting": {
+    "message": "تم اختصار الرابط بالفعل.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
   },
   "popupErrorInvalidUrl": {
-    "message": "الرجاء إدخال رابط http(s) صالح."
+    "message": "الرجاء إدخال رابط http(s) صالح.",
+    "description": "Error for invalid URL format."
   },
-  "popupErrorCopyFailed": {
-    "message": "فشل النسخ."
+  "popupErrorNothingToCopy": {
+    "message": "لا يوجد شيء للنسخ.",
+    "description": "Error when copy button is clicked with no URL."
+  },
+  "popupErrorNothingToAttach": {
+    "message": "لا يوجد شيء للإرفاق.",
+    "description": "Error when attach button is clicked with no URL."
   },
   "popupErrorEnterUrlForStats": {
-    "message": "أدخل رابطًا قصيرًا أو كلمة رئيسية للحصول على الإحصائيات."
+    "message": "أدخل رابطا مختصرا أو كلمة مفتاحية للحصول على الإحصاءات.",
+    "description": "Error when stats button is clicked with no input."
   },
   "popupErrorProvideUrlToDelete": {
-    "message": "قدم رابطًا قصيرًا أو كلمة رئيسية للحذف."
-  },
-  "popupErrorStatsNotFound": {
-    "message": "الرابط القصير غير موجود."
-  },
-  "errorShortenFailed": {
-    "message": "فشل الاختصار."
-  },
-  "errorStatsFailed": {
-    "message": "فشل جلب الإحصائيات."
-  },
-  "errorDeleteFailed": {
-    "message": "فشل الحذف."
-  },
-  "errorEnterKeywordToDelete": {
-    "message": "الرجاء إدخال رابط قصير أو كلمة رئيسية للحذف."
+    "message": "قدم رابطا مختصرا أو كلمة مفتاحية للحذف.",
+    "description": "Error when delete is clicked with no URL."
   },
   "errorNoSettings": {
-    "message": "الرجاء تكوين YOURLS أولاً في إعدادات الإضافة."
-  },
-  "errorKeywordExists": {
-    "message": "هذه الكلمة الرئيسية المخصصة مستخدمة بالفعل. الرجاء تجربة أخرى."
-  },
-  "toastUrlCreated": {
-    "message": "تم إنشاء الرابط القصير."
-  },
-  "toastUrlExists": {
-    "message": "الرابط مختصر بالفعل."
-  },
-  "toastUrlDeleted": {
-    "message": "تم حذف الرابط القصير."
-  },
-  "setupTitle": {
-    "message": "الإعداد مطلوب"
-  },
-  "setupMessage": {
-    "message": "الرجاء تكوين رابط نسخة YOURLS ورمز API الخاص بك في الإعدادات."
-  },
-  "setupBtnGoToOptions": {
-    "message": "فتح الإعدادات"
-  },
-  "advancedOptionsLabel": {
-    "message": "خيارات متقدمة"
-  },
-  "titleLabel": {
-    "message": "عنوان مخصص (اختياري)"
-  },
-  "popupBtnCopyClose": {
-    "message": "نسخ وإغلاق"
-  },
-  "popupBtnQrCode": {
-    "message": "رمز الاستجابة السريعة"
-  },
-  "popupBtnDownloadQr": {
-    "message": "تنزيل رمز الاستجابة السريعة"
+    "message": "الرجاء تهيئة YOURLS أولا في إعدادات الإضافة.",
+    "description": "Error when settings are not configured."
   },
   "dashboardTitle": {
-    "message": "لوحة تحكم YOURLS"
+    "message": "لوحة التحكم",
+    "description": "The main title for the dashboard page and tab."
   },
-  "dashboardLinks": {
-    "message": "إجمالي الروابط"
+  "dashboardBtnRefresh": {
+    "message": "تحديث",
+    "description": "Text for the refresh button on the dashboard."
   },
-  "dashboardClicks": {
-    "message": "إجمالي النقرات"
+  "dashboardLabelTotalLinks": {
+    "message": "إجمالي الروابط",
+    "description": "Label for the total links stat card."
+  },
+  "dashboardLabelTotalClicks": {
+    "message": "إجمالي النقرات",
+    "description": "Label for the total clicks stat card."
+  },
+  "dashboardLabelAvgClicks": {
+    "message": "متوسط النقرات",
+    "description": "Label for the average clicks stat card."
+  },
+  "dashboardLabelServerStatus": {
+    "message": "حالة الخادم",
+    "description": "Label for the server status stat card."
+  },
+  "dashboardTitleRecentLinks": {
+    "message": "الروابط الأخيرة",
+    "description": "The title for the recent links section."
+  },
+  "dashboardStatusOnline": {
+    "message": "متصل",
+    "description": "Server status text for when the connection is OK."
+  },
+  "dashboardStatusError": {
+    "message": "خطأ",
+    "description": "Server status text for when an error occurs."
+  },
+  "dashboardStatusLoading": {
+    "message": "جارٍ التحميل...",
+    "description": "Generic loading text."
+  },
+  "dashboardNoLinksFound": {
+    "message": "لم يتم العثور على روابط حديثة.",
+    "description": "Message shown when the recent links list is empty."
+  },
+  "dashboardBtnViewMore": {
+    "message": "عرض المزيد",
+    "description": "Text for the 'View More' button to load more links."
+  },
+  "dashBulk": {
+    "message": "اختصار مجموعة من الروابط"
+  },
+  "dashLogs": {
+    "message": "سجل النشاط"
+  },
+  "dashLookup": {
+    "message": "ابحث في YOURLS"
+  },
+  "dashNew": {
+    "message": "رابط جديد"
+  },
+  "dashCreateNew": {
+    "message": "أنشئ رابطا مختصرا"
+  },
+  "dashUpdateExisting": {
+    "message": "عدّل الرابط الحالي"
+  },
+  "dashRegenerate": {
+    "message": "أعد إنشاء الرابط بأمان"
+  },
+  "dashEdit": {
+    "message": "عدّل"
+  },
+  "bulkHeading": {
+    "message": "اختصار مجموعة من الروابط"
+  },
+  "bulkInput": {
+    "message": "الروابط المراد اختصارها"
+  },
+  "bulkPreview": {
+    "message": "عاين"
+  },
+  "bulkStart": {
+    "message": "ابدأ"
+  },
+  "bulkStop": {
+    "message": "أوقف بعد الطلب الحالي"
+  },
+  "bulkCopy": {
+    "message": "انسخ النتائج"
+  },
+  "bulkSize": {
+    "message": "تحديث التقدم كل"
+  },
+  "logHeading": {
+    "message": "أحدث أنشطة kURL"
+  },
+  "logClear": {
+    "message": "امسح السجل"
+  },
+  "popupErrorQrGeneration": {
+    "message": "تعذر إنشاء رمز QR."
+  },
+  "dashManualHelp": {
+    "message": "استخدم «أنشئ رابطا مختصرا» لإنشاء رابط جديد. لتعديل رابط موجود، انقر على «عدّل» بجانبه في إحدى القوائم أو اعثر عليه بزر «ابحث في YOURLS»، ثم انقر على «عدّل الرابط الحالي». قد تؤثر التعديلات في روابط سبق أن شاركتها."
+  },
+  "optionsCopyFeedbackLabel": {
+    "message": "إظهار إشعارات النجاح"
+  },
+  "optionsCopyFeedbackHint": {
+    "message": "إظهار تأكيد موجز بعد النسخ في لوحة التحكم، وبعد الاختصار والنسخ من القائمة السياقية. يمكن إيقاف إشعارات النجاح دون إخفاء رسائل الخطأ. يحفظ هذا الإعداد فورا."
+  },
+  "dashCopyToast": {
+    "message": "تم النسخ إلى الحافظة"
+  },
+  "apiAuthRejected": {
+    "message": "رفض YOURLS توقيع واجهة API. ربما تغير رمز التوقيع بعد تحديث الخادم. سجل الدخول إلى لوحة إدارة YOURLS عبر المتصفح، وافتح الإدارة ← الأدوات، وانسخ التوقيع الحالي إلى إعدادات kURL، ثم اختر «اختبر الاتصال واحفظ». لا يحتاج kURL إلى اسم المستخدم أو كلمة المرور. إذا استمر الخطأ فتحقق من ساعة الجهاز والخادم وقيود الوصول إلى API."
+  },
+  "apiAccessDenied": {
+    "message": "رفض الخادم الوصول إلى API ‏(HTTP 401/403). تحقق من التوقيع في إدارة YOURLS ← الأدوات، ثم أعد اختبار الاتصال. إذا كان التوقيع صحيحا فتحقق من قيود الخادم والوقت. لا يلزم تسجيل الدخول داخل kURL."
+  },
+  "apiInvalidResponse": {
+    "message": "لم يرسل YOURLS استجابة API صالحة (HTTP $status$). تحقق من عنوان الخادم وHTTPS وأي إعادة توجيه إلى صفحة تسجيل الدخول.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "apiOpenTools": {
+    "message": "افتح إدارة YOURLS ← الأدوات لنسخ توقيع API الحالي"
+  },
+  "optionsBtnTestAndSave": {
+    "message": "اختبر الاتصال واحفظ"
+  },
+  "contextSelectUrl": {
+    "message": "حدد رابط HTTP(S) كاملا."
+  },
+  "contextCopied": {
+    "message": "✓ تم النسخ إلى الحافظة: $shorturl$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      }
+    }
+  },
+  "contextShorteningFailed": {
+    "message": "تعذر اختصار الرابط"
+  },
+  "dashboardLabelClicks": {
+    "message": "النقرات: $count$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "insertAmbiguousLink": {
+    "message": "تستخدم عدة روابط عنوان URL هذا. انقر داخل الرابط المطلوب وحاول مرة أخرى."
+  },
+  "insertClickedLinkMissing": {
+    "message": "لم يتم العثور على الرابط الذي نقرت عليه في نص الرسالة."
+  },
+  "optionsOldTokenHint": {
+    "message": "قد يكون هذا الرمز المؤلف من عشرة أحرف من إصدار قديم من YOURLS. انسخ توقيع API الحالي من الإدارة ← الأدوات."
+  },
+  "menuQuickCopy": {
+    "message": "kURL: اختصار ونسخ"
+  },
+  "lookupHeading": {
+    "message": "البحث عن رابط موجود"
+  },
+  "lookupHelp": {
+    "message": "أدخل رابطا مختصرا أو الكلمة المفتاحية أو الرابط الأصلي. يمكنك معرفة وجهة الرابط المختصر وعدد النقرات، أو التحقق مما إذا كان للرابط الأصلي اختصار سابق."
+  },
+  "lookupQueryLabel": {
+    "message": "الرابط المختصر أو الكلمة المفتاحية أو الرابط الأصلي"
+  },
+  "lookupQueryPlaceholder": {
+    "message": "$short$ أو https://example.com/article",
+    "placeholders": {
+      "short": {
+        "content": "$1"
+      }
+    }
+  },
+  "lookupSearch": {
+    "message": "البحث في YOURLS"
+  },
+  "lookupResultHeading": {
+    "message": "تم العثور على الرابط"
+  },
+  "lookupClicks": {
+    "message": "النقرات"
+  },
+  "lookupCreateInstead": {
+    "message": "إنشاء رابط مختصر"
+  },
+  "lookupInvalid": {
+    "message": "أدخل رابطا أصليا صالحا، أو رابطا مختصرا من هذا الخادم، أو الكلمة المفتاحية."
+  },
+  "lookupNeedsHelper": {
+    "message": "يتطلب البحث باستخدام الرابط الأصلي إضافة YOURLS Helper الاختيارية. ويمكن البحث عن الروابط المختصرة من دونها."
+  },
+  "lookupSearching": {
+    "message": "جارٍ البحث في YOURLS…"
+  },
+  "lookupFound": {
+    "message": "تم العثور على الرابط في خادم YOURLS."
+  },
+  "lookupNotFound": {
+    "message": "لم يتم العثور على رابط مختصر"
+  },
+  "lookupNotFoundHelp": {
+    "message": "لا يوجد اختصار معروف لهذا الرابط الأصلي. يمكنك إنشاء اختصار جديد."
+  },
+  "helperCompactOk": {
+    "message": "إضافة Helper مثبتة"
+  },
+  "helperShowDetails": {
+    "message": "تفاصيل التثبيت والشفرة المصدرية"
+  },
+  "dashFilter": {
+    "message": "تصفية أحدث الروابط المعروضة"
+  },
+  "dashSearch": {
+    "message": "بحث ضمن الروابط المعروضة"
+  },
+  "dashFilterHelp": {
+    "message": "تقتصر التصفية على أحدث الروابط المعروضة حاليا. اضغط «$button$» لإضافة روابط أقدم.",
+    "placeholders": {
+      "button": {
+        "content": "$1"
+      }
+    }
+  },
+  "dashFilterNoMatch": {
+    "message": "لا توجد نتائج ضمن الروابط الحديثة المعروضة."
+  },
+  "lookupOwnInvalid": {
+    "message": "هذا العنوان تابع لخادم YOURLS الخاص بك، لكنه ليس رابطا مختصرا صالحا. أدخل الكلمة المفتاحية أو رابطا مختصرا من هذا الخادم."
+  },
+  "dashboardSetupHeading": {
+    "message": "الاتصال بخادم YOURLS"
+  },
+  "dashboardSetupHelp": {
+    "message": "أدخل عنوان خادم YOURLS ورمز توقيع API في الإعدادات، ثم اختبر الاتصال واحفظ الإعدادات."
+  },
+  "dashboardSetupButton": {
+    "message": "فتح إعدادات YOURLS"
+  },
+  "dashboardSetupStatus": {
+    "message": "اتصل بخادم YOURLS للبدء."
+  },
+  "connectionNotConfigured": {
+    "message": "لم يتم إعداد الاتصال"
+  },
+  "connectionNotChecked": {
+    "message": "لم يتم اختبار الاتصال بهذه الإعدادات"
+  },
+  "connectionChecking": {
+    "message": "جارٍ اختبار الاتصال بخادم YOURLS…"
+  },
+  "connectionOnline": {
+    "message": "تم الاتصال — استجابت واجهة YOURLS البرمجية"
+  },
+  "connectionFailed": {
+    "message": "فشل اختبار الاتصال — تحقق من الخادم والرمز"
+  },
+  "connectionPermissionMissing": {
+    "message": "إذن الوصول إلى خادم YOURLS غير متاح"
+  },
+  "confirmDelete": {
+    "message": "هل تريد حذف هذا الرابط المختصر نهائيا؟ قد تتوقف الروابط الموجودة في المواقع الإلكترونية ورسائل البريد الإلكتروني المرسلة عن العمل."
+  },
+  "menuQuickPage": {
+    "message": "kURL: اختصار رابط الصفحة الحالية ونسخه"
+  },
+  "popupCurrentPage": {
+    "message": "استخدم الصفحة الحالية"
+  },
+  "optionsPrivacyNotice": {
+    "message": "يرسل kURL الروابط التي تختار اختصارها أو إدارتها، مع الكلمات المفتاحية والعناوين الاختيارية، إلى خادم YOURLS الذي تحدده عبر HTTPS. يبقى رمز API وسجل النشاط المحلي لسبعة أيام في المتصفح ولا تُرسل بيانات إلى مطور الإضافة."
+  },
+  "helperSetupSummary": {
+    "message": "يعمل المساعد الاختياري على خادم YOURLS الخاص بك، وليس داخل إضافة المتصفح."
+  },
+  "helperSource": {
+    "message": "عرض شيفرة المساعد على GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "تغيّرت الإعدادات أثناء الاختبار. لم يُحفظ شيء. أعد اختبار الاتصال."
+  },
+  "footerContact": {
+    "message": "التواصل"
+  },
+  "footerSupport": {
+    "message": "ادعم تطوير الإضافة"
   }
 }

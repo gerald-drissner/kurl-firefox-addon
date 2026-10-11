@@ -1,54 +1,54 @@
 {
   "extensionName": {
-    "message": "kurl - Acortador de YOURLS"
+    "message": "kURL – Acortador de YOURLS",
+    "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Acorta enlaces con tu instancia de YOURLS directamente desde tu navegador."
-  },
-  "menuItemShortenSelection": {
-    "message": "kurl: Acortar URL seleccionada"
-  },
-  "menuItemShortenPage": {
-    "message": "kurl: Acortar URL de esta página"
-  },
-  "menuItemShortenLink": {
-    "message": "kurl: Acortar dirección del enlace"
+    "message": "Acorta, busca y administra enlaces desde tu propio servidor YOURLS en el navegador."
   },
   "optionsTitle": {
-    "message": "Configuración de YOURLS"
+    "message": "Configuración de YOURLS",
+    "description": "Title for the options page."
   },
   "optionsYourlsUrlLabel": {
-    "message": "URL de YOURLS (sin barra diagonal final)"
+    "message": "URL de YOURLS (sin barra diagonal final)",
+    "description": "Label for the YOURLS URL input."
   },
   "optionsApiSignatureLabel": {
-    "message": "Token de firma de la API"
+    "message": "Token de firma de la API",
+    "description": "Label for the API signature token input."
   },
   "optionsAutoCopyLabel": {
-    "message": "Copiar enlace corto al portapapeles automáticamente"
+    "message": "Copiar enlace corto al portapapeles automáticamente",
+    "description": "Label for the auto-copy checkbox."
   },
   "optionsBtnSave": {
-    "message": "Guardar"
+    "message": "Guardar",
+    "description": "Save button text."
   },
   "optionsBtnTest": {
-    "message": "Probar conexión"
+    "message": "Probar conexión",
+    "description": "Test connection button text."
   },
   "optionsBtnRemovePerm": {
-    "message": "Eliminar permiso del host"
+    "message": "Eliminar permiso de host",
+    "description": "Remove host permission button text."
   },
   "optionsStatusLoaded": {
-    "message": "Configuración guardada cargada. Haz clic en «Probar conexión»."
+    "message": "Se han cargado los ajustes guardados.",
+    "description": "Initial status message on options page."
   },
   "optionsStatusEnterUrlAndToken": {
-    "message": "Por favor, introduce tu URL de YOURLS y tu token de API."
+    "message": "Por favor, introduce tu URL de YOURLS y el token de la API.",
+    "description": "Error message when URL or token is missing."
   },
   "optionsStatusPermNotGranted": {
-    "message": "No se concedió el permiso del host."
-  },
-  "optionsStatusPermRequestError": {
-    "message": "No se pudo solicitar el permiso del host: "
+    "message": "No se concedió el permiso de host.",
+    "description": "Error message when host permission is denied."
   },
   "optionsStatusConnOk": {
     "message": "Conexión OK (Total de enlaces: $total$)",
+    "description": "Success message for connection test.",
     "placeholders": {
       "total": {
         "content": "$1"
@@ -56,67 +56,112 @@
     }
   },
   "optionsStatusConnFailed": {
-    "message": "Falló la conexión."
+    "message": "Conexión fallida.",
+    "description": "Error message for failed connection test."
   },
   "optionsStatusSaved": {
-    "message": "Configuración guardada. Es posible que desees probar la conexión de nuevo."
+    "message": "Configuración guardada. Puede que quieras probar la conexión de nuevo.",
+    "description": "Status message after saving settings."
   },
   "optionsStatusEnterUrlToRemove": {
-    "message": "Introduce una URL para eliminar su permiso."
+    "message": "Introduce una URL para eliminar su permiso.",
+    "description": "Message when trying to remove permission without a URL."
   },
   "optionsStatusPermRemoveError": {
-    "message": "No se pudo eliminar el permiso: "
+    "message": "No se pudo eliminar el permiso: ",
+    "description": "Error message when removing host permission fails."
   },
   "optionsStatusPermRemoved": {
-    "message": "Permiso del host eliminado para este origen."
+    "message": "Permiso de host eliminado para este origen.",
+    "description": "Success message when permission is removed."
   },
   "popupTitle": {
-    "message": "kurl - Acortador de YOURLS"
+    "message": "Acortador de YOURLS",
+    "description": "Title for the popup window."
   },
   "popupLongUrlLabel": {
-    "message": "URL larga"
+    "message": "URL larga",
+    "description": "Label for the long URL input."
+  },
+  "popupAdvancedOptions": {
+    "message": "Opciones avanzadas",
+    "description": "Label for the collapsible advanced options section in the popup."
   },
   "popupKeywordLabel": {
-    "message": "Palabra clave personalizada (opcional)"
+    "message": "Palabra clave personalizada (opcional)",
+    "description": "Label for the custom keyword input."
+  },
+  "popupTitleLabel": {
+    "message": "Título (opcional)",
+    "description": "Label for the URL title input."
   },
   "popupBtnShorten": {
-    "message": "Acortar"
+    "message": "Acortar",
+    "description": "Shorten button text."
   },
   "popupShortUrlLabel": {
-    "message": "URL corta"
+    "message": "URL corta",
+    "description": "Label for the short URL output."
+  },
+  "popupBtnCopy": {
+    "message": "Copiar",
+    "description": "Copy button text."
+  },
+  "popupBtnCopyClose": {
+    "message": "Copiar y cerrar",
+    "description": "Copy and Close button text."
   },
   "popupBtnDelete": {
-    "message": "Eliminar"
+    "message": "Eliminar",
+    "description": "Delete button text."
   },
-  "popupBtnConfirmDelete": {
-    "message": "¿Confirmar?"
+  "popupBtnGoToSettings": {
+    "message": "Ir a la configuración",
+    "description": "Button text in the popup to open the options page."
+  },
+  "popupBtnShowQr": {
+    "message": "Mostrar código QR",
+    "description": "Button to show the QR code."
+  },
+  "popupBtnDownloadQr": {
+    "message": "Descargar",
+    "description": "Button to download the QR code image."
   },
   "popupStatsLabel": {
-    "message": "Estadísticas para (URL corta o palabra clave)"
+    "message": "Estadísticas para (URL corta o palabra clave)",
+    "description": "Label for the stats input."
   },
   "popupBtnStats": {
-    "message": "Estadísticas"
+    "message": "Estadísticas",
+    "description": "Get stats button text."
   },
   "popupBtnToggleJson": {
-    "message": "Alternar JSON"
+    "message": "Alternar JSON",
+    "description": "Toggle JSON view button text."
   },
   "popupStatusReady": {
-    "message": "Listo."
+    "message": "Listo.",
+    "description": "Initial status message in popup."
   },
   "popupStatusShortening": {
-    "message": "Acortando…"
+    "message": "Acortando…",
+    "description": "Status message while shortening."
   },
   "popupStatusCreated": {
-    "message": "URL corta creada."
+    "message": "URL corta creada.",
+    "description": "Success message when URL is shortened."
   },
   "popupStatusCopied": {
-    "message": "Copiado al portapapeles."
+    "message": "Copiado al portapapeles.",
+    "description": "Message when text is copied."
   },
   "popupStatusFetchingStats": {
-    "message": "Obteniendo estadísticas…"
+    "message": "Obteniendo estadísticas…",
+    "description": "Status message while fetching stats."
   },
   "popupStatusStatsResult": {
-    "message": "Corta: $shorturl$\nDestino: $longurl$\nClics: $clicks$",
+    "message": "Corta: $shorturl$\nObjetivo: $longurl$\nClics: $clicks$",
+    "description": "Formatted stats result.",
     "placeholders": {
       "shorturl": {
         "content": "$1"
@@ -130,90 +175,279 @@
     }
   },
   "popupStatusDeleting": {
-    "message": "Eliminando…"
+    "message": "Eliminando…",
+    "description": "Status message while deleting."
   },
   "popupStatusDeleted": {
-    "message": "URL corta eliminada."
+    "message": "URL corta eliminada.",
+    "description": "Success message when URL is deleted."
+  },
+  "popupStatusAttachingQr": {
+    "message": "Adjuntando código QR...",
+    "description": "Status message when attaching a QR code."
+  },
+  "popupStatusQrAttached": {
+    "message": "Código QR adjuntado con éxito.",
+    "description": "Success message when QR code is attached."
   },
   "popupInfoAlreadyShortened": {
-    "message": "URL ya acortada. Puedes ver las estadísticas o eliminarla a continuación."
+    "message": "URL ya acortada. Puedes ver las estadísticas o eliminarla a continuación.",
+    "description": "Informational message for an existing URL."
   },
-  "popupInfoAutoStats": {
-    "message": "Esta ya es una URL corta. Obteniendo estadísticas automáticamente."
+  "popupInfoExisting": {
+    "message": "URL ya acortada.",
+    "description": "Popup status when YOURLS already had a short URL for this destination."
   },
   "popupErrorInvalidUrl": {
-    "message": "Por favor, introduce una URL http(s) válida."
+    "message": "Por favor, introduce una URL http(s) válida.",
+    "description": "Error for invalid URL format."
   },
-  "popupErrorCopyFailed": {
-    "message": "Falló la copia."
+  "popupErrorNothingToCopy": {
+    "message": "Nada para copiar.",
+    "description": "Error when copy button is clicked with no URL."
+  },
+  "popupErrorNothingToAttach": {
+    "message": "Nada para adjuntar.",
+    "description": "Error when attach button is clicked with no URL."
   },
   "popupErrorEnterUrlForStats": {
-    "message": "Introduce una URL corta o palabra clave para obtener estadísticas."
+    "message": "Introduce una URL corta o una palabra clave para obtener estadísticas.",
+    "description": "Error when stats button is clicked with no input."
   },
   "popupErrorProvideUrlToDelete": {
-    "message": "Proporciona una URL corta o palabra clave para eliminar."
-  },
-  "popupErrorStatsNotFound": {
-    "message": "URL corta no encontrada."
-  },
-  "errorShortenFailed": {
-    "message": "Falló el acortamiento."
-  },
-  "errorStatsFailed": {
-    "message": "Falló la obtención de estadísticas."
-  },
-  "errorDeleteFailed": {
-    "message": "Falló la eliminación."
-  },
-  "errorEnterKeywordToDelete": {
-    "message": "Por favor, introduce una URL corta o palabra clave para eliminar."
+    "message": "Proporciona una URL corta o una palabra clave para eliminar.",
+    "description": "Error when delete is clicked with no URL."
   },
   "errorNoSettings": {
-    "message": "Por favor, configura primero YOURLS en la configuración del complemento."
-  },
-  "errorKeywordExists": {
-    "message": "Esa palabra clave personalizada ya está en uso. Por favor, prueba con otra."
-  },
-  "toastUrlCreated": {
-    "message": "URL corta creada."
-  },
-  "toastUrlExists": {
-    "message": "URL ya acortada."
-  },
-  "toastUrlDeleted": {
-    "message": "URL corta eliminada."
-  },
-  "setupTitle": {
-    "message": "Configuración requerida"
-  },
-  "setupMessage": {
-    "message": "Por favor, configura la URL de tu instancia de YOURLS y tu token de API en la configuración."
-  },
-  "setupBtnGoToOptions": {
-    "message": "Abrir configuración"
-  },
-  "advancedOptionsLabel": {
-    "message": "Opciones avanzadas"
-  },
-  "titleLabel": {
-    "message": "Título personalizado (opcional)"
-  },
-  "popupBtnCopyClose": {
-    "message": "Copiar y cerrar"
-  },
-  "popupBtnQrCode": {
-    "message": "Código QR"
-  },
-  "popupBtnDownloadQr": {
-    "message": "Descargar código QR"
+    "message": "Por favor, configura YOURLS primero en la configuración del complemento.",
+    "description": "Error when settings are not configured."
   },
   "dashboardTitle": {
-    "message": "Panel de YOURLS"
+    "message": "Panel de control",
+    "description": "The main title for the dashboard page and tab."
   },
-  "dashboardLinks": {
-    "message": "Total de enlaces"
+  "dashboardBtnRefresh": {
+    "message": "Actualizar",
+    "description": "Text for the refresh button on the dashboard."
   },
-  "dashboardClicks": {
-    "message": "Total de clics"
+  "dashboardLabelTotalLinks": {
+    "message": "Total de enlaces",
+    "description": "Label for the total links stat card."
+  },
+  "dashboardLabelTotalClicks": {
+    "message": "Total de clics",
+    "description": "Label for the total clicks stat card."
+  },
+  "dashboardLabelAvgClicks": {
+    "message": "Promedio de clics",
+    "description": "Label for the average clicks stat card."
+  },
+  "dashboardLabelServerStatus": {
+    "message": "Estado del servidor",
+    "description": "Label for the server status stat card."
+  },
+  "dashboardTitleRecentLinks": {
+    "message": "Enlaces recientes",
+    "description": "The title for the recent links section."
+  },
+  "dashboardStatusOnline": {
+    "message": "En línea",
+    "description": "Server status text for when the connection is OK."
+  },
+  "dashboardStatusLoading": {
+    "message": "Cargando...",
+    "description": "Generic loading text."
+  },
+  "dashboardNoLinksFound": {
+    "message": "No se encontraron enlaces recientes.",
+    "description": "Message shown when the recent links list is empty."
+  },
+  "dashboardBtnViewMore": {
+    "message": "Ver más",
+    "description": "Text for the 'View More' button to load more links."
+  },
+  "apiAuthRejected": {
+    "message": "YOURLS rechazó la firma de la API. Es posible que el token haya cambiado tras actualizar el servidor. Inicia sesión en la administración de YOURLS desde el navegador, abre Administración → Herramientas, copia la firma actual a la configuración de kURL y pulsa «Probar conexión y guardar». kURL no necesita tu usuario ni contraseña. Si sigue fallando, comprueba la hora del equipo y del servidor y las reglas de acceso a la API."
+  },
+  "apiAccessDenied": {
+    "message": "El servidor rechazó el acceso a la API (HTTP 401/403). Comprueba la firma en YOURLS → Administración → Herramientas y vuelve a probar. Si es correcta, revisa las restricciones del servidor y su reloj. No es necesario iniciar sesión en kURL."
+  },
+  "apiInvalidResponse": {
+    "message": "YOURLS no devolvió una respuesta válida de la API (HTTP $status$). Revisa la URL del servidor, HTTPS y posibles redirecciones o páginas de inicio de sesión.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "apiOpenTools": {
+    "message": "Abrir YOURLS → Administración → Herramientas para copiar la firma actual"
+  },
+  "optionsBtnTestAndSave": {
+    "message": "Probar conexión y guardar"
+  },
+  "contextSelectUrl": {
+    "message": "Seleccione una URL HTTP(S) completa."
+  },
+  "contextCopied": {
+    "message": "✓ Copiada al portapapeles: $shorturl$",
+    "placeholders": {
+      "shorturl": {
+        "content": "$1"
+      }
+    }
+  },
+  "contextShorteningFailed": {
+    "message": "No se pudo acortar la URL"
+  },
+  "dashboardLabelClicks": {
+    "message": "Clics: $count$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "insertAmbiguousLink": {
+    "message": "Varios enlaces usan esta URL. Haz clic dentro del enlace deseado e inténtalo de nuevo."
+  },
+  "insertClickedLinkMissing": {
+    "message": "No se encontró el enlace pulsado en el cuerpo del mensaje."
+  },
+  "optionsOldTokenHint": {
+    "message": "Este token de diez caracteres podría pertenecer a una versión anterior de YOURLS. Copia la firma API actual desde Administración → Herramientas."
+  },
+  "menuQuickCopy": {
+    "message": "kURL: Acortar y copiar"
+  },
+  "lookupHeading": {
+    "message": "Buscar un enlace existente"
+  },
+  "lookupHelp": {
+    "message": "Escribe una URL corta, su palabra clave o la URL de destino. Consulta el destino y los clics de un enlace corto, o comprueba si el destino ya tiene un enlace."
+  },
+  "lookupQueryLabel": {
+    "message": "URL corta, palabra clave o URL de destino"
+  },
+  "lookupQueryPlaceholder": {
+    "message": "$short$ o https://example.com/articulo",
+    "placeholders": {
+      "short": {
+        "content": "$1"
+      }
+    }
+  },
+  "lookupSearch": {
+    "message": "Buscar en YOURLS"
+  },
+  "lookupResultHeading": {
+    "message": "Enlace encontrado"
+  },
+  "lookupClicks": {
+    "message": "Clics"
+  },
+  "lookupCreateInstead": {
+    "message": "Crear URL corta"
+  },
+  "lookupInvalid": {
+    "message": "Introduce una URL de destino válida, una URL corta de este servidor o una palabra clave."
+  },
+  "lookupNeedsHelper": {
+    "message": "La búsqueda por URL de destino requiere el complemento opcional YOURLS Helper. Las URL cortas se pueden consultar sin él."
+  },
+  "lookupSearching": {
+    "message": "Buscando en YOURLS…"
+  },
+  "lookupFound": {
+    "message": "Enlace encontrado en tu servidor YOURLS."
+  },
+  "lookupNotFound": {
+    "message": "No se encontró URL corta"
+  },
+  "lookupNotFoundHelp": {
+    "message": "No se encontró una URL corta para este destino. Puedes crearla."
+  },
+  "helperCompactOk": {
+    "message": "Helper instalado"
+  },
+  "helperShowDetails": {
+    "message": "Instalación y código fuente"
+  },
+  "dashFilter": {
+    "message": "Filtrar enlaces recientes mostrados"
+  },
+  "dashSearch": {
+    "message": "Buscar entre los enlaces mostrados"
+  },
+  "dashFilterHelp": {
+    "message": "Solo filtra los enlaces recientes visibles. Usa «$button$» para incluir los anteriores.",
+    "placeholders": {
+      "button": {
+        "content": "$1"
+      }
+    }
+  },
+  "dashFilterNoMatch": {
+    "message": "No hay coincidencias entre los enlaces recientes mostrados."
+  },
+  "lookupOwnInvalid": {
+    "message": "Esta dirección pertenece a tu servidor YOURLS, pero no es un enlace corto válido. Introduce una palabra clave o una URL corta de este servidor."
+  },
+  "dashboardSetupHeading": {
+    "message": "Conectar el servidor YOURLS"
+  },
+  "dashboardSetupHelp": {
+    "message": "Introduce la URL de YOURLS y la firma de la API en Ajustes. Prueba la conexión para guardar los datos."
+  },
+  "dashboardSetupButton": {
+    "message": "Abrir ajustes de YOURLS"
+  },
+  "dashboardSetupStatus": {
+    "message": "Conecta tu servidor YOURLS para empezar."
+  },
+  "connectionNotConfigured": {
+    "message": "Conexión sin configurar"
+  },
+  "connectionNotChecked": {
+    "message": "Conexión no comprobada con estos ajustes"
+  },
+  "connectionChecking": {
+    "message": "Comprobando la conexión con YOURLS…"
+  },
+  "connectionOnline": {
+    "message": "Conectado: la API de YOURLS responde"
+  },
+  "connectionFailed": {
+    "message": "Error de conexión: comprueba el servidor y el token"
+  },
+  "connectionPermissionMissing": {
+    "message": "Falta permiso para acceder al servidor YOURLS"
+  },
+  "confirmDelete": {
+    "message": "¿Eliminar definitivamente este enlace corto? Los enlaces incluidos en sitios web y correos electrónicos enviados podrían dejar de funcionar."
+  },
+  "menuQuickPage": {
+    "message": "kURL: Acortar la página actual y copiar"
+  },
+  "popupCurrentPage": {
+    "message": "Usar la página actual"
+  },
+  "optionsPrivacyNotice": {
+    "message": "kURL envía los enlaces elegidos y las palabras clave o títulos opcionales a tu servidor YOURLS mediante HTTPS. El token de API y el registro local de siete días permanecen en el navegador. No se envían datos al desarrollador."
+  },
+  "helperSetupSummary": {
+    "message": "El Helper opcional funciona en tu servidor YOURLS, no dentro de la extensión."
+  },
+  "helperSource": {
+    "message": "Ver el código del Helper en GitHub"
+  },
+  "optionsStatusChangedDuringTest": {
+    "message": "La configuración cambió durante la prueba. No se guardó nada. Vuelve a comprobar la conexión."
+  },
+  "footerContact": {
+    "message": "Contacto"
+  },
+  "footerSupport": {
+    "message": "Apoyar el desarrollo"
   }
 }
