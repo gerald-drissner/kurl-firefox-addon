@@ -447,5 +447,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "Настройки изменились во время проверки. Ничего не сохранено. Проверьте подключение ещё раз."
+  },
+  "footerContact": {
+    "message": "Связаться"
+  },
+  "footerSupport": {
+    "message": "Поддержать разработку"
   }
 }

@@ -443,5 +443,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "La configuración cambió durante la prueba. No se guardó nada. Vuelve a comprobar la conexión."
+  },
+  "footerContact": {
+    "message": "Contacto"
+  },
+  "footerSupport": {
+    "message": "Apoyar el desarrollo"
   }
 }

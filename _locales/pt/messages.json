@@ -439,5 +439,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "As definições foram alteradas durante o teste. Nada foi guardado. Teste novamente a ligação."
+  },
+  "footerContact": {
+    "message": "Contato"
+  },
+  "footerSupport": {
+    "message": "Apoiar o desenvolvimento"
   }
 }

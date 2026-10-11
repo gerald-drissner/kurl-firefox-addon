@@ -625,6 +625,7 @@ $("helper-code-details").addEventListener("toggle", async event => {
   }
 });
 i18n();
+$("kurl-dashboard-version").textContent = "kURL " + browser.runtime.getManifest().version;
 updateLookupPlaceholder("");
 (async () => {
   const settings = await H.getSettings();

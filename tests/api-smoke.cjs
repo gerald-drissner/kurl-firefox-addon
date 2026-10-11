@@ -4,7 +4,7 @@ for (const platform of [JSON.parse(fs.readFileSync(path.join(__dirname,'..','man
   const root=path.join(__dirname,'..');
   const read=p=>fs.readFileSync(path.join(root,p),'utf8');
   const manifest=JSON.parse(read('manifest.json'));
-  assert.equal(manifest.version,'2.0.1');
+  assert.equal(manifest.version,'2.0.2');
   assert.equal(manifest.manifest_version,3);
   assert.equal(manifest.options_ui.page,'dashboard.html');
   assert(manifest.optional_host_permissions.includes('https://*/*'));

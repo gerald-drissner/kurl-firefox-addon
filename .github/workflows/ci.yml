@@ -28,6 +28,8 @@ jobs:
         run: node tests/no-menus.cjs
       - name: Stale connection settings protection
         run: node tests/options-race.cjs
+      - name: Dashboard footer and localization
+        run: node tests/footer.cjs
       - name: Helper PHP syntax
         if: runner.os == 'Linux'
         run: php -l helper/kurl-helper/plugin.php

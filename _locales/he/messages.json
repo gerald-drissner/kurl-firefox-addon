@@ -447,5 +447,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "ההגדרות השתנו במהלך הבדיקה. דבר לא נשמר. יש לבדוק שוב את החיבור."
+  },
+  "footerContact": {
+    "message": "יצירת קשר"
+  },
+  "footerSupport": {
+    "message": "תמיכה בפיתוח"
   }
 }

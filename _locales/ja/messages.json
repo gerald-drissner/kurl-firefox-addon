@@ -443,5 +443,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "接続テスト中に設定が変更されました。保存されていません。もう一度接続をテストしてください。"
+  },
+  "footerContact": {
+    "message": "お問い合わせ"
+  },
+  "footerSupport": {
+    "message": "開発を支援する"
   }
 }

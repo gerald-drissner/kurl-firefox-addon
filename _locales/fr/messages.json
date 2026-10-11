@@ -447,5 +447,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "Les paramètres ont changé pendant le test. Rien n’a été enregistré. Testez de nouveau la connexion."
+  },
+  "footerContact": {
+    "message": "Contact"
+  },
+  "footerSupport": {
+    "message": "Soutenir le développement"
   }
 }

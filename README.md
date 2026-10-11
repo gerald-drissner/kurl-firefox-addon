@@ -1,4 +1,4 @@
-# kURL for Firefox — 2.0.1 development preview
+# kURL for Firefox — 2.0.2 development preview
 
 This is a **separate browser extension**, modernized using the tested kURL for Thunderbird 2.0.20 dashboard, security model, YOURLS API client, link search, bulk shortening and local logs. **Do not submit this preview to the store without live browser tests.**
 
@@ -31,3 +31,7 @@ Audit follow-up: safe Bing base64url link unwrapping, Google-host spoofing rejec
 ## Contact
 
 For support and privacy questions, email [mail@drissner.media](mailto:mail@drissner.media), or open an issue in this repository.
+
+## Dashboard footer (2.0.2 preview)
+
+The dashboard displays the installed version dynamically and provides optional, user-clicked external links for contact and supporting development. No browser data or YOURLS credentials are sent to these sites by kURL; no donation is required for any feature.

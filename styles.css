@@ -624,3 +624,24 @@ body.options-body:has(.dashboard-shell) { min-width: 0; padding: 24px clamp(14px
 span.link-long { unicode-bidi: plaintext; }
 input[type="url"], #shortUrl, #statsInput, #keyword, #lookup-query, #manual-keyword, #manual-result { direction: ltr; }
 [dir="rtl"] :is(.link-short, .link-long, .kurl-date, input[type="url"], #shortUrl, #statsInput, #keyword, #lookup-query, #manual-keyword, #manual-result) { text-align: right; }
+
+/* Nonintrusive, user-initiated external support links; no outbound requests on page load. */
+.kurl-dashboard-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  margin-top: 30px;
+  padding: 17px 8px 3px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+.kurl-dashboard-footer a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.kurl-dashboard-footer a:hover,
+.kurl-dashboard-footer a:focus-visible { color: var(--accent); }
+.kurl-dashboard-footer #kurl-dashboard-version { unicode-bidi: isolate; white-space: nowrap; }
+.kurl-dashboard-footer .kurl-footer-separator { opacity: .55; }

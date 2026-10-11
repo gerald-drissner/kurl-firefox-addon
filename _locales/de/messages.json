@@ -722,5 +722,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "Einstellungen während des Tests geändert. Nichts gespeichert. Bitte Verbindung erneut testen."
+  },
+  "footerContact": {
+    "message": "Kontakt"
+  },
+  "footerSupport": {
+    "message": "Entwicklung unterstützen"
   }
 }

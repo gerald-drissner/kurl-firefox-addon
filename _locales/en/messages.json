@@ -722,5 +722,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "Settings changed during the test. Nothing was saved; run the connection test again."
+  },
+  "footerContact": {
+    "message": "Contact"
+  },
+  "footerSupport": {
+    "message": "Support development"
   }
 }

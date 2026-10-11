@@ -503,5 +503,11 @@
   },
   "optionsStatusChangedDuringTest": {
     "message": "تغيّرت الإعدادات أثناء الاختبار. لم يُحفظ شيء. أعد اختبار الاتصال."
+  },
+  "footerContact": {
+    "message": "التواصل"
+  },
+  "footerSupport": {
+    "message": "ادعم تطوير الإضافة"
   }
 }

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "short_name": "kURL",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Gerald Drißner",
   "default_locale": "en",
   "description": "__MSG_extensionDescription__",
